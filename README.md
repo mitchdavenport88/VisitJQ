@@ -39,3 +39,17 @@ As the site owner, I want:
 * To give people reasons to visit. I can do this by providing a wide range of options of what to do, where to go and where to stay to cater for a wider audience.
 * To show relevant information on my recommendations. This information is to be clear, informative and useful.
 * To be easily contactable.
+
+### Scope - Functionality
+
+### Scope - Content
+
+### Structure
+Based on the information gathered during the scope the website will just be one page, with all sections following one another. Basic structure of the page is as follows:
+* Fixed navigation bar at the top with links to each section of the page. This will be accessible at all times.
+* Body:
+    * Hero image.
+    * About section. Eat | Drink | Explore
+    * What to do section. Google Maps API.
+    * Contact. Email.JS.
+* Footer with social media links and copyright notice.
