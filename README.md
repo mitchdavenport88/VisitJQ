@@ -41,8 +41,15 @@ As the site owner, I want:
 * To be easily contactable.
 
 ### Scope - Functionality
+* The site must be easy to navigate around.
+* Fully responsive on all devices.
+* Present clear and concise information. Be user-friendly.
+* Function as expected. 
 
 ### Scope - Content
+* Tell / show the audience what the JQ has to offer.
+* A recommendations section using the google maps API to provide interactivity and provide additional information.
+* Contact through email.JS or via social media.
 
 ### Structure
 Based on the information gathered during the scope the website will just be one page, with all sections following one another. Basic structure of the page is as follows:
@@ -53,3 +60,7 @@ Based on the information gathered during the scope the website will just be one 
     * What to do section. Google Maps API.
     * Contact. Email.JS.
 * Footer with social media links and copyright notice.
+
+### Skeleton
+
+[Initial idea - sketch](https://github.com/mitchdavenport88/visitJQ/blob/master/assets/readme/wireframes/wireframe-sketch.jpg).
