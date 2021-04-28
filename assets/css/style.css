@@ -37,9 +37,10 @@ body {
 
 .nav-item:hover {
     text-decoration: underline;
+    font-size: 1.05rem;
 }
 
-/* landing page */
+/* landing page section */
 
 #landing-page {
     height: 100vh;
@@ -73,4 +74,84 @@ body {
     font-weight: bold;
     border: 1px solid #36622B;
     border-radius: 5px;
+}
+
+/* about section - eat | drink | explore */
+
+#about {
+    padding: 0 2.5% 2.5% 2.5%;
+}
+
+.section-heading {
+    text-align: center;
+    padding: 90px 2.5% 2.5%;
+    margin: 0;
+    color: #36622B;
+}
+
+.about-container {
+    width: 100%;
+}
+
+/* code for the carousel was found on https://www.youtube.com/watch?v=rTB-UNl_B_Y and edited accordingly */
+
+.about-carousel {
+    border: 1px solid black;
+    height: 400px;
+    position: relative;
+    overflow: hidden;
+}
+
+.slider {
+    height: 100%;
+    display: flex;
+    width: 400%;
+    transition: all 0.3s;
+}
+
+.slider div {
+    flex-basis: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.carousel-controls .arrow {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    cursor: pointer;
+}
+
+.arrow.left {
+    left: 10px;
+}
+
+.arrow.right {
+    right: 10px;
+}
+
+.carousel-controls ul {
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    transform: translate(-50%);
+    list-style-type: none;
+    display: flex;
+    padding: 0;
+    margin: 0;
+}
+
+.carousel-controls ul li {
+    width: 10px;
+    height: 10px;
+    border: 2px solid black;
+    border-radius: 50%;
+    margin: 10px;
+    background-color: black;
+    cursor: pointer;
+}
+
+.carousel-controls ul li.selected {
+    background-color: transparent;
 }
