@@ -1,0 +1,76 @@
+* {
+    padding: 0;
+    margin: 0;
+    border: 0;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+body {
+    background-color: #FBFAD3;
+}
+
+/* navigation */
+
+.my-navbar {
+    background-color: #729D39;
+    font-size: 1rem;
+}
+
+.my-navbar a {
+    color: #FBFAD3;
+    letter-spacing: 0.2rem;
+}
+
+.my-logo {
+    font-size: 2rem;
+    font-weight: bold;
+    margin-left: 2.5%;
+}
+
+.my-nav {
+    margin-right: 2.5%;
+}
+
+.nav-item {
+    margin-left: 20px;
+}
+
+.nav-item:hover {
+    text-decoration: underline;
+}
+
+/* landing page */
+
+#landing-page {
+    height: 100vh;
+    background: url("/assets/images/jq-background-image.jpg") no-repeat top;
+    background-size: cover;
+    position: relative;
+}
+
+.landing-page-overlay {
+    height: 100%;
+    display: flex;
+    align-items: flex-end;
+    
+}
+
+.landing-page-overlay-textbox {
+    text-align: center;
+    background-color: #729D39;
+    color: #FBFAD3;
+    padding: 2.5%;
+    margin-left: 5%;
+    margin-bottom: 5%;
+    border-radius: 5px;
+}
+
+.landing-page-overlay-textbox button {
+    background-color: #FBFAD3;
+    padding: 5%;
+    margin-top: 10%;
+    color: #36622B;
+    font-weight: bold;
+    border: 1px solid #36622B;
+    border-radius: 5px;
+}
