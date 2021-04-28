@@ -27,17 +27,27 @@ body {
     margin-left: 2.5%;
 }
 
-.my-nav {
+/* .my-nav {
     margin-right: 2.5%;
-}
+} */
 
 .nav-item {
-    margin-left: 20px;
+    margin: 0 20px;
+    text-align: center;
 }
 
 .nav-item:hover {
     text-decoration: underline;
     font-size: 1.05rem;
+}
+
+.my-burger {
+    color: #FBFAD3;
+    border: 1px solid #FBFAD3;
+    padding: 5px 7px;
+    border-radius: 5px;
+    font-size: 1.5rem;
+    margin-right: 2.5%;
 }
 
 /* landing page section */
