@@ -116,7 +116,43 @@
     </section>
 
     <!-- to do section - google map api -->
-    <section id="explore"></section>
+    <section id="explore">
+        <h1 class="section-heading">what to do?</h1>
+        <div class="explore-container">
+            <div class="row">
+                <!-- buttons -->
+                <div class="col-12 col-lg-8 button-row d-flex justify-content-center">
+                    <button type="button">
+                        <i class="fas fa-utensils"></i><span class="d-none d-md-inline"> eat</span>
+                    </button>
+                    <button type="button">
+                        <i class="fas fa-beer"></i><span class="d-none d-md-inline"> drink</span>
+                    </button>
+                    <button type="button">
+                        <i class="fas fa-bed"></i><span class="d-none d-md-inline"> stay</span>
+                    </button>
+                    <button type="button">
+                        <i class="fas fa-binoculars"></i><span class="d-none d-md-inline"> explore</span>
+                    </button>
+                </div>
+                <div class="d-none recommend-title d-lg-block col-4">
+                    <div>
+                        <h4>Visit JQ top picks</h4>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <!-- map -->
+                <div id="map" class="col-12 col-lg-8"></div>
+                <!-- content -->
+                <div class="recommend-content d-12 d-lg-block col-lg-4">
+                    <div>
+                        recommendations...
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
 
     <!-- contact - mail.js -->
     <section id="contact"></section>
@@ -128,8 +164,11 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-JEW9xMcG8R+pH31jmWH6WWP0WintQrMb4s7ZOdauHnUtxwoG2vI5DkLtS3qm9Ekf" crossorigin="anonymous">
     </script>
-    <!-- my js file -->
+    <!-- google map API -->
+    <script async src="https://maps.googleapis.com/maps/api/js?key=AIzaSyADhoG7kEe6EyBmvkyWm8_vRAOqjEZGBis&callback=initMap"></script>
+    <!-- my js files -->
     <script src="/assets/js/script.js"></script>
+    <script src="/assets/js/map.js"></script>
 </body>
 
 </html>
