@@ -110,6 +110,7 @@ body {
     height: 450px;
     position: relative;
     overflow: hidden;
+    border-radius: 5px;
 }
 
 .slider {
@@ -127,16 +128,20 @@ body {
 }
 
 .arrow.left {
-    left: 10px;
+    left: 5px;
+    font-size: 1.5rem;
+    color: #FBFAD3;
 }
 
 .arrow.right {
-    right: 10px;
+    right: 5px;
+    font-size: 1.5rem;
+    color: #FBFAD3;
 }
 
 .carousel-controls ul {
     position: absolute;
-    bottom: 20px;
+    bottom: 0px;
     left: 50%;
     transform: translate(-50%);
     list-style-type: none;
@@ -148,10 +153,10 @@ body {
 .carousel-controls ul li {
     width: 10px;
     height: 10px;
-    border: 2px solid black;
+    border: 2px solid #FBFAD3;
     border-radius: 50%;
     margin: 10px;
-    background-color: black;
+    background-color: #FBFAD3;;
     cursor: pointer;
 }
 
@@ -163,16 +168,17 @@ body {
 
 .slider div {
     flex-basis: 50%;
-    display: flex;
     margin: 0 auto;
-    padding: 0;
     background-color: #729D39;
 }
 
 .slider-content {
     display: flex;
-    justify-content: center;
+    flex-direction: column;
     align-items: center;
+    text-align: center;
+    color: #FBFAD3;
+    padding: 20px 50px;
 }
 
 .slider-content-pic1 {
@@ -180,6 +186,7 @@ body {
     background-size: cover;
     background-position: left;
     background-repeat: no-repeat;
+    padding: 0;
 }
 
 .slider-content-pic2 {
@@ -187,6 +194,7 @@ body {
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
+    padding: 0;
 }
 
 .slider-content-pic3 {
@@ -194,6 +202,7 @@ body {
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
+    padding: 0;
 }
 
 .slider-content-pic4 {
@@ -201,4 +210,22 @@ body {
     background-size: cover;
     background-position: right;
     background-repeat: no-repeat;
+    padding: 0;
+}
+
+/* media queries */
+/* max-width tablet */
+@media only screen and (max-width: 991px) {  
+    .slider div {
+        flex-basis: 100%;
+    }
+
+    .slider div {
+        overflow-y: scroll;
+    }
+}
+
+/* max-width md */
+@media only screen and (max-width: 767px) {
+
 }
