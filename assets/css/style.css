@@ -103,11 +103,11 @@ body {
     width: 100%;
 }
 
+/* carousel */
 /* code for the carousel was found on https://www.youtube.com/watch?v=rTB-UNl_B_Y and edited accordingly */
 
 .about-carousel {
-    border: 1px solid black;
-    height: 400px;
+    height: 450px;
     position: relative;
     overflow: hidden;
 }
@@ -117,13 +117,6 @@ body {
     display: flex;
     width: 400%;
     transition: all 0.3s;
-}
-
-.slider div {
-    flex-basis: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
 }
 
 .carousel-controls .arrow {
@@ -164,4 +157,48 @@ body {
 
 .carousel-controls ul li.selected {
     background-color: transparent;
+}
+
+/* carousel content */
+
+.slider div {
+    flex-basis: 50%;
+    display: flex;
+    margin: 0 auto;
+    padding: 0;
+    background-color: #729D39;
+}
+
+.slider-content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.slider-content-pic1 {
+    background-image: url("/assets/images/jq-about-pic.jpg");
+    background-size: cover;
+    background-position: left;
+    background-repeat: no-repeat;
+}
+
+.slider-content-pic2 {
+    background-image: url("/assets/images/jq-eat-pic.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.slider-content-pic3 {
+    background-image: url("/assets/images/jq-drink-pic.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.slider-content-pic4 {
+    background-image: url("/assets/images/jq-history-pic.jpg");
+    background-size: cover;
+    background-position: right;
+    background-repeat: no-repeat;
 }
