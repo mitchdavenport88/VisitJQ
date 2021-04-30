@@ -90,7 +90,7 @@ body {
 /* about section - eat | drink | explore */
 
 #about {
-    padding: 0 2.5% 2.5% 2.5%;
+    padding: 0 2.5%;
 }
 
 .section-heading {
@@ -222,7 +222,7 @@ body {
     background-size: cover;
     background-position: right;
     background-repeat: no-repeat;
-    padding: 0;
+
 }
 
 /* media queries */
