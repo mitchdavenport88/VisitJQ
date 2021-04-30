@@ -63,7 +63,6 @@ body {
     height: 100%;
     display: flex;
     align-items: flex-end;
-    
 }
 
 .landing-page-overlay-textbox {
@@ -74,6 +73,7 @@ body {
     margin-left: 5%;
     margin-bottom: 5%;
     border-radius: 5px;
+    letter-spacing: 0.1rem;
 }
 
 .landing-page-overlay-textbox button {
@@ -84,6 +84,7 @@ body {
     font-weight: bold;
     border: 1px solid #36622B;
     border-radius: 5px;
+    letter-spacing: 0.1rem;
 }
 
 /* about section - eat | drink | explore */
@@ -97,6 +98,7 @@ body {
     padding: 90px 2.5% 2.5%;
     margin: 0;
     color: #36622B;
+    letter-spacing: 0.2rem;
 }
 
 .about-container {
@@ -181,6 +183,16 @@ body {
     padding: 20px 50px;
 }
 
+.slider-content h3 {
+    letter-spacing: 0.1rem;
+    margin-bottom: 20px;
+}
+
+.slider-content p {
+    letter-spacing: 0.1rem;
+    font-weight: lighter;
+}
+
 .slider-content-pic1 {
     background-image: url("/assets/images/jq-about-pic.jpg");
     background-size: cover;
@@ -220,12 +232,18 @@ body {
         flex-basis: 100%;
     }
 
-    .slider div {
+    .about-carousel-row {
         overflow-y: scroll;
     }
 }
 
 /* max-width md */
 @media only screen and (max-width: 767px) {
+    .section-heading {
+        letter-spacing: 0.1rem;
+    }
 
+    .slider-content {
+        padding: 20px 40px;
+    }
 }
