@@ -225,6 +225,83 @@ body {
 
 }
 
+/* to do section - google map api */
+
+#explore {
+    padding: 0 2.5%; 
+}
+
+.explore-container {
+    width: 100%;
+    background-color: #729D39;
+}
+
+.explore-container div.row {
+    margin: 0;
+    padding: 0;
+}
+
+.button-row, 
+.recommend-title, 
+.recommend-content {
+    padding: 0;
+    margin: 0;
+}
+
+.explore-container button {
+    background-color: #FBFAD3;
+    padding: 0.75%;
+    margin: 0.75%;
+    /* min-width: 100px; */
+    color: #36622B;
+    font-weight: bold;
+    border: 1px solid #36622B;
+    border-radius: 5px;
+}
+
+#map {
+    height: 400px;
+    padding: 0;
+}
+
+.recommend-title div, 
+.recommend-content div {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.recommend-title h4 {
+    margin: 0;
+    padding: 0;
+}
+
+/* footer */
+
+#footer {
+    color: #FBFAD3;
+    background-color: #729D39;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1% 2.5%;
+    border-top: 1px solid #FBFAD3;
+}
+
+#footer p {
+    margin: 0;
+}
+
+#footer a {
+    color: #FBFAD3;
+    font-size: 1.5rem;
+    padding: 5px;
+    margin-left: 10px;
+}
+
+
 /* media queries */
 /* max-width tablet */
 @media only screen and (max-width: 991px) {  
