@@ -63,7 +63,6 @@ body {
     height: 100%;
     display: flex;
     align-items: flex-end;
-    
 }
 
 .landing-page-overlay-textbox {
@@ -74,6 +73,7 @@ body {
     margin-left: 5%;
     margin-bottom: 5%;
     border-radius: 5px;
+    letter-spacing: 0.1rem;
 }
 
 .landing-page-overlay-textbox button {
@@ -84,6 +84,7 @@ body {
     font-weight: bold;
     border: 1px solid #36622B;
     border-radius: 5px;
+    letter-spacing: 0.1rem;
 }
 
 /* about section - eat | drink | explore */
@@ -97,6 +98,7 @@ body {
     padding: 90px 2.5% 2.5%;
     margin: 0;
     color: #36622B;
+    letter-spacing: 0.2rem;
 }
 
 .about-container {
@@ -110,6 +112,7 @@ body {
     height: 450px;
     position: relative;
     overflow: hidden;
+    border-radius: 5px;
 }
 
 .slider {
@@ -127,16 +130,20 @@ body {
 }
 
 .arrow.left {
-    left: 10px;
+    left: 5px;
+    font-size: 1.5rem;
+    color: #FBFAD3;
 }
 
 .arrow.right {
-    right: 10px;
+    right: 5px;
+    font-size: 1.5rem;
+    color: #FBFAD3;
 }
 
 .carousel-controls ul {
     position: absolute;
-    bottom: 20px;
+    bottom: 0px;
     left: 50%;
     transform: translate(-50%);
     list-style-type: none;
@@ -148,10 +155,10 @@ body {
 .carousel-controls ul li {
     width: 10px;
     height: 10px;
-    border: 2px solid black;
+    border: 2px solid #FBFAD3;
     border-radius: 50%;
     margin: 10px;
-    background-color: black;
+    background-color: #FBFAD3;;
     cursor: pointer;
 }
 
@@ -163,16 +170,27 @@ body {
 
 .slider div {
     flex-basis: 50%;
-    display: flex;
     margin: 0 auto;
-    padding: 0;
     background-color: #729D39;
 }
 
 .slider-content {
     display: flex;
-    justify-content: center;
+    flex-direction: column;
     align-items: center;
+    text-align: center;
+    color: #FBFAD3;
+    padding: 20px 50px;
+}
+
+.slider-content h3 {
+    letter-spacing: 0.1rem;
+    margin-bottom: 20px;
+}
+
+.slider-content p {
+    letter-spacing: 0.1rem;
+    font-weight: lighter;
 }
 
 .slider-content-pic1 {
@@ -180,6 +198,7 @@ body {
     background-size: cover;
     background-position: left;
     background-repeat: no-repeat;
+    padding: 0;
 }
 
 .slider-content-pic2 {
@@ -187,6 +206,7 @@ body {
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
+    padding: 0;
 }
 
 .slider-content-pic3 {
@@ -194,6 +214,7 @@ body {
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
+    padding: 0;
 }
 
 .slider-content-pic4 {
@@ -201,56 +222,28 @@ body {
     background-size: cover;
     background-position: right;
     background-repeat: no-repeat;
+
 }
 
-/* to do section - google map api */
+/* media queries */
+/* max-width tablet */
+@media only screen and (max-width: 991px) {  
+    .slider div {
+        flex-basis: 100%;
+    }
 
-#explore {
-    padding: 0 2.5%; 
+    .about-carousel-row {
+        overflow-y: scroll;
+    }
 }
 
-.explore-container {
-    width: 100%;
-    background-color: #729D39;
-}
+/* max-width md */
+@media only screen and (max-width: 767px) {
+    .section-heading {
+        letter-spacing: 0.1rem;
+    }
 
-.explore-container div.row {
-    margin: 0;
-    padding: 0;
-}
-
-.button-row, 
-.recommend-title, 
-.recommend-content {
-    padding: 0;
-    margin: 0;
-}
-
-.explore-container button {
-    background-color: #FBFAD3;
-    padding: 0.75%;
-    margin: 0.75%;
-    /* min-width: 100px; */
-    color: #36622B;
-    font-weight: bold;
-    border: 1px solid #36622B;
-    border-radius: 5px;
-}
-
-#map {
-    height: 400px;
-    padding: 0;
-}
-
-.recommend-title div, 
-.recommend-content div {
-    width: 100%;
-    height: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-.recommend-title h4 {
-    margin: 0;
+    .slider-content {
+        padding: 20px 40px;
+    }
 }
