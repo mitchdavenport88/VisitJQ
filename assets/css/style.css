@@ -54,7 +54,7 @@ body {
 
 #landing-page {
     height: 100vh;
-    background: url("/assets/images/jq-background-image.jpg") no-repeat top;
+    background: url("assets/images/jq-background-image.jpg") no-repeat top;
     background-size: cover;
     position: relative;
 }
@@ -194,7 +194,7 @@ body {
 }
 
 .slider-content-pic1 {
-    background-image: url("/assets/images/jq-about-pic.jpg");
+    background-image: url("assets/images/jq-about-pic.jpg");
     background-size: cover;
     background-position: left;
     background-repeat: no-repeat;
@@ -202,7 +202,7 @@ body {
 }
 
 .slider-content-pic2 {
-    background-image: url("/assets/images/jq-eat-pic.jpg");
+    background-image: url("assets/images/jq-eat-pic.jpg");
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -210,7 +210,7 @@ body {
 }
 
 .slider-content-pic3 {
-    background-image: url("/assets/images/jq-drink-pic.jpg");
+    background-image: url("assets/images/jq-drink-pic.jpg");
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -218,7 +218,7 @@ body {
 }
 
 .slider-content-pic4 {
-    background-image: url("/assets/images/jq-history-pic.jpg");
+    background-image: url("assets/images/jq-history-pic.jpg");
     background-size: cover;
     background-position: right;
     background-repeat: no-repeat;
