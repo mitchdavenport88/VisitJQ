@@ -6,7 +6,7 @@ Visit JQ is an interactive website aimed at encouraging people to venture out of
 
 ## Demo
 
-The live site can be viewed here - [Visit JQ](). <!-- add link when deployed -->
+The live site can be viewed here - [Visit JQ](https://mitchdavenport88.github.io/VisitJQ/).
 
 GitHub repository can be viewed here - [mitchdavenport88/visitJQ](https://github.com/mitchdavenport88/visitJQ).
 
@@ -63,4 +63,8 @@ Based on the information gathered during the scope the website will just be one 
 
 ### Skeleton
 
-[Initial idea - sketch](https://github.com/mitchdavenport88/visitJQ/blob/master/assets/readme/wireframes/wireframe-sketch.jpg).
+* Initial idea - [sketch](https://github.com/mitchdavenport88/visitJQ/blob/master/assets/readme/wireframes/wireframe-sketch.jpg).
+* Home wireframes - [desktop]() | [tablet]() | [mobile]().
+* About wireframes - [desktop]() | [tablet]() | [mobile]().
+* To do wireframes - [desktop]() | [tablet]() | [mobile]().
+* Contact wireframes - [desktop]() | [tablet]() | [mobile]().
