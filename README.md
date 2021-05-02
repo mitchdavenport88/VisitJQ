@@ -64,7 +64,15 @@ Based on the information gathered during the scope the website will just be one 
 ### Skeleton
 
 * Initial idea - [sketch](https://github.com/mitchdavenport88/visitJQ/blob/master/assets/readme/wireframes/wireframe-sketch.jpg).
-* Home wireframes - [desktop]() | [tablet]() | [mobile]().
-* About wireframes - [desktop]() | [tablet]() | [mobile]().
-* To do wireframes - [desktop]() | [tablet]() | [mobile]().
-* Contact wireframes - [desktop]() | [tablet]() | [mobile]().
+* Home wireframes - [desktop](https://github.com/mitchdavenport88/VisitJQ/blob/master/assets/readme/wireframes/home%20(desktop).png) | 
+[tablet](https://github.com/mitchdavenport88/VisitJQ/blob/master/assets/readme/wireframes/home%20(tablet).png) | 
+[mobile](https://github.com/mitchdavenport88/VisitJQ/blob/master/assets/readme/wireframes/home%20(phone).png).
+* About wireframes - [desktop](https://github.com/mitchdavenport88/VisitJQ/blob/master/assets/readme/wireframes/about%20(desktop).png) | 
+[tablet](https://github.com/mitchdavenport88/VisitJQ/blob/master/assets/readme/wireframes/about%20(tablet).png) | 
+[mobile](https://github.com/mitchdavenport88/VisitJQ/blob/master/assets/readme/wireframes/about%20(phone).png).
+* To do wireframes - [desktop](https://github.com/mitchdavenport88/VisitJQ/blob/master/assets/readme/wireframes/map%20(desktop).png) | 
+[tablet](https://github.com/mitchdavenport88/VisitJQ/blob/master/assets/readme/wireframes/map%20(tablet).png) | 
+[mobile](https://github.com/mitchdavenport88/VisitJQ/blob/master/assets/readme/wireframes/map%20(phone).png).
+* Contact wireframes - [desktop](https://github.com/mitchdavenport88/VisitJQ/blob/master/assets/readme/wireframes/contact%20(desktop).png) | 
+[tablet](https://github.com/mitchdavenport88/VisitJQ/blob/master/assets/readme/wireframes/contact%20(tablet).png) | 
+[mobile](https://github.com/mitchdavenport88/VisitJQ/blob/master/assets/readme/wireframes/contact%20(phone).png).
