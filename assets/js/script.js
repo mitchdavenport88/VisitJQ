@@ -1,3 +1,10 @@
+// plan your visit button
+const planButton = document.getElementById('plan-button');
+
+planButton.addEventListener('click', function() {
+    parent.location='#about';
+});
+
 // carousel
 // walkthrough found on https://www.youtube.com/watch?v=rTB-UNl_B_Y and edited accordingly
 const slider = document.querySelector('.slider');
