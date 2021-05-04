@@ -1,8 +1,37 @@
 // plan your visit button
 const planButton = document.getElementById('plan-button');
-
 planButton.addEventListener('click', function() {
     parent.location='#about';
+});
+
+// map transport button
+const travelButton = document.getElementById('travel-button');
+travelButton.addEventListener('click', function() {
+    dropMarkers(travelArray);
+});
+
+// map food button
+const foodButton = document.getElementById('food-button');
+foodButton.addEventListener('click', function() {
+    dropMarkers(foodArray);
+});
+
+// map drink button
+const drinkButton = document.getElementById('drink-button');
+drinkButton.addEventListener('click', function() {
+    dropMarkers(drinkArray);
+});
+
+// map stay button
+const sleepButton = document.getElementById('sleep-button');
+sleepButton.addEventListener('click', function() {
+    dropMarkers(sleepArray);
+});
+
+// map explore button
+const toDoButton = document.getElementById('todo-button');
+toDoButton.addEventListener('click', function() {
+    dropMarkers(toDoArray);
 });
 
 // carousel

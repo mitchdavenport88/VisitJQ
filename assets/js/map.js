@@ -1,5 +1,4 @@
 let map;
-
 let markersArray = [];
 
 // initMap function is fired when the google map script is read on index.html
@@ -18,9 +17,8 @@ function initMap() {
     });
 }
 
-// gets called onclick using the button in the html, where the place type is passed
-// clearMarker() is called first to delete any markers that exsist on the map
-// for loop loops through the selected object firing the addMarker function on every loop
+// gets called via the button in the html
+// loops through the selected array firing the addMarker function on every loop
 function dropMarkers(markersArray) {
     clearMarkers();
     for (let i = 0; i < markersArray.length; i++) {
@@ -28,23 +26,21 @@ function dropMarkers(markersArray) {
     };
 }
 
-// deletes any markers that exsist on the map
-function clearMarkers() {
-    for (let i = 0; i < markersArray.length; i++) {
-       markersArray[i].setMap(null); 
-    };
-    markersArray = [];
-}
-
-// gathers info while looping through the object & uses said info to place mark / add info with dot notation
+// fired while looping through dropMarkers() / adds marker info to markersArray
 function addMarker(arrayName) {
     let marker = new google.maps.Marker({
     position: arrayName.location,
     map: map,
-    title: arrayName.name,
+    //title: arrayName.name,
     icon: arrayName.iconImage,
-    animation: google.maps.Animation.DROP,
     });
-    //pushes info into an array which we then use to delete markers
+    //pushes info into the markersArray which we use to delete/show multiple markers
     markersArray.push(marker);
+}
+
+// when called (in dropMarkers) loops through markersArray and and clears it
+function clearMarkers() {
+    for (let i = 0; i < markersArray.length; i++) {
+       markersArray[i].setMap(null); 
+    };
 }
