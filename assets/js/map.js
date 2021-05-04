@@ -36,6 +36,7 @@ function addMarker(arr) {
     position: arr.location,
     map: map,
     title: arr.name,
+    icon: arr.iconImage,
     animation: google.maps.Animation.DROP,
     });
     //pushes info into an array which we then use to delete markers
@@ -51,24 +52,24 @@ function clearMarker() {
 }
 
 // TEST CONST's
-const bars = [{location: {lat: 52.4859, lng: -1.9119}, name: 'Button Factory'},
-              {location: {lat: 52.4845, lng: -1.9043}, name: 'Cucino Rustica'}
+const bars = [{location: {lat: 52.4859, lng: -1.9119}, name: 'Button Factory', iconImage: 'assets/images/custom-markers/drink-marker.png'},
+              {location: {lat: 52.4845, lng: -1.9043}, name: 'Cucino Rustica', iconImage: 'assets/images/custom-markers/drink-marker.png'}
 ];
 
-const food = [{location: {lat: 52.4865, lng: -1.9077}, name: 'Otto'},
-              {location: {lat: 52.4852, lng: -1.9078}, name: 'Lasan'}
+const food = [{location: {lat: 52.4865, lng: -1.9077}, name: 'Otto', iconImage: 'assets/images/custom-markers/food-marker.png'},
+              {location: {lat: 52.4852, lng: -1.9078}, name: 'Lasan', iconImage: 'assets/images/custom-markers/food-marker.png'}
 ];
 
-const toDo = [{location: {lat: 52.4885, lng: -1.9006}, name: 'MMA'},
-              {location: {lat: 52.4908, lng: -1.9121}, name: 'Museum'}
+const toDo = [{location: {lat: 52.4885, lng: -1.9006}, name: 'MMA', iconImage: 'assets/images/custom-markers/stay-marker.png'},
+              {location: {lat: 52.4908, lng: -1.9121}, name: 'Museum', iconImage: 'assets/images/custom-markers/stay-marker.png'}
 ];
 
-const other = [{location: {lat: 52.4847, lng: -1.9116}, name: 'Pen Museum'},
-               {location: {lat: 52.4833, lng: -1.9140}, name: 'Church'}
+const other = [{location: {lat: 52.4847, lng: -1.9116}, name: 'Pen Museum', iconImage: 'assets/images/custom-markers/explore-marker.png'},
+               {location: {lat: 52.4833, lng: -1.9140}, name: 'Church', iconImage: 'assets/images/custom-markers/explore-marker.png'}
 ];
 
-const travel = [{location: {lat: 52.4898, lng: -1.9129}, name: 'Train Station'},
-               {location: {lat: 52.4879, lng: -1.9040}, name: 'St Pauls Tram Stop'}
+const travel = [{location: {lat: 52.4898, lng: -1.9129}, name: 'Train Station', iconImage: 'assets/images/custom-markers/travel-marker.png'},
+               {location: {lat: 52.4879, lng: -1.9040}, name: 'St Pauls Tram Stop', iconImage: 'assets/images/custom-markers/travel-marker.png'}
 ];
 
 /* // final obj's
