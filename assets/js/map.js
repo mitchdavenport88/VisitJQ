@@ -13,7 +13,9 @@ function initMap() {
         zoom: 14.5,
         mapTypeId: 'terrain',
         disableDefaultUI: true
-    });    
+    });
+    // drops markers for train / tram stations onload
+    dropMarker(travel);
 }
 
 // gets called onclick using the button in the html, where the name of the object is passed
@@ -26,18 +28,19 @@ function dropMarker(markersArray) {
     };
 }
 
+let markersArray = [];
+
 // gathers info while looping through the object & uses said info to place mark / add info with dot notation
 function addMarker(arr) {
     let marker = new google.maps.Marker({
     position: arr.location,
     map: map,
-    title: arr.name
+    title: arr.name,
+    animation: google.maps.Animation.DROP,
     });
     //pushes info into an array which we then use to delete markers
     markersArray.push(marker);
 }
-
-let markersArray = [];
 
 // deletes any markers that exsist on the map
 function clearMarker() {
@@ -46,8 +49,6 @@ function clearMarker() {
     };
     markersArray = [];
 }
-
-// WANT TO TRY AN IF STATEMENT TO PICK UP TYPES
 
 // TEST CONST's
 const bars = [{location: {lat: 52.4859, lng: -1.9119}, name: 'Button Factory'},
@@ -62,11 +63,15 @@ const toDo = [{location: {lat: 52.4885, lng: -1.9006}, name: 'MMA'},
               {location: {lat: 52.4908, lng: -1.9121}, name: 'Museum'}
 ];
 
-const other = [{location: {lat: 52.4898, lng: -1.9129}, name: 'Train Station'},
+const other = [{location: {lat: 52.4847, lng: -1.9116}, name: 'Pen Museum'},
                {location: {lat: 52.4833, lng: -1.9140}, name: 'Church'}
-];  
+];
 
-// final obj's
+const travel = [{location: {lat: 52.4898, lng: -1.9129}, name: 'Train Station'},
+               {location: {lat: 52.4879, lng: -1.9040}, name: 'St Pauls Tram Stop'}
+];
+
+/* // final obj's
 const objDrink = [
     // button factory
     {location: {lat: 52.4859748503573, lng: -1.911887096396719}, 
@@ -173,4 +178,4 @@ const objSleep = [
     // kettleworks
     {location: {lat: 52.48606604605024, lng: -1.917875362050885}, 
     name: 'The Kettleworks'}
-];
+]; */

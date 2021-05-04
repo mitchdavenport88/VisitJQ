@@ -252,7 +252,7 @@ body {
     background-color: #FBFAD3;
     padding: 0.75%;
     margin: 0.75%;
-    /* min-width: 100px; */
+    width: 100%;
     color: #36622B;
     font-weight: bold;
     border: 1px solid #36622B;
