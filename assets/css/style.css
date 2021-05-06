@@ -355,21 +355,21 @@ label {
 #success, 
 #failed {
     text-align: center;
-    
     width: 90%;
     margin: 0 auto;
     margin-bottom: 3%;
     border-radius: 5px;
-    border: 1px solid #FBFAD3;
     display: none;
 }
 
 #success {
-    background-color: #36622B;    
+    background-color: #36622B;
+    border: 1px solid #FBFAD3;    
 }
 
 #failed {
-    background-color: red;
+    background-color: #CE1212;
+    border: 1px solid #000;
 }
 
 #success p, 
