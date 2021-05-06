@@ -6,13 +6,19 @@ function sendMail(contactForm) {
         'message': contactForm.message.value
     })
     .then(
-        function(response) {
-            console.log('success', response);
-            //reset found on https://developer.mozilla.org/en-US/docs/Web/API/HTMLFormElement/reset
+        function() {
+            // reset found on https://developer.mozilla.org/en-US/docs/Web/API/HTMLFormElement/reset
             document.getElementById('contact-form').reset();
+            // shows success message
+            document.getElementById('success').style.display = 'block';
+            // hides message after 10s
+            setTimeout(function() {
+                document.getElementById('success').style.display = 'none';
+            }, 10000);
         },
-        function(error) {
-            console.log('failed', error);
+        function() {
+            // shows failed message
+            document.getElementById('failed').style.display = 'block';
         }
     );
     // To block from loading a new page
