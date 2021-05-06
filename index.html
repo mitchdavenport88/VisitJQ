@@ -217,14 +217,22 @@
     <section id="contact">
         <h1 class="section-heading">Contact</h1>
         <div class="contact-container">
-            <form class="contact-form" onsubmit="return sendMail(this);">
-                <label for="name">name:</label>
-                <input type="text" id="name" name="name" class="form-box" required>
-                <label for="email">email:</label>
-                <input type="email" id="email" name="email" class="form-box" required>
-                <label for="message">message:</label>
-                <textarea name="message" id="message" class="form-box" required></textarea>
-                <input type="submit" class="send-button" value="send">
+            <form id="contact-form" class="row" onsubmit="return sendMail(this);">
+                <div class="col-12 col-md-6">
+                    <label for="name">name:</label>
+                    <input type="text" id="name" name="user_name" class="form-box" required>
+                </div>
+                <div class="col-12 col-md-6">
+                    <label for="email">email:</label>
+                    <input type="email" id="email" name="user_email" class="form-box" required>
+                </div>
+                <div class="col-12">
+                    <label for="message">message:</label>
+                    <textarea name="message" id="message" class="form-box" required></textarea>
+                </div>
+                <div class="col-12 send-button-container">
+                    <input type="submit" class="send-button" value="send">    
+                </div>
             </form>
         </div>
     </section>

@@ -282,7 +282,7 @@ body {
 
 #footer {
     color: #FBFAD3;
-    background-color: #729D39;
+    background-color: #36622B;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -328,17 +328,64 @@ body {
 /* contact */
 
 .contact-container {
-
+    width: 100%;
+    background-color: #729D39;
 }
 
-.contact-form {
+#contact-form {
+    width: 70%;
+    margin: 0 auto;
+    padding: 20px 0;
+}
 
+label {
+    display: block;
+    color: #FBFAD3;
+    letter-spacing: 0.1rem;
+    margin-bottom: 1%;
 }
 
 .form-box {
+    width: 100%;
+    margin-bottom: 3%;
+    padding: 1%;
+    border-radius: 5px;
+    font-size: 0.75rem;
+    letter-spacing: 0.05rem;
+    color: #36622B;
+    background-color: #FBFAD3;
+}
 
+#contact-form textarea {
+    resize: none;
+    min-height: 150px;
+}
+
+.send-button-container {
+    display: flex;
+    justify-content: flex-end;
 }
 
 .send-button {
-    
+    background-color: #FBFAD3;
+    color: #36622B;
+    font-weight: bold;
+    border: 1px solid #36622B;
+    border-radius: 5px;
+    letter-spacing: 0.1rem;
+    padding: 0.75% 3%;
+}
+
+/* max-width tablet */
+@media only screen and (max-width: 991px) {  
+    #contact-form {
+        width: 80%;
+    }
+}
+
+/* max-width sm */
+@media only screen and (max-width: 575px) {
+    #contact-form {
+        width: 90%;
+    }
 }
