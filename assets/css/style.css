@@ -14,31 +14,33 @@ body {
 .my-navbar {
     background-color: #729D39;
     font-size: 1rem;
-}
-
-.my-navbar a {
-    color: #FBFAD3;
-    letter-spacing: 0.2rem;
+    border-bottom: 1px solid #FBFAD3;
 }
 
 .my-logo {
     font-size: 2rem;
+    color: #FBFAD3;
     font-weight: bold;
+    letter-spacing: 0.2rem;
     margin-left: 2.5%;
 }
 
-/* .my-nav {
-    margin-right: 2.5%;
-} */
+.my-navbar a {
+    color: #FBFAD3;
+}
 
 .nav-item {
     margin: 0 20px;
     text-align: center;
 }
 
-.nav-item:hover {
-    text-decoration: underline;
-    font-size: 1.05rem;
+.nav-link {
+    color: #FBFAD3;
+    letter-spacing: 0.1rem;
+}
+
+.nav-link:hover {
+    font-weight: bold;
 }
 
 .my-burger {
@@ -278,29 +280,6 @@ body {
     padding: 0;
 }
 
-/* footer */
-
-#footer {
-    color: #FBFAD3;
-    background-color: #36622B;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 1% 2.5%;
-    border-top: 1px solid #FBFAD3;
-}
-
-#footer p {
-    margin: 0;
-}
-
-#footer a {
-    color: #FBFAD3;
-    font-size: 1.5rem;
-    padding: 5px;
-    margin-left: 10px;
-}
-
 /* contact */
 
 .contact-container {
@@ -380,16 +359,41 @@ label {
     color: #FBFAD3;
 }
 
+/* footer */
+
+#footer {
+    color: #FBFAD3;
+    background-color: #36622B;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1% 2.5%;
+    border-top: 1px solid #FBFAD3;
+}
+
+#footer p {
+    margin: 0;
+}
+
+#footer a {
+    color: #FBFAD3;
+    font-size: 1.5rem;
+    padding: 5px;
+    margin-left: 10px;
+}
+
 /* media queries */
+
 /* max-width tablet */
 @media only screen and (max-width: 991px) {  
     /* carousel content */
     .slider div {
         flex-basis: 100%;
     }
-    .about-carousel-row {
-        overflow-y: scroll;
+    .about-carousel {
+        height: auto;
     }
+
     /* contact */
     #contact-form {
         width: 80%;
@@ -408,7 +412,7 @@ label {
 }
 
 /* max-width sm */
-@media only screen and (max-width: 575px) {
+@media only screen and (max-width: 575px) {   
     /* contact */
     #contact-form {
         width: 90%;
