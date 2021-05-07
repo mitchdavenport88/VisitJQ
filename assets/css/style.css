@@ -224,7 +224,7 @@ body {
     background-size: cover;
     background-position: right;
     background-repeat: no-repeat;
-
+    padding: 0;
 }
 
 /* to do section - google map api */

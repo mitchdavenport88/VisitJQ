@@ -1,3 +1,14 @@
+// hides the drop down menu once menu option has been clicked (overides bs toggle)
+const dropDownLinks = document.getElementsByClassName('nav-link');
+const navbarNav = document.getElementById('navbarNav');
+// dropDownLinks return an array - need to apply event listener to each link
+for (i = 0; i < dropDownLinks.length; i++) {
+    dropDownLinks[i].addEventListener('click', function() {
+        // bootstap class of .show is toggled in #navbarNav to show/hide dropdown
+        navbarNav.classList.remove('show');
+    })
+};
+
 // plan your visit button
 const planButton = document.getElementById('plan-button');
 planButton.addEventListener('click', function() {
