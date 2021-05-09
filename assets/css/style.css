@@ -280,6 +280,10 @@ body {
     padding: 0;
 }
 
+.info-window {
+    text-align: center;
+}
+
 /* contact */
 
 .contact-container {

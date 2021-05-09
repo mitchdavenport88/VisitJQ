@@ -38,8 +38,15 @@ function addMarker(placeObj) {
     markersArray.push(marker);
 
     // following block adds info windows to each marker - walkthrough: Eamonn Smyth, How to Google maps
-    // contentString is the template for each info window - add ${}
-    let contentString = `<h3>window title</h3><p>window info</p><a>window website</a>`;
+    // contentString is the template for each info window
+    let contentString = 
+    `<div class="info-window">
+        <h5>${placeObj.name}</h5>
+        <h6>${placeObj.title}</h6>
+        <p>${placeObj.desc}</p>
+        <a href="${placeObj.website}" target="_blank">Go to website</a>
+    </div>`;
+
     // add info window and its properties
     const infowindow = new google.maps.InfoWindow({
         maxWidth: 300,
@@ -47,7 +54,7 @@ function addMarker(placeObj) {
     });
 
     // event listener to open info window when marker is clicked
-    marker.addListener('click', function() {
+    marker.addListener('click', function () {
         //closes windows that are open (seperate function - btm)
         closeWindows();
         // opens the window & then sets itself to infoObj - this we clear in closeWindows()
@@ -62,7 +69,7 @@ function addMarker(placeObj) {
 function clearMarkers() {
     // removes marker off map
     for (let i = 0; i < markersArray.length; i++) {
-       markersArray[i].setMap(null);
+        markersArray[i].setMap(null);
     };
     // clears array (deletes marker)
     markersArray = [];
