@@ -1,3 +1,47 @@
+// plan your visit (landing page) button
+const planButton = document.getElementById('plan-button');
+// map buttons - travel / food / drink / sleep / to do
+const travelButton = document.getElementById('travel-button');
+const foodButton = document.getElementById('food-button');
+const drinkButton = document.getElementById('drink-button');
+const sleepButton = document.getElementById('sleep-button');
+const toDoButton = document.getElementById('todo-button');
+// submit button (contact form)
+const submitButton = document.getElementById('submit-button');
+
+// plan your visit button - scrolls down to about section
+planButton.addEventListener('click', function() {
+    parent.location='#about';
+});
+
+// button hover class - inverts colors of all buttons
+const allButtons = [planButton, travelButton, foodButton, drinkButton, sleepButton, toDoButton, submitButton];
+for (i = 0; i < allButtons.length; i++) {
+    allButtons[i].addEventListener('mouseover', function() {
+        this.classList.add('button-bg-after');
+    });
+    allButtons[i].addEventListener('mouseout', function() {
+        this.classList.remove('button-bg-after');
+    });
+}
+
+// map buttons - trigger dropMarkers in maps.js
+travelButton.addEventListener('click', function() {
+    dropMarkers(travelArray);
+});
+foodButton.addEventListener('click', function() {
+    dropMarkers(foodArray);
+});
+drinkButton.addEventListener('click', function() {
+    dropMarkers(drinkArray);
+});
+sleepButton.addEventListener('click', function() {
+    dropMarkers(sleepArray);
+});
+toDoButton.addEventListener('click', function() {
+    dropMarkers(toDoArray);
+});
+
 // hides the drop down menu once menu option has been clicked (overides bs toggle)
 const dropDownLinks = document.getElementsByClassName('nav-link');
 const navbarNav = document.getElementById('navbarNav');
@@ -8,51 +52,6 @@ for (i = 0; i < dropDownLinks.length; i++) {
         navbarNav.classList.remove('show');
     })
 };
-
-// plan your visit (landing page) button
-const planButton = document.getElementById('plan-button');
-planButton.addEventListener('click', function() {
-    parent.location='#about';
-});
-
-// map button - travel
-const travelButton = document.getElementById('travel-button');
-travelButton.addEventListener('click', function() {
-    dropMarkers(travelArray);
-});
-
-// map button - food
-const foodButton = document.getElementById('food-button');
-foodButton.addEventListener('click', function() {
-    dropMarkers(foodArray);
-});
-
-// map button - drink
-const drinkButton = document.getElementById('drink-button');
-drinkButton.addEventListener('click', function() {
-    dropMarkers(drinkArray);
-});
-
-// map button - sleep
-const sleepButton = document.getElementById('sleep-button');
-sleepButton.addEventListener('click', function() {
-    dropMarkers(sleepArray);
-});
-
-// map button - to do
-const toDoButton = document.getElementById('todo-button');
-toDoButton.addEventListener('click', function() {
-    dropMarkers(toDoArray);
-});
-
-const submitButton = document.getElementById('submit-button');
-
-submitButton.addEventListener('mouseover', function() {
-    this.classList.add('button-bg-after');
-});
-submitButton.addEventListener('mouseout', function() {
-    this.classList.remove('button-bg-after');
-});
 
 // carousel
 // walkthrough found on https://www.youtube.com/watch?v=rTB-UNl_B_Y and edited accordingly
