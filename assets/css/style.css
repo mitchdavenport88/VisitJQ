@@ -327,7 +327,8 @@ label {
 }
 
 #success, 
-#failed {
+#failed, 
+#validate {
     text-align: center;
     width: 90%;
     margin: 0 auto;
@@ -341,13 +342,15 @@ label {
     border: 1px solid #FBFAD3;    
 }
 
-#failed {
+#failed, 
+#validate {
     background-color: #CE1212;
     border: 1px solid #000;
 }
 
 #success p, 
-#failed p {
+#failed p, 
+#validate p {
     margin: 0;
     padding: 1%;
     letter-spacing: 0.1rem;
