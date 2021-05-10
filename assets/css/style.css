@@ -79,12 +79,9 @@ body {
 }
 
 .landing-page-overlay-textbox button {
-    background-color: #FBFAD3;
     padding: 5%;
     margin-top: 10%;
-    color: #36622B;
     font-weight: bold;
-    border: 1px solid #36622B;
     border-radius: 5px;
     letter-spacing: 0.1rem;
 }
@@ -251,13 +248,10 @@ body {
 }
 
 .explore-container button {
-    background-color: #FBFAD3;
     padding: 0.75%;
     margin: 0.75%;
     width: 100%;
-    color: #36622B;
     font-weight: bold;
-    border: 1px solid #36622B;
     border-radius: 5px;
 }
 
@@ -326,10 +320,7 @@ label {
 }
 
 .send-button {
-    background-color: #FBFAD3;
-    color: #36622B;
     font-weight: bold;
-    border: 1px solid #36622B;
     border-radius: 5px;
     letter-spacing: 0.1rem;
     padding: 0.75% 3%;
@@ -384,6 +375,20 @@ label {
     font-size: 1.5rem;
     padding: 5px;
     margin-left: 10px;
+}
+
+/* buttons */
+
+.button-bg-before {
+    background-color: #FBFAD3;
+    color: #36622B;
+    border: 1px solid #36622B;
+}
+
+.button-bg-after {
+    background-color: #36622B;
+    color: #FBFAD3;
+    border: 1px solid #FBFAD3;
 }
 
 /* media queries */

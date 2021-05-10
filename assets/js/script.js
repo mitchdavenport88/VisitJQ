@@ -45,6 +45,15 @@ toDoButton.addEventListener('click', function() {
     dropMarkers(toDoArray);
 });
 
+const submitButton = document.getElementById('submit-button');
+
+submitButton.addEventListener('mouseover', function() {
+    this.classList.add('button-bg-after');
+});
+submitButton.addEventListener('mouseout', function() {
+    this.classList.remove('button-bg-after');
+});
+
 // carousel
 // walkthrough found on https://www.youtube.com/watch?v=rTB-UNl_B_Y and edited accordingly
 const slider = document.querySelector('.slider');
