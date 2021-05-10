@@ -1,4 +1,8 @@
 // CI walkthrough / EmailJS documentation
+(function () {
+    emailjs.init('user_S3AJosb3HjKtZGHIvYZxa');
+})();
+
 // idea of showing and hiding alerts came from this Traversy Media video - https://youtu.be/PP4Tr0l08NE
 function sendMail(contactForm) {
     emailjs.send('service_779rxdl', 'template_0i79coo', {
