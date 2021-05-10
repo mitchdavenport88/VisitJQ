@@ -23,24 +23,7 @@ for (i = 0; i < allButtons.length; i++) {
     allButtons[i].addEventListener('mouseout', function() {
         this.classList.remove('button-bg-after');
     });
-}
-
-// map buttons - trigger dropMarkers in maps.js
-travelButton.addEventListener('click', function() {
-    dropMarkers(travelArray);
-});
-foodButton.addEventListener('click', function() {
-    dropMarkers(foodArray);
-});
-drinkButton.addEventListener('click', function() {
-    dropMarkers(drinkArray);
-});
-sleepButton.addEventListener('click', function() {
-    dropMarkers(sleepArray);
-});
-toDoButton.addEventListener('click', function() {
-    dropMarkers(toDoArray);
-});
+};
 
 // hides the drop down menu once menu option has been clicked (overides bs toggle)
 const dropDownLinks = document.getElementsByClassName('nav-link');
@@ -50,7 +33,7 @@ for (i = 0; i < dropDownLinks.length; i++) {
     dropDownLinks[i].addEventListener('click', function() {
         // bootstap class of .show is toggled in #navbarNav to show/hide dropdown
         navbarNav.classList.remove('show');
-    })
+    });
 };
 
 // carousel
