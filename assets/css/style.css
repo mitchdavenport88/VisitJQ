@@ -285,6 +285,22 @@ body {
 
 .info-window {
     text-align: center;
+    letter-spacing: 0.05rem;
+    color: var(--dark-green);
+}
+
+.info-window h5, 
+.info-window a {
+    font-weight: bold;
+}
+
+.info-window a {
+    text-decoration: none;
+    color: var(--dark-green);    
+}
+
+.info-window a:hover {
+    text-decoration: underline;   
 }
 
 /* contact */

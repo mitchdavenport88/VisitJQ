@@ -1,13 +1,14 @@
 let map;
 let markersArray = [];
 
+// jQ is the center point
+const jQ = {
+    lat: 52.487137777478495,
+    lng: -1.9097842445407542
+};
+
 // initMap function is fired when the google map script is read in index.html
 function initMap() {
-    // jQ is the center point
-    const jQ = {
-        lat: 52.487137777478495,
-        lng: -1.9097842445407542
-    };
     // renders map in #map div
     map = new google.maps.Map(document.getElementById('map'), {
         center: jQ,
@@ -19,6 +20,8 @@ function initMap() {
 
 // called via eventListeners that pass in the array that holds the objects in map-consts.js
 function dropMarkers(arrayName) {
+    map.panTo(jQ);
+    map.setZoom(14.5);
     clearMarkers();
     // calls addMarker on each object / element in the array
     for (let i = 0; i < arrayName.length; i++) {
@@ -44,17 +47,19 @@ function addMarker(placeObj) {
         <h5>${placeObj.name}</h5>
         <h6>${placeObj.title}</h6>
         <p>${placeObj.desc}</p>
-        <a href="${placeObj.website}" target="_blank">Go to website</a>
+        <a href="${placeObj.website}" target="_blank">Click here to visit website</a>
     </div>`;
 
     // add info window and its properties
     const infowindow = new google.maps.InfoWindow({
-        maxWidth: 300,
+        maxWidth: 400,
         content: contentString
     });
 
     // event listener to open info window when marker is clicked
     marker.addListener('click', function () {
+        // pans so the marker is in the middle
+        map.panTo(placeObj.location);
         //closes windows that are open (seperate function - btm)
         closeWindows();
         // opens the window & then sets itself to infoObj - this we clear in closeWindows()
@@ -83,3 +88,20 @@ function closeWindows() {
         infoObj[0].length = 0;
     };
 }
+
+//  eventListeners
+travelButton.addEventListener('click', function() {
+    dropMarkers(travelArray);
+});
+foodButton.addEventListener('click', function() {
+    dropMarkers(foodArray);
+});
+drinkButton.addEventListener('click', function() {
+    dropMarkers(drinkArray);
+});
+sleepButton.addEventListener('click', function() {
+    dropMarkers(sleepArray);
+});
+toDoButton.addEventListener('click', function() {
+    dropMarkers(toDoArray);
+});
