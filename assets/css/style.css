@@ -287,6 +287,10 @@ body {
     text-align: center;
     letter-spacing: 0.05rem;
     color: var(--dark-green);
+    padding: 2.5%;
+    background-color: var(--light-green);
+    border-radius: 5px;
+    border: 1px solid var(--dark-green);
 }
 
 .info-window h5, 
