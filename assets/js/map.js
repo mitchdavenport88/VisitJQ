@@ -7,11 +7,15 @@ function setDefaultText() {
     for (i = 0; i < recommendContentContainer.length; i++) {
         recommendContentContainer[i].innerHTML = 
         `<h3 class="recommend-content-title">Visit JQ Recommends</h3>
+        <hr class="divider">
+        <p class="recommend-content-p">
+            Museums, heritage, creativity and culture. The JQ is bursting with activities and 
+            new experiences.
+        </p>
         <hr>
         <p class="recommend-content-p">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Commodi laborum eum veniam 
-            voluptatibus quidem ad, hic qui, aperiam magnam, delectus voluptatum ipsum inventore 
-            laudantium tenetur! Vel nam dolore dolores perspiciatis?
+            Use our interactive map to help plan your visit and view our top picks. Click on one 
+            of the buttons above the map to start!
         </p>`;
     };
 }

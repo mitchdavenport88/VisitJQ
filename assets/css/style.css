@@ -299,7 +299,7 @@ body {
     line-height: 1.8rem;
 }
 
-.recommend-content hr {
+.divider {
     margin: 1.2rem;
     width: 50%;
     height: 2px;
