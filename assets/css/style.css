@@ -290,12 +290,17 @@ body {
     justify-content: center;
 }
 
-.recommend-content h4, 
+.recommend-content h3, 
 .recommend-content p {
     margin: 0;
 }
 
+.recommend-content p {
+    line-height: 1.8rem;
+}
+
 .recommend-content hr {
+    margin: 1.2rem;
     width: 50%;
     height: 2px;
     text-align: center;
