@@ -299,6 +299,16 @@ body {
     line-height: 1.8rem;
 }
 
+.recommend-content a {
+    text-decoration: none;
+    font-weight: bold;
+    color: var(--dark-green);    
+}
+
+.recommend-content a:hover {
+    text-decoration: underline;
+}
+
 .divider {
     margin: 1.2rem;
     width: 50%;

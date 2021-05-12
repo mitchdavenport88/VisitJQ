@@ -1,11 +1,10 @@
 // sets default recommend-content in HTML
+const recContentDefault = document.getElementsByClassName('recommend-content');
 window.addEventListener("load", setDefaultText);
-
-const recommendContentContainer = document.getElementsByClassName('recommend-content');
 // defaults recommend-content
 function setDefaultText() {
-    for (i = 0; i < recommendContentContainer.length; i++) {
-        recommendContentContainer[i].innerHTML = 
+    for (i = 0; i < recContentDefault.length; i++) {
+        recContentDefault[i].innerHTML = 
         `<h3 class="recommend-content-title">Visit JQ Recommends</h3>
         <hr class="divider">
         <p class="recommend-content-p">
@@ -37,66 +36,52 @@ function initMap() {
 }
 
 // called via eventListeners that pass in the array that holds the objects in map-consts.js
-function dropMarkers(arrayName) {
+function dropMarkers(placeType) {
     map.panTo(jQ);
     map.setZoom(14.5);
     clearMarkers();
     // calls addMarker on each object / element in the array
-    for (let i = 0; i < arrayName.length; i++) {
-        addMarker(arrayName[i]);
+    for (let i = 0; i < placeType.length; i++) {
+        addMarker(placeType[i]);
     };
 }
 
 // adds markers - called while looping through dropMarkers()
-function addMarker(placeObj) {
+function addMarker(place) {
     const marker = new google.maps.Marker({
-        position: placeObj.location,
+        position: place.location,
         map: map,
-        title: placeObj.name,
-        icon: placeObj.iconImage
+        title: place.name,
+        icon: place.iconImage
     });
     // push marker info to markersArray which we use to show & delete multiple markers
     markersArray.push(marker);
-
     // add info window and its properties
     const infowindow = new google.maps.InfoWindow({
         maxWidth: 400,
         content: 
         `<div class="info-window">
-            <h5>${placeObj.name}</h5>
-            <h6>${placeObj.title}</h6>
-            <p>${placeObj.desc}</p>
-            <a href="${placeObj.website}" target="_blank">Click here to visit website</a>
+            <h5>${place.name}</h5>
+            <h6>${place.title}</h6>
+            <p>${place.desc}</p>
+            <a href="${place.website}" target="_blank">Click here to visit website</a>
         </div>`
     });
-
     // walkthrough: Eamonn Smyth, How to Google maps
     // event listener to open info window when marker is clicked
     marker.addListener('click', function () {
         // pans so the marker is in the middle
-        map.panTo(placeObj.location);
+        map.panTo(place.location);
         //closes windows that are open (seperate function - btm)
         closeWindows();
         // opens the window & then sets itself to infoObj - this we clear in closeWindows()
         infowindow.open(map, marker);
         infoObj[0] = infowindow;
+        // changes text next to map to read selected info
+        changeDefaultText(place);
     });
     // stores infowindow info & gets wiped by closeWindows()
     infoObj = [];
-
-    // event listener to change text in recommend-content
-    marker.addListener('click', function () {
-        if (placeObj.reviewTitle && placeObj.review) {
-           for (i = 0; i < recommendContentContainer.length; i++) {
-                recommendContentContainer[i].innerHTML = 
-                `<h3 class="recommend-content-title">${placeObj.reviewTitle}</h3>
-                <hr>
-                <p class="recommend-content-p">${placeObj.review}</p>`;
-            }; 
-        } else {
-            setDefaultText();
-        };
-    });
 }
 
 // when called (in dropMarkers) loops through markersArray and deletes existing markers
@@ -118,24 +103,46 @@ function closeWindows() {
     };
 }
 
+function changeDefaultText(place) {
+    if (place.reviewTitle && place.review) {
+        for (i = 0; i < recContentDefault.length; i++) {
+            recContentDefault[i].innerHTML = 
+            `<h3 class="recommend-content-title">${place.reviewTitle}</h3>
+            <hr class="divider">
+            <p class="recommend-content-p">${place.review}</p>`;
+        };
+    } else if (place.addInfo) {
+        for (i = 0; i < recContentDefault.length; i++) {
+            recContentDefault[i].innerHTML = 
+            `<h3 class="recommend-content-title">${place.name}</h3>
+            <hr class="divider">
+            <p class="recommend-content-p">${place.addInfo}</p>
+            <hr>
+            <a href="${place.website}" target="_blank">Click here for timetables, journey planners and any other additional info.</a>`;
+        };
+    } else {
+        setDefaultText();
+    };
+}
+
 //  eventListeners
 travelButton.addEventListener('click', function() {
     setDefaultText();
-    dropMarkers(travelArray);
+    dropMarkers(jewelleryQuarterPlaces.travel);
 });
 foodButton.addEventListener('click', function() {
     setDefaultText();
-    dropMarkers(foodArray);
+    dropMarkers(jewelleryQuarterPlaces.food);
 });
 drinkButton.addEventListener('click', function() {
     setDefaultText();
-    dropMarkers(drinkArray);
+    dropMarkers(jewelleryQuarterPlaces.drink);
 });
 sleepButton.addEventListener('click', function() {
     setDefaultText();
-    dropMarkers(sleepArray);
+    dropMarkers(jewelleryQuarterPlaces.sleep);
 });
 toDoButton.addEventListener('click', function() {
     setDefaultText();
-    dropMarkers(toDoArray);
+    dropMarkers(jewelleryQuarterPlaces.toDo);
 });
