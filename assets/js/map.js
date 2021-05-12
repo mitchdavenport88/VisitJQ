@@ -1,11 +1,25 @@
+// sets default recommend-content in HTML
+window.addEventListener("load", setDefaultText);
+
+const recommendContentContainer = document.getElementsByClassName('recommend-content');
+// defaults recommend-content
+function setDefaultText() {
+    for (i = 0; i < recommendContentContainer.length; i++) {
+        recommendContentContainer[i].innerHTML = 
+        `<h3 class="recommend-content-title">Visit JQ Recommends</h3>
+        <hr>
+        <p class="recommend-content-p">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Commodi laborum eum veniam 
+            voluptatibus quidem ad, hic qui, aperiam magnam, delectus voluptatum ipsum inventore 
+            laudantium tenetur! Vel nam dolore dolores perspiciatis?
+        </p>`;
+    };
+}
+
 let map;
 let markersArray = [];
-
 // jQ is the center point
-const jQ = {
-    lat: 52.487137777478495,
-    lng: -1.9097842445407542
-};
+const jQ = {lat: 52.487137777478495, lng: -1.9097842445407542};
 
 // initMap function is fired when the google map script is read in index.html
 function initMap() {
@@ -40,22 +54,19 @@ function addMarker(placeObj) {
     // push marker info to markersArray which we use to show & delete multiple markers
     markersArray.push(marker);
 
-    // following block adds info windows to each marker - walkthrough: Eamonn Smyth, How to Google maps
-    // contentString is the template for each info window
-    let contentString = 
-    `<div class="info-window">
-        <h5>${placeObj.name}</h5>
-        <h6>${placeObj.title}</h6>
-        <p>${placeObj.desc}</p>
-        <a href="${placeObj.website}" target="_blank">Click here to visit website</a>
-    </div>`;
-
     // add info window and its properties
     const infowindow = new google.maps.InfoWindow({
         maxWidth: 400,
-        content: contentString
+        content: 
+        `<div class="info-window">
+            <h5>${placeObj.name}</h5>
+            <h6>${placeObj.title}</h6>
+            <p>${placeObj.desc}</p>
+            <a href="${placeObj.website}" target="_blank">Click here to visit website</a>
+        </div>`
     });
 
+    // walkthrough: Eamonn Smyth, How to Google maps
     // event listener to open info window when marker is clicked
     marker.addListener('click', function () {
         // pans so the marker is in the middle
@@ -68,6 +79,20 @@ function addMarker(placeObj) {
     });
     // stores infowindow info & gets wiped by closeWindows()
     infoObj = [];
+
+    // event listener to change text in recommend-content
+    marker.addListener('click', function () {
+        if (placeObj.reviewTitle && placeObj.review) {
+           for (i = 0; i < recommendContentContainer.length; i++) {
+                recommendContentContainer[i].innerHTML = 
+                `<h3 class="recommend-content-title">${placeObj.reviewTitle}</h3>
+                <hr>
+                <p class="recommend-content-p">${placeObj.review}</p>`;
+            }; 
+        } else {
+            setDefaultText();
+        };
+    });
 }
 
 // when called (in dropMarkers) loops through markersArray and deletes existing markers
@@ -91,17 +116,22 @@ function closeWindows() {
 
 //  eventListeners
 travelButton.addEventListener('click', function() {
+    setDefaultText();
     dropMarkers(travelArray);
 });
 foodButton.addEventListener('click', function() {
+    setDefaultText();
     dropMarkers(foodArray);
 });
 drinkButton.addEventListener('click', function() {
+    setDefaultText();
     dropMarkers(drinkArray);
 });
 sleepButton.addEventListener('click', function() {
+    setDefaultText();
     dropMarkers(sleepArray);
 });
 toDoButton.addEventListener('click', function() {
+    setDefaultText();
     dropMarkers(toDoArray);
 });
