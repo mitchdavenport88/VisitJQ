@@ -1,30 +1,40 @@
-// sets default recommend-content in HTML
+// recommend-content class in HTML
 const recContentDefault = document.getElementsByClassName('recommend-content');
-window.addEventListener("load", setDefaultText);
-// defaults recommend-content
+
+/**
+ * setDefaultText sets the default html in recommend-content class (to the right / under the map)
+ */
 function setDefaultText() {
-    for (i = 0; i < recContentDefault.length; i++) {
-        recContentDefault[i].innerHTML = 
-        `<h3 class="recommend-content-title">Visit JQ Recommends</h3>
-        <hr class="divider">
-        <p class="recommend-content-p">
-            Museums, heritage, creativity and culture. The JQ is bursting with activities and 
-            new experiences.
-        </p>
-        <hr>
-        <p class="recommend-content-p">
-            Use our interactive map to help plan your visit and view our top picks. Click on one 
-            of the buttons above the map to start!
-        </p>`;
-    };
+    recContentDefault[0].innerHTML = 
+    `<h3 class="recommend-content-title">Visit JQ Recommends</h3>
+    <hr class="divider">
+    <p class="recommend-content-p">
+        Museums, heritage, creativity and culture. The JQ is bursting with activities and 
+        new experiences.
+    </p>
+    <hr>
+    <p class="recommend-content-p">
+        Use our interactive map to help plan your visit and view our top picks. Click on one 
+        of the buttons above the map to start!
+    </p>`;
 }
 
-let map;
-let markersArray = [];
-// jQ is the center point
-const jQ = {lat: 52.487137777478495, lng: -1.9097842445407542};
+// sets default html onload
+window.addEventListener("load", setDefaultText);
 
-// initMap function is fired when the google map script is read in index.html
+let map;
+
+let markersArray = [];
+
+// jQ is the center point
+const jQ = {
+    lat: 52.487137777478495,
+    lng: -1.9097842445407542
+};
+
+/**
+ * initMap function is fired when the google map script is read in index.html
+ */
 function initMap() {
     // renders map in #map div
     map = new google.maps.Map(document.getElementById('map'), {
@@ -35,18 +45,23 @@ function initMap() {
     });
 }
 
-// called via eventListeners that pass in the array that holds the objects in map-consts.js
+/**
+ * dropMarkers places markers on the map - called via eventListeners
+ * @param {Array} placeType - extracted from jewelleryQuarterPlaces object in map-consts.js
+ */
 function dropMarkers(placeType) {
     map.panTo(jQ);
     map.setZoom(14.5);
     clearMarkers();
-    // calls addMarker on each object / element in the array
     for (let i = 0; i < placeType.length; i++) {
         addMarker(placeType[i]);
-    };
+    }
 }
 
-// adds markers - called while looping through dropMarkers()
+/**
+ * addMarker is called while looping through dropMarkers() and adds marker icon to each location
+ * @param {Object} place - extracted from placeType array, which holds the data of each place
+ */
 function addMarker(place) {
     const marker = new google.maps.Marker({
         position: place.location,
@@ -54,9 +69,11 @@ function addMarker(place) {
         title: place.name,
         icon: place.iconImage
     });
+
     // push marker info to markersArray which we use to show & delete multiple markers
     markersArray.push(marker);
-    // add info window and its properties
+
+    // add an info window that uses data from place object for display
     const infowindow = new google.maps.InfoWindow({
         maxWidth: 400,
         content: 
@@ -67,82 +84,85 @@ function addMarker(place) {
             <a href="${place.website}" target="_blank">Click here to visit website</a>
         </div>`
     });
-    // walkthrough: Eamonn Smyth, How to Google maps
-    // event listener to open info window when marker is clicked
+
+    // walkthrough: Eamonn Smyth, How to Google maps via slack
     marker.addListener('click', function () {
-        // pans so the marker is in the middle
         map.panTo(place.location);
-        //closes windows that are open (seperate function - btm)
         closeWindows();
-        // opens the window & then sets itself to infoObj - this we clear in closeWindows()
         infowindow.open(map, marker);
+        // sets itself to infoObj that we clear in closeWindows()
         infoObj[0] = infowindow;
-        // changes text next to map to read selected info
+        // changes the default html in recommend-content class
         changeDefaultText(place);
     });
-    // stores infowindow info & gets wiped by closeWindows()
     infoObj = [];
 }
 
-// when called (in dropMarkers) loops through markersArray and deletes existing markers
+// 
+/**
+ * this function loops through markersArray and deletes existing markers by clearing the array
+ */
 function clearMarkers() {
-    // removes marker off map
     for (let i = 0; i < markersArray.length; i++) {
         markersArray[i].setMap(null);
-    };
-    // clears array (deletes marker)
+    }
     markersArray = [];
 }
 
-// called when a marker is clicked (addMarker())
+/**
+ * this function closes previously opened infoWindows by clearing the infoObj array
+ */
 function closeWindows() {
-    // clears infoObj array / removing previously opened window 
     if (infoObj.length > 0) {
         infoObj[0].close();
         infoObj[0].length = 0;
-    };
+    }
 }
 
+/**
+ * changeDefaultText replaces the default html in recommend-content class with either a reveiw or additional info
+ * @param {Object} place - extracted from placeType array, which holds the data of each place
+ */
 function changeDefaultText(place) {
     if (place.reviewTitle && place.review) {
-        for (i = 0; i < recContentDefault.length; i++) {
-            recContentDefault[i].innerHTML = 
-            `<h3 class="recommend-content-title">${place.reviewTitle}</h3>
-            <hr class="divider">
-            <p class="recommend-content-p">${place.review}</p>`;
-        };
+        recContentDefault[0].innerHTML = 
+        `<h3 class="recommend-content-title">${place.reviewTitle}</h3>
+        <hr class="divider">
+        <p class="recommend-content-p">${place.review}</p>`;
     } else if (place.addInfo) {
-        for (i = 0; i < recContentDefault.length; i++) {
-            recContentDefault[i].innerHTML = 
-            `<h3 class="recommend-content-title">${place.name}</h3>
-            <hr class="divider">
-            <p class="recommend-content-p">${place.addInfo}</p>
-            <hr>
-            <a href="${place.website}" target="_blank">Click here for timetables, journey planners and any other additional info.</a>`;
-        };
+        recContentDefault[0].innerHTML = 
+        `<h3 class="recommend-content-title">${place.name}</h3>
+        <hr class="divider">
+        <p class="recommend-content-p">${place.addInfo}</p>
+        <hr>
+        <a href="${place.website}" target="_blank">Click here for timetables, journey planners and any other additional info.</a>`;
     } else {
         setDefaultText();
-    };
+    }
 }
 
 //  eventListeners
-travelButton.addEventListener('click', function() {
+travelButton.addEventListener('click', function () {
     setDefaultText();
     dropMarkers(jewelleryQuarterPlaces.travel);
 });
-foodButton.addEventListener('click', function() {
+
+foodButton.addEventListener('click', function () {
     setDefaultText();
     dropMarkers(jewelleryQuarterPlaces.food);
 });
-drinkButton.addEventListener('click', function() {
+
+drinkButton.addEventListener('click', function () {
     setDefaultText();
     dropMarkers(jewelleryQuarterPlaces.drink);
 });
-sleepButton.addEventListener('click', function() {
+
+sleepButton.addEventListener('click', function () {
     setDefaultText();
     dropMarkers(jewelleryQuarterPlaces.sleep);
 });
-toDoButton.addEventListener('click', function() {
+
+toDoButton.addEventListener('click', function () {
     setDefaultText();
     dropMarkers(jewelleryQuarterPlaces.toDo);
 });

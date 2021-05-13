@@ -376,4 +376,4 @@ const jewelleryQuarterPlaces = {
         website: 'https://www.silverdoorapartments.com/kettleworks-serviced-apartments-birmingham-15934/', 
         iconImage: 'assets/images/custom-markers/stay-marker.png'
     }]
-}
+};
