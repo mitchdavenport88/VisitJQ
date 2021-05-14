@@ -10,16 +10,27 @@
 })();
 
 submitButton.addEventListener('click', function () {
-    // following if statements validate data input - https://www.w3schools.com/js/js_validation.asp
-    let userName = document.forms['contact-form']['user_name'].value;
-    let userEmail = document.forms['contact-form']['user_email'].value;
-    let userMessage = document.forms['contact-form']['message'].value;
-    // if statement checks for blank input fields
+    // https://www.w3schools.com/js/js_validation.asp
+    const userName = document.forms['contact-form']['user_name'].value;
+    const userEmail = document.forms['contact-form']['user_email'].value;
+    const userMessage = document.forms['contact-form']['message'].value;
+    // https://youtu.be/HzJngc-Se9Q
+    const pattern = /^[^ ]+@[^ ]+\.[a-z]{2,3}$/;
+    let validUserEmail;
+
+    // checks for blank input fields
     if (userName === '' || userEmail === '' || userMessage === '') {
         displayValidateMsg();
     }
-    // if statement checks that all input fields have been filled in and then sends the data
-    if (userName !== '' && userEmail !== '' && userMessage !== '') {
+    // checks for valid email address - https://youtu.be/HzJngc-Se9Q
+    if (userEmail.match(pattern)) {
+        validUserEmail = true;
+    } else {
+        validUserEmail = false;
+        displayValidateMsg();
+    }
+    // checks that all input data has passed the previous two validation steps, then sends the data
+    if (userName !== '' && userMessage !== '' && validUserEmail === true) {
         // changes text on button to sending...
         submitButton.value = 'sending...';
         // EmailJS template information
@@ -82,4 +93,3 @@ function displayFailedMsg() {
         document.getElementById('failed').style.display = 'none';
     }, 6000);
 }
-    
