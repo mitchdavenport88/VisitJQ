@@ -9,13 +9,12 @@ const toDoButton = document.getElementById('todo-button');
 // submit button (contact form)
 const submitButton = document.getElementById('submit-button');
 
-// plan your visit button - scrolls down to about section onclick
-// code from https://www.plus2net.com/html_tutorial/button-linking.php
+// scrolls to about section on planButton click - https://www.plus2net.com/html_tutorial/button-linking.php
 planButton.addEventListener('click', function() {
     parent.location='#about';
 });
 
-// button hover - inverts colors of selected buttons
+// button hover - inverts colors of main website buttons (allButtons)
 const allButtons = [planButton, travelButton, foodButton, drinkButton, sleepButton, toDoButton, submitButton];
 for (i = 0; i < allButtons.length; i++) {
     allButtons[i].addEventListener('mouseover', function() {
@@ -29,24 +28,26 @@ for (i = 0; i < allButtons.length; i++) {
 // hides the drop down menu once a link has been clicked (overides bootstrap toggle)
 const dropDownLinks = document.getElementsByClassName('nav-link');
 const navbarNav = document.getElementById('navbarNav');
-// dropDownLinks returns an array - need to apply event listener to each link
 for (i = 0; i < dropDownLinks.length; i++) {
     dropDownLinks[i].addEventListener('click', function() {
-        // bootstap class of .show is toggled in #navbarNav to show/hide dropdown
+        // removes bootstap class of .show which is toggled in #navbarNav
         navbarNav.classList.remove('show');
     });
 }
 
-// carousel - walkthrough found on https://www.youtube.com/watch?v=rTB-UNl_B_Y and edited accordingly
+// carousel 
+// walkthrough found on https://www.youtube.com/watch?v=rTB-UNl_B_Y and edited accordingly
 const slider = document.querySelector('.slider');
 const leftArrow = document.querySelector('.left');
 const rightArrow = document.querySelector('.right');
 const indicatorParents = document.querySelector('.carousel-controls ul');
 let sectionIndex = 0;
+// hides left arrow on load (about the jq slide is sectionIndex 0)
+window.onload = displayArrow();
 
-document.querySelectorAll('.carousel-controls li').forEach(function(indicator, ind) {
+document.querySelectorAll('.carousel-controls li').forEach(function(indicator, index) {
     indicator.addEventListener('click', function() {
-        sectionIndex = ind;
+        sectionIndex = index;
         document.querySelector('.carousel-controls .selected').classList.remove('selected');
         indicator.classList.add('selected');
         slider.style.transform = 'translate('+ (sectionIndex) * -25 +'%)';
@@ -56,23 +57,24 @@ document.querySelectorAll('.carousel-controls li').forEach(function(indicator, i
 
 leftArrow.addEventListener('click', function() {
     sectionIndex = (sectionIndex > 0) ? sectionIndex - 1 : 0;
-    document.querySelector('.carousel-controls .selected').classList.remove('selected');
-    indicatorParents.children[sectionIndex].classList.add('selected');
-    slider.style.transform = 'translate('+ (sectionIndex) * -25 +'%)';
+    nextSlide();
     displayArrow();
 });
 
 rightArrow.addEventListener('click', function() {
     sectionIndex = (sectionIndex < 3) ? sectionIndex + 1 : 3;
-    document.querySelector('.carousel-controls .selected').classList.remove('selected');
-    indicatorParents.children[sectionIndex].classList.add('selected');
-    slider.style.transform = 'translate('+ (sectionIndex) * -25 +'%)';
+    nextSlide();
     displayArrow();
 });
 
-/**
- * this function controls what arrows display and when depending on index number
- */
+/** moves slider-content on the carousel */
+function nextSlide() {
+    document.querySelector('.carousel-controls .selected').classList.remove('selected');
+    indicatorParents.children[sectionIndex].classList.add('selected');
+    slider.style.transform = 'translate('+ (sectionIndex) * -25 +'%)';
+}
+
+/** checks sectionIndex and hides left/right arrows accordingly */
 function displayArrow() {
     if (sectionIndex === 0) {
         leftArrow.style.display = 'none';
@@ -85,4 +87,3 @@ function displayArrow() {
         rightArrow.style.display = 'none';
     }
 }
-window.onload = displayArrow();

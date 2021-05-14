@@ -1,11 +1,8 @@
-// recommend-content class in HTML
-const recContentDefault = document.getElementsByClassName('recommend-content');
-
-/**
- * setDefaultText sets the default html in recommend-content class (to the right / under the map)
- */
+// recommend-content class is a section in the html (to the right / under the map)
+const reccomendContentSection = document.getElementsByClassName('recommend-content');
+/** sets the default html in recommend-content class on load */
 function setDefaultText() {
-    recContentDefault[0].innerHTML = 
+    reccomendContentSection[0].innerHTML = 
     `<h3 class="recommend-content-title">Visit JQ Recommends</h3>
     <hr class="divider">
     <p class="recommend-content-p">
@@ -18,12 +15,14 @@ function setDefaultText() {
         of the buttons above the map to start!
     </p>`;
 }
-
-// sets default html onload
 window.addEventListener("load", setDefaultText);
 
-let map;
+// walkthroughs & tutorials: 
+// Eamonn Smyth - How to Google maps PDF via slack & Pradip Debnath - https://youtu.be/Xptz0GQ2DO4
+// Google Maps JavaScript API documentation | Developers console 
+// Sam Codes - https://youtu.be/uPhWSyRqQDA & Traversy Media - https://youtu.be/Zxf1mnP5zcw
 
+let map;
 let markersArray = [];
 
 // jQ is the center point
@@ -32,11 +31,9 @@ const jQ = {
     lng: -1.9097842445407542
 };
 
-/**
- * initMap function is fired when the google map script is read in index.html
- */
+/** initMap function is fired when the google map script is read in index.html*/
 function initMap() {
-    // renders map in #map div
+    // renders map in #map div in html
     map = new google.maps.Map(document.getElementById('map'), {
         center: jQ,
         zoom: 14.5,
@@ -46,7 +43,7 @@ function initMap() {
 }
 
 /**
- * dropMarkers places markers on the map - called via eventListeners
+ * places markers on the map. called via eventListeners which pass in placeType
  * @param {Array} placeType - extracted from jewelleryQuarterPlaces object in map-consts.js
  */
 function dropMarkers(placeType) {
@@ -59,8 +56,9 @@ function dropMarkers(placeType) {
 }
 
 /**
- * addMarker is called while looping through dropMarkers() and adds marker icon to each location
- * @param {Object} place - extracted from placeType array, which holds the data of each place
+ * collects data from the object place. we use this data to position markers, add and show info to 
+ * the infoWindows and change the content in the recommend-content div
+ * @param {Object} place - extracted from placeType array, which holds all the data of each place
  */
 function addMarker(place) {
     const marker = new google.maps.Marker({
@@ -69,11 +67,9 @@ function addMarker(place) {
         title: place.name,
         icon: place.iconImage
     });
-
     // push marker info to markersArray which we use to show & delete multiple markers
     markersArray.push(marker);
 
-    // add an info window that uses data from place object for display
     const infowindow = new google.maps.InfoWindow({
         maxWidth: 400,
         content: 
@@ -85,23 +81,18 @@ function addMarker(place) {
         </div>`
     });
 
-    // walkthrough: Eamonn Smyth, How to Google maps via slack
     marker.addListener('click', function () {
         map.panTo(place.location);
         closeWindows();
         infowindow.open(map, marker);
-        // sets itself to infoObj that we clear in closeWindows()
+        // sets itself to infoObj[0] that we clear using closeWindows()
         infoObj[0] = infowindow;
-        // changes the default html in recommend-content class
         changeDefaultText(place);
     });
     infoObj = [];
 }
 
-// 
-/**
- * this function loops through markersArray and deletes existing markers by clearing the array
- */
+/** this function loops through markersArray and deletes existing markers by clearing the array */
 function clearMarkers() {
     for (let i = 0; i < markersArray.length; i++) {
         markersArray[i].setMap(null);
@@ -109,9 +100,7 @@ function clearMarkers() {
     markersArray = [];
 }
 
-/**
- * this function closes previously opened infoWindows by clearing the infoObj array
- */
+/** this function closes previously opened infoWindows by clearing the infoObj array */
 function closeWindows() {
     if (infoObj.length > 0) {
         infoObj[0].close();
@@ -120,17 +109,17 @@ function closeWindows() {
 }
 
 /**
- * changeDefaultText replaces the default html in recommend-content class with either a reveiw or additional info
+ * replaces the default html in recommend-content div with either a reveiw or additional info
  * @param {Object} place - extracted from placeType array, which holds the data of each place
  */
 function changeDefaultText(place) {
     if (place.reviewTitle && place.review) {
-        recContentDefault[0].innerHTML = 
+        reccomendContentSection[0].innerHTML = 
         `<h3 class="recommend-content-title">${place.reviewTitle}</h3>
         <hr class="divider">
         <p class="recommend-content-p">${place.review}</p>`;
     } else if (place.addInfo) {
-        recContentDefault[0].innerHTML = 
+        reccomendContentSection[0].innerHTML = 
         `<h3 class="recommend-content-title">${place.name}</h3>
         <hr class="divider">
         <p class="recommend-content-p">${place.addInfo}</p>
@@ -141,7 +130,7 @@ function changeDefaultText(place) {
     }
 }
 
-//  eventListeners
+// eventListeners - buttons already declared in script.js
 travelButton.addEventListener('click', function () {
     setDefaultText();
     dropMarkers(jewelleryQuarterPlaces.travel);

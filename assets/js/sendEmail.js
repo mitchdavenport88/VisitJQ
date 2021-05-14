@@ -1,35 +1,33 @@
-// idea for form validation messages came from this Traversy Media video - https://youtu.be/PP4Tr0l08NE
-// CI walkthrough and EmailJS documentation was used as a guide to send form
+// as a guide I used a combination of the CI walkthrough and EmailJS documentation to send the form
 
-/**
- * this function authorises the use of my EmailJS account
- * @author EmailJS documentation - https://www.emailjs.com/docs/tutorial/creating-contact-form/
- */
+/** authorises the use of my EmailJS account- https://www.emailjs.com/docs/tutorial/creating-contact-form/*/
 (function () {
     emailjs.init('user_S3AJosb3HjKtZGHIvYZxa');
 })();
 
 submitButton.addEventListener('click', function () {
-    // https://www.w3schools.com/js/js_validation.asp
+    // principle of validation taken from - https://www.w3schools.com/js/js_validation.asp
     const userName = document.forms['contact-form']['user_name'].value;
     const userEmail = document.forms['contact-form']['user_email'].value;
     const userMessage = document.forms['contact-form']['message'].value;
-    // https://youtu.be/HzJngc-Se9Q
+    // pattern const taken from - https://youtu.be/HzJngc-Se9Q
     const pattern = /^[^ ]+@[^ ]+\.[a-z]{2,3}$/;
     let validUserEmail;
 
+    // idea for validation messages came from this Traversy Media video - https://youtu.be/PP4Tr0l08NE
     // checks for blank input fields
     if (userName === '' || userEmail === '' || userMessage === '') {
         displayValidateMsg();
     }
-    // checks for valid email address - https://youtu.be/HzJngc-Se9Q
+    // if statements taken from - https://youtu.be/HzJngc-Se9Q and edited accordingly 
+    // checks the email validity against the pattern variable. assigns validUserEmail a boolean value
     if (userEmail.match(pattern)) {
         validUserEmail = true;
     } else {
         validUserEmail = false;
         displayValidateMsg();
     }
-    // checks that all input data has passed the previous two validation steps, then sends the data
+    // checks that all input data has passed the previous two validation steps, then sends
     if (userName !== '' && userMessage !== '' && validUserEmail === true) {
         // changes text on button to sending...
         submitButton.value = 'sending...';
@@ -45,50 +43,44 @@ submitButton.addEventListener('click', function () {
             function () {
                 displayFailedMsg();
             });
-        // to block from loading a new page
+        // blocks new page from loading
         return false;
     }
 });
 
-/**
- * this function displays 'Please fill in all fields!' message if an input field is blank
- * the message is then hidden after 6 seconds
- */
+/** displays 'Please ensure all fields are correctly filled in!' message */
 function displayValidateMsg() {
     document.getElementById('failed').style.display = 'none';
     document.getElementById('validate').style.display = 'block';
+    // message hidden after 6seconds
     setTimeout(function () {
         document.getElementById('validate').style.display = 'none';
     }, 6000);
 }
 
-/**
- * this function displays 'Your message has been sent!' message if all input fields are complete
- * resets form - found on https://developer.mozilla.org/en-US/docs/Web/API/HTMLFormElement/reset
- * changes text on button back to default (send)
- * the message is then hidden after 6 seconds
- */
+/** displays 'Your message has been sent!' message */
 function displaySuccessMsg() {
     document.getElementById('failed').style.display = 'none';
     document.getElementById('validate').style.display = 'none';
-    document.getElementById('contact-form').reset();
     document.getElementById('success').style.display = 'block';
+    // form reset - found on https://developer.mozilla.org/en-US/docs/Web/API/HTMLFormElement/reset
+    document.getElementById('contact-form').reset();
+    // changes text on button back to send (default)
     submitButton.value = 'send';
+    // message hidden after 6seconds
     setTimeout(function () {
         document.getElementById('success').style.display = 'none';
     }, 6000);
 }
 
-/**
- * this function displays 'Sorry, your message wasn't sent this time!' if sending fails
- * changes text on button back to default (send)
- * the message is then hidden after 6 seconds
- */
+/** displays 'Sorry, your message wasn't sent this time!' message */
 function displayFailedMsg() {
     document.getElementById('validate').style.display = 'none';
     document.getElementById('success').style.display = 'none';
     document.getElementById('failed').style.display = 'block';
+    // changes text on button back to send (default)
     submitButton.value = 'send';
+    // message hidden after 6seconds
     setTimeout(function () {
         document.getElementById('failed').style.display = 'none';
     }, 6000);
