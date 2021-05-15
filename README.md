@@ -64,7 +64,7 @@ As the site owner, I'd want:
 
 ### Out of content scope but for future consideration
 * An about Visit JQ page - providing service and company information.
-* Gallery - linked or hooked up to a Instagram account.
+* Gallery - linked up to a Instagram account.
 * Newsletter subscription built into the contact form or as a pop up modal.
 
 ### Structure
@@ -79,16 +79,34 @@ Based on the information gathered during the scope the website will require just
 
 ### Skeleton
 
-* Initial idea - [sketch](https://github.com/mitchdavenport88/VisitJQ/blob/master/readme-docs/wireframes/wireframe-sketch.jpg).
-* Home wireframes - [desktop](https://github.com/mitchdavenport88/VisitJQ/blob/master/readme-docs/wireframes/home%20(desktop).png) | 
+Initial idea - [sketch](https://github.com/mitchdavenport88/VisitJQ/blob/master/readme-docs/wireframes/wireframe-sketch.jpg).
+
+Home wireframes - [desktop](https://github.com/mitchdavenport88/VisitJQ/blob/master/readme-docs/wireframes/home%20(desktop).png) | 
 [tablet](https://github.com/mitchdavenport88/VisitJQ/blob/master/readme-docs/wireframes/home%20(tablet).png) | 
 [mobile](https://github.com/mitchdavenport88/VisitJQ/blob/master/readme-docs/wireframes/home%20(phone).png).
-* About wireframes - [desktop](https://github.com/mitchdavenport88/VisitJQ/blob/master/readme-docs/wireframes/about%20(desktop).png) | 
+
+About wireframes - [desktop](https://github.com/mitchdavenport88/VisitJQ/blob/master/readme-docs/wireframes/about%20(desktop).png) | 
 [tablet](https://github.com/mitchdavenport88/VisitJQ/blob/master/readme-docs/wireframes/about%20(tablet).png) | 
 [mobile](https://github.com/mitchdavenport88/VisitJQ/blob/master/readme-docs/wireframes/about%20(phone).png).
-* To do wireframes - [desktop](https://github.com/mitchdavenport88/VisitJQ/blob/master/readme-docs/wireframes/map%20(desktop).png) | 
+
+To do wireframes - [desktop](https://github.com/mitchdavenport88/VisitJQ/blob/master/readme-docs/wireframes/map%20(desktop).png) | 
 [tablet](https://github.com/mitchdavenport88/VisitJQ/blob/master/readme-docs/wireframes/map%20(tablet).png) | 
 [mobile](https://github.com/mitchdavenport88/VisitJQ/blob/master/readme-docs/wireframes/map%20(phone).png).
-* Contact wireframes - [desktop](https://github.com/mitchdavenport88/VisitJQ/blob/master/readme-docs/wireframes/contact%20(desktop).png) | 
+
+Contact wireframes - [desktop](https://github.com/mitchdavenport88/VisitJQ/blob/master/readme-docs/wireframes/contact%20(desktop).png) | 
 [tablet](https://github.com/mitchdavenport88/VisitJQ/blob/master/readme-docs/wireframes/contact%20(tablet).png) | 
 [mobile](https://github.com/mitchdavenport88/VisitJQ/blob/master/readme-docs/wireframes/contact%20(phone).png).
+
+### Surface
+
+As this is a single page design each section will fill the page horizontally and follow one another vertically as stated in the structure. This will remain the case at all responsive breakpoints. The navigation menu will be fixed at the top of the page and will house the websites logo and links that scroll the page up or down to any other section meaning links to each section will be accessible at any point. Each section will follow a similar layout of title then content. The content will be placed on a background of block colour in order to lift the section contents off the page and add a bit of segregation whilst making it a bit more visually appealing. A footer of similar aesthetic to the navigation menu will be at the bottom of the page housing social media links (via icons) underneath the contact section. This is where a user would expect to find these.
+
+I want the imagery used throughout to be a nod to the creativity closely associated with the area. The JQ has a strong industrial link with the manufacture of Jewellery (hence the name) so I want my hero image to echo this, which is why I’ve selected [this](assets/images/jq-background-image.jpg) image. Also the darkness of the image contrasts nicely with the green palette I’m using. The other images I plan on using will be in the about section and will represent each eat, drink, explore titles. These will also be a nod to the creativity associated with the JQ.
+
+I’ve visited the JQ a number of times in the past I found that green was quite synonymous with the area. A lot of doors and window frames are painted this colour and even the Chamberlain clock (a local landmark) is green. So with this in mind I found a palette using [ColorHunt](https://colorhunt.co/) to represent this. As a result I will use a combination of #FBFAD3 (light green), #729D39 (medium green) and #36622B (dark green) throughout. I plan on using Arial as my main font due to its versatility. I think it looks good bold, regular and light and when a small amount of letter spacing is applied produces clean, professional looking text.
+
+![Color Hunt - color palette 135904](readme-docs/screenshots/colorhunt-greens.png)
+
+## Features
+
+### Page Layout
