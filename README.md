@@ -106,9 +106,23 @@ I’ve visited the JQ a number of times in the past I found that green was quite
 
 ## Features
 
+<!-- ### Page Layout
+### Navigational
+### Home / landing
+### About | Eat | Drink | Explore
+### What to do?
+### Contact -->
+
+### Features left to implement
+* Show a local weather forecast using a weather API as part of the about section. I had this as part of my original scope but at the bottom in terms of priority. This will be implemented underneath the about section using a API such as [Weatherbit.](https://www.weatherbit.io/api)
+* An about Visit JQ page - providing service and company information.
+* Gallery - linked up to a Instagram account.
+* Newsletter subscription built into the contact form or as a pop up modal.
+
 ## Technologies
 * HTML & CSS.
 * JavaScript.
+* Gitpod (IDE).
 * Git, [GitHub](https://github.com/) and [GitHub Pages](https://pages.github.com/). Used for version control, hosting my repository and hosting my site.
 * [Balsamiq.](https://balsamiq.com/) Program used for drawing the wireframes.
 * [Bootstrap 5.](https://getbootstrap.com/) Grid layout, responsive design and basic styling.
@@ -123,3 +137,33 @@ I’ve visited the JQ a number of times in the past I found that green was quite
 
 ## Testing
 Separate testing document can be found here - [testing documentation.](TESTING.md)
+
+## Deployment
+
+### Adding and committing files
+I’ve been using Gitpod to write my code and using the terminal to add, commit and push code from my workspace to 
+GitHub where it is stored remotely as shown in the course content. 
+1. Typing `git add` into the terminal will move files to the staging area. You should normally do this once a couple of minor additions or changes have been made or one large change or addition has been made. `git add .` will add all files that have been modified, the full stop here means all. If I want to be more selective I can type in the file name e.g. index.html or the files pathway e.g. assets/css/style.css instead of the full stop e.g. `git add index.html`.
+2. To send these changes to the local repository we use `git commit`. Normally you'll want to include a brief description of these changes so instead use `git commit –m “ ”`. Between the “ ” write a clear, concise message detailing what this commit has done.
+3. To view any changes on GitHub pages or when you want to send your work to a remote repository (GitHub in this instance) then use the `git push` command. This pushes all the previous commits made to the remote repository. When GitHub Pages is set up for the repository it will automatically pick up these changes and display the most up to date version that has been pushed. 
+
+### GitHub Pages deployment
+This site is hosted by GitHub pages and was deployed from the master branch of its GitHub repository. The following steps were taken to deploy this project:
+1. Log in to GitHub and navigate to the chosen repository.
+2. Select **settings** from the menu that is near the top of the page.
+3. From the options menu on the left of the screen select **pages**. You can also scroll down to the GitHub Pages section near the bottom of the page and click the link.
+4. Under the sub-heading **source** change the drop down menu that reads none so it reads Branch:master. Click save.
+5. The page will refresh, this means it was successful. Note that changes will take a while to take effect.
+6. To retrieve the link go back to the GitHub Pages section, repeating step 3 where it will be displayed.
+
+### Cloning
+You can clone a repository so that it can be worked on locally in an IDE such as VSCode by following these steps:
+1. Log in to GitHub and navigate to the repository you wish to clone.
+2. Click the button that reads **code**. This button is situated to the left of the green Gitpod button near the top of the page.
+3. To clone the repository using HTTPS, copy the link shown whilst HTTPS is selected. The link will look something like this: `https://github.com/YOUR-USERNAME/YOUR-REPOSITORY`
+4. Open your local IDE and in the terminal navigate to the working directory of where you wish to insert the cloned directory.
+5. Type `git clone` followed by the link you copied in step 3 into the terminal, this will look something like this: `git clone https://github.com/YOUR-USERNAME/YOUR-REPOSITORY`
+6. Press **enter** and the clone will be created in your selected / current working directory (cwd).
+
+Taken from GitHub's documentation on cloning, which can be found 
+[here.](https://docs.github.com/en/github/creating-cloning-and-archiving-repositories/cloning-a-repository#cloning-a-repository-to-github-desktop)
