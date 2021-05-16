@@ -62,11 +62,6 @@ As the site owner, I'd want:
 * Give additional information on recommendations – websites, reviews and descriptions.
 * Show a local weather forecast using a weather API as part of the about section.
 
-### Out of content scope but for future consideration
-* An about Visit JQ page - providing service and company information.
-* Gallery - linked up to a Instagram account.
-* Newsletter subscription built into the contact form or as a pop up modal.
-
 ### Structure
 Based on the information gathered during the scope the website will require just one page, with each section filling the page horizontally and following one another vertically. The basic structure of the page will be as follows:
 * Fixed navigation bar at the top with the Visit JQ logo and links to each section of the page. This will be accessible at all times.
@@ -99,9 +94,11 @@ Contact wireframes - [desktop](https://github.com/mitchdavenport88/VisitJQ/blob/
 
 ### Surface
 
-As this is a single page design each section will fill the page horizontally and follow one another vertically as stated in the structure. This will remain the case at all responsive breakpoints. The navigation menu will be fixed at the top of the page and will house the websites logo and links that scroll the page up or down to any other section meaning links to each section will be accessible at any point. Each section will follow a similar layout of title then content. The content will be placed on a background of block colour in order to lift the section contents off the page and add a bit of segregation whilst making it a bit more visually appealing. A footer of similar aesthetic to the navigation menu will be at the bottom of the page housing social media links (via icons) underneath the contact section. This is where a user would expect to find these.
+As this is a single page design each section will fill the page horizontally and follow one another vertically as stated in the structure. This will remain the case at all responsive breakpoints. The navigation menu will be fixed at the top of the page and will house the websites logo and links that scroll the page up or down to any other section meaning links to each section will be accessible at any point. 
 
-I want the imagery used throughout to be a nod to the creativity closely associated with the area. The JQ has a strong industrial link with the manufacture of Jewellery (hence the name) so I want my hero image to echo this, which is why I’ve selected [this](assets/images/jq-background-image.jpg) image. Also the darkness of the image contrasts nicely with the green palette I’m using. The other images I plan on using will be in the about section and will represent each eat, drink, explore titles. These will also be a nod to the creativity associated with the JQ.
+Each section will follow a similar layout of title then content. The content will be placed on a background of block colour in order to lift the section contents off the page and add a bit of segregation whilst making it a bit more visually appealing. A footer of similar aesthetic to the navigation menu will be at the bottom of the page housing social media links (via icons) underneath the contact section. This is where a user would expect to find these.
+
+I want the imagery used throughout to be a nod to the creativity closely associated with the area. The JQ has a strong industrial link with the manufacture of Jewellery (hence the name) so I want my hero image to echo this, which is why I’ve selected [this image.](assets/images/jq-background-image.jpg) Also the darkness of the image contrasts nicely with the green palette I’m using. The other images I plan on using will be in the about section and will represent each eat, drink, explore titles. These will also be a nod to the creativity associated with the JQ.
 
 I’ve visited the JQ a number of times in the past I found that green was quite synonymous with the area. A lot of doors and window frames are painted this colour and even the Chamberlain clock (a local landmark) is green. So with this in mind I found a palette using [ColorHunt](https://colorhunt.co/) to represent this. As a result I will use a combination of #FBFAD3 (light green), #729D39 (medium green) and #36622B (dark green) throughout. I plan on using Arial as my main font due to its versatility. I think it looks good bold, regular and light and when a small amount of letter spacing is applied produces clean, professional looking text.
 
@@ -109,4 +106,20 @@ I’ve visited the JQ a number of times in the past I found that green was quite
 
 ## Features
 
-### Page Layout
+## Technologies
+* HTML & CSS.
+* JavaScript.
+* Git, [GitHub](https://github.com/) and [GitHub Pages](https://pages.github.com/). Used for version control, hosting my repository and hosting my site.
+* [Balsamiq.](https://balsamiq.com/) Program used for drawing the wireframes.
+* [Bootstrap 5.](https://getbootstrap.com/) Grid layout, responsive design and basic styling.
+* [Favicon.io.](https://favicon.io/) Created favicon's, which are visible in browser tabs and the bookmarks bar.
+* [Font Awesome.](https://fontawesome.com/) Adds icons throughout the site to increase UX.
+* [Google Maps JavaScript API.](https://developers.google.com/maps/documentation/javascript/overview) API used to render a google map on my site. I used built in features such as markers and infowindows to provide additonal information. 
+* [Custom map markers.](https://mapicons.mapsmarker.com/) Used to generate and download custom map markers that match the sites aesthetic.
+* [Email.JS.](https://www.emailjs.com/) Connects the contact form to a email service. EmailJS uses the data inputted into the form to generate and send an email using a combination of JavaScript and a custom template. 
+* [TinyPNG.](https://tinypng.com/). Reduces file size of the image files used. 
+* [Am I responsive?](http://ami.responsivedesign.is/) Gives a visual representation of how the website looks on different devices. Also used to produce the mock-up shown above.
+* [AutoPrefixer.](https://autoprefixer.github.io/) Adds vendor prefixes to CSS code for use on additional browsers.
+
+## Testing
+Separate testing document can be found here - [testing documentation.](TESTING.md)
