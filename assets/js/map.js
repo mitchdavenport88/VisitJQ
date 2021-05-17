@@ -6,24 +6,24 @@ window.addEventListener('load', function() {
             <span class="d-none d-md-inline"> ${buttonName}</span>
         </button>`;
     }
+    // condense down???
     for (i = 0; i < buttonContainer.children.length; i++) {
         buttonContainer.children[i].addEventListener('mouseover', function() {
             this.classList.add('button-bg-after');
         });
         buttonContainer.children[i].addEventListener('mouseout', function() {
-        this.classList.remove('button-bg-after');
-    });   
+            this.classList.remove('button-bg-after');
+        });   
     }
-    
 })
 
-{/*
+/*
 <i class="fas fa-train"></i>
 <i class="fas fa-utensils"></i>
 <i class="fas fa-beer"></i>
 <i class="fas fa-bed"></i>
 <i class="fas fa-binoculars"></i>
-*/}
+*/
 
 // recommend-content class is a section in the html (to the right / under the map)
 const reccomendContentSection = document.getElementsByClassName('recommend-content');
