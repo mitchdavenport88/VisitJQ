@@ -1,5 +1,5 @@
 const jewelleryQuarterPlaces = {
-    travel: [{
+    'travel': [{
         location: {lat: 52.4901528320036, lng: -1.9128514235878478}, 
         name: 'Jewellery Quarter Train Station', 
         title: 'Train Station', 
@@ -56,7 +56,7 @@ const jewelleryQuarterPlaces = {
         website: 'https://www.birmingham.gov.uk/directory_record/6669/jewellery_quarter_multi-storey_car_park', 
         iconImage: 'assets/images/custom-markers/parking-marker.png'
     }], 
-    food: [{
+    'food': [{
         location: {lat: 52.485233583417745, lng: -1.907818886868876}, 
         name: 'Lasan', 
         title: 'Indian Fine Dining & Cocktail Bar', 
@@ -136,7 +136,7 @@ const jewelleryQuarterPlaces = {
         website: 'https://www.3threescoffee.com/', 
         iconImage: 'assets/images/custom-markers/coffee-marker.png'
     }], 
-    drink: [{
+    'drink': [{
         location: {lat: 52.4859748503573, lng: -1.911887096396719}, 
         name: 'Button Factory', 
         title: 'Cocktails w/ Roof Terrace', 
@@ -216,7 +216,7 @@ const jewelleryQuarterPlaces = {
         website: 'http://theactressandbishop.co.uk/', 
         iconImage: 'assets/images/custom-markers/drink-marker.png'
     }],
-    toDo: [{
+    'explore': [{
         location: {lat: 52.489142096340736, lng: -1.9054979818528697}, 
         name: 'Burning Soul Brewery', 
         title: 'Brewery Tours & Taproom', 
@@ -296,7 +296,7 @@ const jewelleryQuarterPlaces = {
         website: 'https://en.wikipedia.org/wiki/Chamberlain_Clock', 
         iconImage: 'assets/images/custom-markers/explore-marker.png'
     }],
-    sleep: [{
+    'sleep': [{
         location: {lat: 52.486154447304486, lng: -1.9118621157048172}, 
         name: 'Frederick Street Townhouse', 
         title: 'Boutique B&B', 

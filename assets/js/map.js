@@ -1,3 +1,30 @@
+window.addEventListener('load', function() {
+    const buttonContainer = document.getElementById('button-row');
+    for (buttonName of Object.keys(jewelleryQuarterPlaces)) {
+        buttonContainer.innerHTML += 
+        `<button type="button" class="button-bg" onclick="dropMarkers(jewelleryQuarterPlaces.${buttonName}); setDefaultText();">
+            <span class="d-none d-md-inline"> ${buttonName}</span>
+        </button>`;
+    }
+    for (i = 0; i < buttonContainer.children.length; i++) {
+        buttonContainer.children[i].addEventListener('mouseover', function() {
+            this.classList.add('button-bg-after');
+        });
+        buttonContainer.children[i].addEventListener('mouseout', function() {
+        this.classList.remove('button-bg-after');
+    });   
+    }
+    
+})
+
+{/*
+<i class="fas fa-train"></i>
+<i class="fas fa-utensils"></i>
+<i class="fas fa-beer"></i>
+<i class="fas fa-bed"></i>
+<i class="fas fa-binoculars"></i>
+*/}
+
 // recommend-content class is a section in the html (to the right / under the map)
 const reccomendContentSection = document.getElementsByClassName('recommend-content');
 /** sets the default html in recommend-content class on load */
@@ -129,29 +156,3 @@ function changeDefaultText(place) {
         setDefaultText();
     }
 }
-
-// eventListeners - buttons already declared in script.js
-travelButton.addEventListener('click', function () {
-    setDefaultText();
-    dropMarkers(jewelleryQuarterPlaces.travel);
-});
-
-foodButton.addEventListener('click', function () {
-    setDefaultText();
-    dropMarkers(jewelleryQuarterPlaces.food);
-});
-
-drinkButton.addEventListener('click', function () {
-    setDefaultText();
-    dropMarkers(jewelleryQuarterPlaces.drink);
-});
-
-sleepButton.addEventListener('click', function () {
-    setDefaultText();
-    dropMarkers(jewelleryQuarterPlaces.sleep);
-});
-
-toDoButton.addEventListener('click', function () {
-    setDefaultText();
-    dropMarkers(jewelleryQuarterPlaces.toDo);
-});

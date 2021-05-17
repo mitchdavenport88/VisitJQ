@@ -1,29 +1,17 @@
 // plan your visit (landing page) button
 const planButton = document.getElementById('plan-button');
-// map buttons - travel / food / drink / sleep / to do
-const travelButton = document.getElementById('travel-button');
-const foodButton = document.getElementById('food-button');
-const drinkButton = document.getElementById('drink-button');
-const sleepButton = document.getElementById('sleep-button');
-const toDoButton = document.getElementById('todo-button');
-// submit button (contact form)
-const submitButton = document.getElementById('submit-button');
+// condense down???
+planButton.addEventListener('mouseover', function() {
+    this.classList.add('button-bg-after');
+});
+planButton.addEventListener('mouseout', function() {
+    this.classList.remove('button-bg-after');
+});
 
 // scrolls to about section on planButton click - https://www.plus2net.com/html_tutorial/button-linking.php
 planButton.addEventListener('click', function() {
     parent.location='#about';
 });
-
-// button hover - inverts colors of main website buttons (allButtons)
-const allButtons = [planButton, travelButton, foodButton, drinkButton, sleepButton, toDoButton, submitButton];
-for (i = 0; i < allButtons.length; i++) {
-    allButtons[i].addEventListener('mouseover', function() {
-        this.classList.add('button-bg-after');
-    });
-    allButtons[i].addEventListener('mouseout', function() {
-        this.classList.remove('button-bg-after');
-    });
-}
 
 // hides the drop down menu once a link has been clicked (overides bootstrap toggle)
 const dropDownLinks = document.getElementsByClassName('nav-link');
