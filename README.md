@@ -1,11 +1,9 @@
 # Visit JQ
 
 ### Milestone Project Two
-
 Visit JQ is an interactive website aimed at encouraging people to venture out of central Birmingham to discover what the Jewellery Quarter has to offer. The JQ (as locals call it) is seen as a bit of a hidden gem, located just a stone’s throw away from the hustle and bustle of the city centre with a flourishing food and drink scene. This combined with the area’s industrial roots and being Birmingham’s central creative hub makes the JQ well worth a visit.
 
 ## Demo
-
 The live site can be viewed here - [Visit JQ](https://mitchdavenport88.github.io/VisitJQ/).
 
 GitHub repository can be viewed here - [mitchdavenport88/visitJQ](https://github.com/mitchdavenport88/visitJQ).
@@ -13,7 +11,6 @@ GitHub repository can be viewed here - [mitchdavenport88/visitJQ](https://github
 ![Site Mockup](readme-docs/screenshots/amiresponsive-image.jpg)
 
 ## UX
-
 ### Strategy
 The aim of the website is to create a user friendly website that’s shows potential visitors information about the Jewellery Quarter in a clear and intuitive manner. Visit JQ will provide the user with information and recommendations in order to entice people away from the city centre and support more local, independent businesses as well as this local community.
 
@@ -73,7 +70,6 @@ Based on the information gathered during the scope the website will require just
 * Footer with social media links and copyright notice.
 
 ### Skeleton
-
 Initial idea - [sketch](https://github.com/mitchdavenport88/VisitJQ/blob/master/readme-docs/wireframes/wireframe-sketch.jpg).
 
 Home wireframes - [desktop](https://github.com/mitchdavenport88/VisitJQ/blob/master/readme-docs/wireframes/home%20(desktop).png) | 
@@ -93,7 +89,6 @@ Contact wireframes - [desktop](https://github.com/mitchdavenport88/VisitJQ/blob/
 [mobile](https://github.com/mitchdavenport88/VisitJQ/blob/master/readme-docs/wireframes/contact%20(phone).png).
 
 ### Surface
-
 As this is a single page design each section will fill the page horizontally and follow one another vertically as stated in the structure. This will remain the case at all responsive breakpoints. The navigation menu will be fixed at the top of the page and will house the websites logo and links that scroll the page up or down to any other section meaning links to each section will be accessible at any point. 
 
 Each section will follow a similar layout of title then content. The content will be placed on a background of block colour in order to lift the section contents off the page and add a bit of segregation whilst making it a bit more visually appealing. A footer of similar aesthetic to the navigation menu will be at the bottom of the page housing social media links (via icons) underneath the contact section. This is where a user would expect to find these.
@@ -105,13 +100,44 @@ I’ve visited the JQ a number of times in the past I found that green was quite
 ![Color Hunt - color palette 135904](readme-docs/screenshots/colorhunt-greens.png)
 
 ## Features
+### Page Layout
+* Responsive at all breakpoints. By using a combination of media queries and Bootstrap’s responsive grid means the sites layout and contents will adapt to the device it’s been viewed on.
 
-<!-- ### Page Layout
 ### Navigational
+* Fixed navigation bar so links to any other section of the website are accessible at any point.
+* The logo is always in the top left of the page. This also has a secondary feature as a link back up to the home page (scrolls to the top).
+* Navigation links on screen widths of lg and above are displayed inline at the top right of the page where a user would expect to find them.
+* To encourage interaction I’ve put a simple hover class on the navigation links that makes them bold when hovered over.
+* On screen widths of md and below these links are housed in a dropdown menu, which is toggled on/off via the click of a button. The button features the Font Awesome icon ‘fa-bars’, which is associated with this dropdown menu function.
+* I have chosen to adjust Bootstraps toggle effect on this dropdown menu using my own JavaScript code. When a link is selected via the dropdown menu the menu will now close automatically whereas before it remained open blocking content. 
+
 ### Home / landing
+* An image of a Jeweller at work fills the entire landing page (100vh), this gives the page an initial wow factor.
+* I’ve also used a text overlay box that features a brief description of the page and a button that on click scrolls the page down to the about section.
+* All buttons on the site will invert colour when hovered, this is to show the user it is clickable and to get them to engage with it.
+
 ### About | Eat | Drink | Explore
+* I have chosen to use a carousel for this section as I felt it was the best way to display this amount of information without overwhelming a user. By breaking the text up into bite sized pieces and adding some division between snippets of information makes it much more user-friendly whilst taking up a minimal amount of screen space. 
+* The carousel is made up of four slides and can be controlled by the arrows displayed or by the indictor buttons at the bottom. The indicator buttons also act as a visual guide, showing the user the number of slides. They also change in appearance to indicate what slide the user is on.
+* The arrows shown will hide on slide one and four as a move left/right isn’t possible.
+* Text appears on a contrasted background with a different image on each slide. The image is responsive as it gets hidden on widths of md and below to display text only. 
+
 ### What to do?
-### Contact -->
+
+
+### Contact 
+* All inputs are labelled and have a placeholder so it’s clear what goes into each field.
+* The form layout changes at 768px to provide something suited for smaller screen widths. 
+* The form doesn’t use the method attribute to "POST" instead the data collected will be sent in an email using EmailJS. When send is clicked the form data is sent to a template on EmailJS, which has been setup to put this data into a structured email and then sent on.
+* I've used the correct input types for each input field but also written my own validation using JavaScript to check that all input fields are filled in so no empty forms can be sent and that the email address provided is valid.
+* Once the send button is clicked a message will appear dependant on it's status. This message will tell the user if:
+    * The message has been sent correctly.
+    * The message has failed to send.
+    * One of the input fields hasn’t been filled in correctly.
+* The send button will invert colour when hovered over like all other buttons. When the form is good to go and send is clicked the text on the button will then change to sending… showing that something is happening. Once successfully sent the button defaults back to send.
+
+### Footer
+* I’ve used icons representing the social links at the foot of the page. Each icon is associated with the intended destination and clicking them will send the user there via a new window/tab.
 
 ### Features left to implement
 * Show a local weather forecast using a weather API as part of the about section. I had this as part of my original scope but at the bottom in terms of priority. This will be implemented underneath the about section using a API such as [Weatherbit.](https://www.weatherbit.io/api)
@@ -131,7 +157,7 @@ I’ve visited the JQ a number of times in the past I found that green was quite
 * [Google Maps JavaScript API.](https://developers.google.com/maps/documentation/javascript/overview) API used to render a google map on my site. I used built in features such as markers and infowindows to provide additonal information. 
 * [Custom map markers.](https://mapicons.mapsmarker.com/) Used to generate and download custom map markers that match the sites aesthetic.
 * [Email.JS.](https://www.emailjs.com/) Connects the contact form to a email service. EmailJS uses the data inputted into the form to generate and send an email using a combination of JavaScript and a custom template. 
-* [TinyPNG.](https://tinypng.com/). Reduces file size of the image files used. 
+* [TinyPNG.](https://tinypng.com/) Reduces file size of the image files used. 
 * [Am I responsive?](http://ami.responsivedesign.is/) Gives a visual representation of how the website looks on different devices. Also used to produce the mock-up shown above.
 * [AutoPrefixer.](https://autoprefixer.github.io/) Adds vendor prefixes to CSS code for use on additional browsers.
 
@@ -139,7 +165,6 @@ I’ve visited the JQ a number of times in the past I found that green was quite
 Separate testing document can be found here - [testing documentation.](TESTING.md)
 
 ## Deployment
-
 ### Adding and committing files
 I’ve been using Gitpod to write my code and using the terminal to add, commit and push code from my workspace to 
 GitHub where it is stored remotely as shown in the course content. 
@@ -167,3 +192,5 @@ You can clone a repository so that it can be worked on locally in an IDE such as
 
 Taken from GitHub's documentation on cloning, which can be found 
 [here.](https://docs.github.com/en/github/creating-cloning-and-archiving-repositories/cloning-a-repository#cloning-a-repository-to-github-desktop)
+
+## Credits

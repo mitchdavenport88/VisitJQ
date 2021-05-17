@@ -5,3 +5,13 @@ The live site can be viewed here - [Visit JQ](https://mitchdavenport88.github.io
 [Back to README file.](README.md)
 
 ## Testing
+
+## Functionality
+
+## Responsiveness
+
+## Browser Compatibility
+
+## User Stories
+
+## Bugs & fixes
