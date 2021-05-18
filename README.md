@@ -123,7 +123,14 @@ I’ve visited the JQ a number of times in the past I found that green was quite
 * Text appears on a contrasted background with a different image on each slide. The image is responsive as it gets hidden on widths of md and below to display text only. 
 
 ### What to do?
-
+* On load a map renders in the ‘What to Do?’ section using the google maps API. I have set the co-ordinates so the map loads showing the JQ area.
+* On large screen widths the map section and the Visit JQ Recommends section will appear inline. On anything below 992px the map section along with its buttons will fill the page width while the Visit JQ Recommends section will be displayed underneath the map.
+* When first loaded the Visit JQ Recommends section contains a little introduction and a brief explanation of how the map and its buttons work. This content gets changed throughout use.
+* The buttons above the map will display a Font Awesome icon along with a button label, which represent each of the place types users can find out more about. On small devices the label gets hidden to show the logo only.
+* As with all buttons on the page they have a hover class, which will invert the colours to show it’s clickable.
+* When a button is clicked map markers get displayed on the map to indicate where we’d recommend visiting. Each button drops a different set of markers dependent on the category selected.
+* Each marker is clickable and on click will display additional info such as the place name, a brief description and their website in the form of an info window. Once another marker is clicked the existing window will close and the new info window will display.
+* In addition to the info window displaying when clicked a review of the place will also appear in the Visit JQ Recommends section.
 
 ### Contact 
 * All inputs are labelled and have a placeholder so it’s clear what goes into each field.
