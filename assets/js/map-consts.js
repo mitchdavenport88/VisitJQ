@@ -377,3 +377,11 @@ const jewelleryQuarterPlaces = {
         iconImage: 'assets/images/custom-markers/stay-marker.png'
     }]
 };
+
+const placeIcon = {
+    travel: 'fa-train',
+    eat: 'fa-utensils',
+    drink: 'fa-beer',
+    sleep: 'fa-bed',
+    explore: 'fa-binoculars'
+};
