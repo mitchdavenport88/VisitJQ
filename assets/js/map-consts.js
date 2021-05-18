@@ -56,7 +56,7 @@ const jewelleryQuarterPlaces = {
         website: 'https://www.birmingham.gov.uk/directory_record/6669/jewellery_quarter_multi-storey_car_park', 
         iconImage: 'assets/images/custom-markers/parking-marker.png'
     }], 
-    'food': [{
+    'eat': [{
         location: {lat: 52.485233583417745, lng: -1.907818886868876}, 
         name: 'Lasan', 
         title: 'Indian Fine Dining & Cocktail Bar', 

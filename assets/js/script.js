@@ -1,12 +1,5 @@
 // plan your visit (landing page) button
 const planButton = document.getElementById('plan-button');
-// condense down???
-planButton.addEventListener('mouseover', function() {
-    this.classList.add('button-bg-after');
-});
-planButton.addEventListener('mouseout', function() {
-    this.classList.remove('button-bg-after');
-});
 
 // scrolls to about section on planButton click - https://www.plus2net.com/html_tutorial/button-linking.php
 planButton.addEventListener('click', function() {

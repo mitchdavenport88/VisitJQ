@@ -1,14 +1,7 @@
-// as a guide I used a combination of the CI walkthrough and EmailJS documentation to send the form
 // submit button (contact form)
 const submitButton = document.getElementById('submit-button');
-// condense down???
-submitButton.addEventListener('mouseover', function() {
-    this.classList.add('button-bg-after');
-});
-submitButton.addEventListener('mouseout', function() {
-    this.classList.remove('button-bg-after');
-});
 
+// as a guide I used a combination of the CI walkthrough and EmailJS documentation to send the form
 /** authorises the use of my EmailJS account- https://www.emailjs.com/docs/tutorial/creating-contact-form/*/
 (function () {
     emailjs.init('user_S3AJosb3HjKtZGHIvYZxa');

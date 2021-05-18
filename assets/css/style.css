@@ -473,7 +473,7 @@ label {
     border: 1px solid var(--dark-green);
 }
 
-.button-bg-after {
+.button-bg:hover {
     background-color: var(--dark-green);
     color: var(--light-green);
     border: 1px solid var(--light-green);
