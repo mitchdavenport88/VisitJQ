@@ -281,7 +281,7 @@ body {
     padding: 20px;
 }
 
-.recommend-content {
+#recommend-content {
     letter-spacing: 0.1rem;
     font-weight: lighter;
     color: var(--light-green);
@@ -303,22 +303,22 @@ body {
     justify-content: center;
 }
 
-.recommend-content h3, 
-.recommend-content p {
+#recommend-content h3, 
+#recommend-content p {
     margin: 0;
 }
 
-.recommend-content p {
+#recommend-content p {
     line-height: 1.8rem;
 }
 
-.recommend-content a {
+#recommend-content a {
     text-decoration: none;
     font-weight: bold;
     color: var(--dark-green);    
 }
 
-.recommend-content a:hover {
+#recommend-content a:hover {
     text-decoration: underline;
 }
 

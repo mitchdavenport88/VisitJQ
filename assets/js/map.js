@@ -10,9 +10,9 @@ window.addEventListener('load', function() {
 });
 
 /** sets the default html in recommend-content class on load */
-const reccomendContentSection = document.getElementsByClassName('recommend-content');
+const reccomendContentSection = document.getElementById('recommend-content');
 function setDefaultText() {
-    reccomendContentSection[0].innerHTML = 
+    reccomendContentSection.innerHTML = 
     `<h3 class="recommend-content-title">Visit JQ Recommends</h3>
     <hr class="divider">
     <p class="recommend-content-p">
@@ -123,12 +123,12 @@ function closeWindows() {
  */
 function changeDefaultText(place) {
     if (place.reviewTitle && place.review) {
-        reccomendContentSection[0].innerHTML = 
+        reccomendContentSection.innerHTML = 
         `<h3 class="recommend-content-title">${place.reviewTitle}</h3>
         <hr class="divider">
         <p class="recommend-content-p">${place.review}</p>`;
     } else if (place.addInfo) {
-        reccomendContentSection[0].innerHTML = 
+        reccomendContentSection.innerHTML = 
         `<h3 class="recommend-content-title">${place.name}</h3>
         <hr class="divider">
         <p class="recommend-content-p">${place.addInfo}</p>
