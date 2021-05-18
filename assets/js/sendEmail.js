@@ -1,12 +1,11 @@
-// submit button (contact form)
-const submitButton = document.getElementById('submit-button');
-
 // as a guide I used a combination of the CI walkthrough and EmailJS documentation to send the form
+
 /** authorises the use of my EmailJS account- https://www.emailjs.com/docs/tutorial/creating-contact-form/*/
 (function () {
     emailjs.init('user_S3AJosb3HjKtZGHIvYZxa');
 })();
 
+const submitButton = document.getElementById('submit-button');
 submitButton.addEventListener('click', function () {
     // principle of validation taken from - https://www.w3schools.com/js/js_validation.asp
     const userName = document.forms['contact-form']['user_name'].value;

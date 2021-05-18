@@ -1,7 +1,5 @@
-// plan your visit (landing page) button
-const planButton = document.getElementById('plan-button');
-
 // scrolls to about section on planButton click - https://www.plus2net.com/html_tutorial/button-linking.php
+const planButton = document.getElementById('plan-button');
 planButton.addEventListener('click', function() {
     parent.location='#about';
 });
@@ -9,7 +7,7 @@ planButton.addEventListener('click', function() {
 // hides the drop down menu once a link has been clicked (overides bootstrap toggle)
 const dropDownLinks = document.getElementsByClassName('nav-link');
 const navbarNav = document.getElementById('navbarNav');
-for (i = 0; i < dropDownLinks.length; i++) {
+for (let i = 0; i < dropDownLinks.length; i++) {
     dropDownLinks[i].addEventListener('click', function() {
         // removes bootstap class of .show which is toggled in #navbarNav
         navbarNav.classList.remove('show');

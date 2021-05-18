@@ -378,6 +378,7 @@ const jewelleryQuarterPlaces = {
     }]
 };
 
+// object that holds font awesome icon tags for button labels
 const placeIcon = {
     travel: 'fa-train',
     eat: 'fa-utensils',

@@ -1,3 +1,4 @@
+// dynamically creates and loads buttons in the map section using data from map-consts.js
 window.addEventListener('load', function() {
     const buttonContainer = document.getElementById('button-row');
     for (let buttonName of Object.keys(jewelleryQuarterPlaces)) {
@@ -32,10 +33,11 @@ function setDefaultText() {
 // Sam Codes - https://youtu.be/uPhWSyRqQDA & Traversy Media - https://youtu.be/Zxf1mnP5zcw
 
 let map;
+// we use markersArray to show & delete multiple markers
 let markersArray = [];
 let infoObj = [];
 
-// jQ is the center point
+// jQ is the co-ordinates of the center point
 const jQ = {
     lat: 52.487137777478495,
     lng: -1.9097842445407542
@@ -53,7 +55,8 @@ function initMap() {
 }
 
 /**
- * places markers on the map. called via eventListeners which pass in placeType
+ * places markers on the map
+ * called via eventListeners which pass in placeType
  * @param {Array} placeType - extracted from jewelleryQuarterPlaces object in map-consts.js
  */
 function dropMarkers(placeType) {
@@ -66,8 +69,9 @@ function dropMarkers(placeType) {
 }
 
 /**
- * collects data from the object place. we use this data to position markers, add and show info to 
- * the infoWindows and change the content in the recommend-content div
+ * collects and uses data from the object to position markers 
+ * adds and shows info via the infoWindows via marker eventListener
+ * changes the content in the recommend-content div to a review or additonal info
  * @param {Object} place - extracted from placeType array, which holds all the data of each place
  */
 function addMarker(place) {
