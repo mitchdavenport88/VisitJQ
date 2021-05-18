@@ -1,23 +1,16 @@
 window.addEventListener('load', function() {
     const buttonContainer = document.getElementById('button-row');
-    for (buttonName of Object.keys(jewelleryQuarterPlaces)) {
+    for (let buttonName of Object.keys(jewelleryQuarterPlaces)) {
         buttonContainer.innerHTML += 
         `<button type="button" class="button-bg" onclick="dropMarkers(jewelleryQuarterPlaces.${buttonName}); setDefaultText();">
-            <span class="d-none d-md-inline"> ${buttonName}</span>
+            <i class="fas ${placeIcon[buttonName]}"></i><span class="d-none d-md-inline"> ${buttonName}</span>
         </button>`;
     }
-})
-
-/*<i class="fas fa-train"></i>
-<i class="fas fa-utensils"></i>
-<i class="fas fa-beer"></i>
-<i class="fas fa-bed"></i>
-<i class="fas fa-binoculars"></i>*/
-
-// recommend-content class is a section in the html (to the right / under the map)
-const reccomendContentSection = document.getElementsByClassName('recommend-content');
+    setDefaultText();
+});
 
 /** sets the default html in recommend-content class on load */
+const reccomendContentSection = document.getElementsByClassName('recommend-content');
 function setDefaultText() {
     reccomendContentSection[0].innerHTML = 
     `<h3 class="recommend-content-title">Visit JQ Recommends</h3>
@@ -32,7 +25,6 @@ function setDefaultText() {
         of the buttons above the map to start!
     </p>`;
 }
-window.addEventListener("load", setDefaultText);
 
 // walkthroughs & tutorials: 
 // Eamonn Smyth - How to Google maps PDF via slack & Pradip Debnath - https://youtu.be/Xptz0GQ2DO4
@@ -41,6 +33,7 @@ window.addEventListener("load", setDefaultText);
 
 let map;
 let markersArray = [];
+let infoObj = [];
 
 // jQ is the center point
 const jQ = {
@@ -106,7 +99,6 @@ function addMarker(place) {
         infoObj[0] = infowindow;
         changeDefaultText(place);
     });
-    infoObj = [];
 }
 
 /** this function loops through markersArray and deletes existing markers by clearing the array */
