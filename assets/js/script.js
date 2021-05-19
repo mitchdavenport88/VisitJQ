@@ -1,14 +1,14 @@
-// scrolls to about section on planButton click - https://www.plus2net.com/html_tutorial/button-linking.php
+// scrolls to about section on planButton click - https://www.plus2net.com/html_tutorial/button-linking.php and edited accordingly
 const planButton = document.getElementById('plan-button');
-planButton.addEventListener('click', function() {
-    parent.location='#about';
+planButton.addEventListener('click', function () {
+    parent.location = '#about';
 });
 
 // hides the drop down menu once a link has been clicked (overides bootstrap toggle)
 const dropDownLinks = document.getElementsByClassName('nav-link');
 const navbarNav = document.getElementById('navbarNav');
 for (let i = 0; i < dropDownLinks.length; i++) {
-    dropDownLinks[i].addEventListener('click', function() {
+    dropDownLinks[i].addEventListener('click', function () {
         // removes bootstap class of .show which is toggled in #navbarNav
         navbarNav.classList.remove('show');
     });
@@ -24,23 +24,23 @@ let sectionIndex = 0;
 // hides left arrow on load (about the jq slide is sectionIndex 0)
 window.onload = displayArrow();
 
-document.querySelectorAll('.carousel-controls li').forEach(function(indicator, index) {
-    indicator.addEventListener('click', function() {
+document.querySelectorAll('.carousel-controls li').forEach(function (indicator, index) {
+    indicator.addEventListener('click', function () {
         sectionIndex = index;
         document.querySelector('.carousel-controls .selected').classList.remove('selected');
         indicator.classList.add('selected');
-        slider.style.transform = 'translate('+ (sectionIndex) * -25 +'%)';
+        slider.style.transform = 'translate(' + (sectionIndex) * -25 + '%)';
         displayArrow();
     });
 });
 
-leftArrow.addEventListener('click', function() {
+leftArrow.addEventListener('click', function () {
     sectionIndex = (sectionIndex > 0) ? sectionIndex - 1 : 0;
     nextSlide();
     displayArrow();
 });
 
-rightArrow.addEventListener('click', function() {
+rightArrow.addEventListener('click', function () {
     sectionIndex = (sectionIndex < 3) ? sectionIndex + 1 : 3;
     nextSlide();
     displayArrow();
@@ -50,7 +50,7 @@ rightArrow.addEventListener('click', function() {
 function nextSlide() {
     document.querySelector('.carousel-controls .selected').classList.remove('selected');
     indicatorParents.children[sectionIndex].classList.add('selected');
-    slider.style.transform = 'translate('+ (sectionIndex) * -25 +'%)';
+    slider.style.transform = 'translate(' + (sectionIndex) * -25 + '%)';
 }
 
 /** checks sectionIndex and hides left/right arrows accordingly */

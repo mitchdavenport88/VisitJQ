@@ -168,6 +168,9 @@ I’ve visited the JQ a number of times in the past I found that green was quite
 * [TinyPNG.](https://tinypng.com/) Reduces file size of the image files used. 
 * [Am I responsive?](http://ami.responsivedesign.is/) Gives a visual representation of how the website looks on different devices. Also used to produce the mock-up shown above.
 * [AutoPrefixer.](https://autoprefixer.github.io/) Adds vendor prefixes to CSS code for use on additional browsers.
+* W3C [HTML](https://validator.w3.org/) & [CSS](https://jigsaw.w3.org/css-validator/) validators.
+* [JSHint](https://jshint.com/) JavaScript validator.
+* [Beautifier.](https://beautifier.io/) Formats code neatly.
 
 ## Testing
 Separate testing document can be found here - [testing documentation.](TESTING.md)

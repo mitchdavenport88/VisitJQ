@@ -230,6 +230,7 @@ body {
 .slider-content-pic img {
     height: 450px;
     width: 100%;
+    -o-object-fit: cover;
     object-fit: cover;
 }
 

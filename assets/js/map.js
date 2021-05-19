@@ -1,29 +1,31 @@
 // dynamically creates and loads buttons in the map section using data from map-consts.js
-window.addEventListener('load', function() {
+window.addEventListener('load', function () {
     const buttonContainer = document.getElementById('button-row');
     for (let buttonName of Object.keys(jewelleryQuarterPlaces)) {
         buttonContainer.innerHTML += 
-        `<button type="button" class="button-bg" onclick="dropMarkers(jewelleryQuarterPlaces.${buttonName}); setDefaultText();">
-            <i class="fas ${placeIcon[buttonName]}"></i><span class="d-none d-md-inline"> ${buttonName}</span>
+        `<button type="button" class="button-bg" 
+        onclick="dropMarkers(jewelleryQuarterPlaces.${buttonName}); setDefaultText();">
+            <i class="fas ${placeIcon[buttonName]}"></i>
+            <span class="d-none d-md-inline"> ${buttonName}</span>
         </button>`;
     }
     setDefaultText();
 });
 
-/** sets the default html in recommend-content class on load */
 const reccomendContentSection = document.getElementById('recommend-content');
+/** sets the default html in recommend-content class on load */
 function setDefaultText() {
-    reccomendContentSection.innerHTML = 
+    reccomendContentSection.innerHTML =
     `<h3 class="recommend-content-title">Visit JQ Recommends</h3>
     <hr class="divider">
     <p class="recommend-content-p">
-        Museums, heritage, creativity and culture. The JQ is bursting with activities and 
-        new experiences.
+        Museums, heritage, creativity and culture. The JQ is bursting with 
+        activities and new experiences.
     </p>
     <hr>
     <p class="recommend-content-p">
-        Use our interactive map to help plan your visit and view our top picks. Click on one 
-        of the buttons above the map to start!
+        Use our interactive map to help plan your visit and view our top picks. Click 
+        on one of the buttons above the map to start!
     </p>`;
 }
 
@@ -86,8 +88,7 @@ function addMarker(place) {
 
     const infowindow = new google.maps.InfoWindow({
         maxWidth: 400,
-        content: 
-        `<div class="info-window">
+        content: `<div class="info-window">
             <h5>${place.name}</h5>
             <h6>${place.title}</h6>
             <p>${place.desc}</p>
@@ -127,17 +128,19 @@ function closeWindows() {
  */
 function changeDefaultText(place) {
     if (place.reviewTitle && place.review) {
-        reccomendContentSection.innerHTML = 
+        reccomendContentSection.innerHTML =
         `<h3 class="recommend-content-title">${place.reviewTitle}</h3>
         <hr class="divider">
         <p class="recommend-content-p">${place.review}</p>`;
     } else if (place.addInfo) {
-        reccomendContentSection.innerHTML = 
+        reccomendContentSection.innerHTML =
         `<h3 class="recommend-content-title">${place.name}</h3>
         <hr class="divider">
         <p class="recommend-content-p">${place.addInfo}</p>
         <hr>
-        <a href="${place.website}" target="_blank">Click here for timetables, journey planners and any other additional info.</a>`;
+        <a href="${place.website}" target="_blank">
+            Click here for timetables, journey planners and any other additional info.
+        </a>`;
     } else {
         setDefaultText();
     }
