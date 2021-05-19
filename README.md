@@ -244,3 +244,5 @@ Taken from GitHub's documentation on cloning, which can be found
 * Aukje van der Wal - [MS2 Lead Call via Slack.](https://us02web.zoom.us/rec/play/PL07KmO07O24DlzKgJ0W8aA1NIuCKpURunQB89g6LP71sRwXL7WF2YhHiOGYvPkYMwlMEvCfu3jOruhu.M8bzVC5Hy8UDC2Nz?startTime=1613671536000&_x_zm_rtaid=llLdywhYSJyduniSuy4unw.1618323037971.65d64db139e616abc014e51344401eb0&_x_zm_rhtaid=554)
 * My mentor Brian Macharia for all the feedback and aiding in the planning and execution of this site.
 * Tutor support at Code Institute for their help and support when needed most.
+* Naoise Gaffney and Stefan Carter for taking the time to look at my site and giving feedback via 
+slack's #peer-code-review channel.

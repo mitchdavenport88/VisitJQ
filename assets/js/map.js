@@ -92,7 +92,9 @@ function addMarker(place) {
             <h5>${place.name}</h5>
             <h6>${place.title}</h6>
             <p>${place.desc}</p>
-            <a href="${place.website}" target="_blank">Click here to visit website</a>
+            <a href="${place.website}" target="_blank" rel="noreferrer">
+                Click here to visit website
+            </a>
         </div>`
     });
 
@@ -138,7 +140,7 @@ function changeDefaultText(place) {
         <hr class="divider">
         <p class="recommend-content-p">${place.addInfo}</p>
         <hr>
-        <a href="${place.website}" target="_blank">
+        <a href="${place.website}" target="_blank rel="noreferrer"">
             Click here for timetables, journey planners and any other additional info.
         </a>`;
     } else {
