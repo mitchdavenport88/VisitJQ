@@ -12,8 +12,8 @@ My code has been put through the following:
 * JSHint JavaScript validation:
     * map.js:
         * Reports two unused variables. initMap() is called by the google maps script in index.html on load. The other is dropMarkers(), which is called by the onclick eventListener attached to the map buttons.
-        * Reports three undefined variables. Two of these jewelleryQuarterPlaces and placeIcon are defined in map-consts.js the other, called google is used by the map API to load. 
-    * map-consts.js - Reports two unused variables. These variables are called in map.js.
+        * Reports three undefined variables. Two of these jewelleryQuarterPlaces and placeIcon are defined in database.js the other, called google is used by the map API to load. 
+    * database.js - Reports two unused variables. These variables are called in map.js.
     * script.js - no issues reported.
     * sendEmail.js:
         * Reports one undefined variable. The emailjs variable is used by the EmailJS API and given as part of thier documentation to successfully send the contact form via email as expected.

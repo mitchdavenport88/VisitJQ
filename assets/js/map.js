@@ -1,4 +1,4 @@
-// dynamically creates and loads buttons in the map section using data from map-consts.js
+// dynamically creates and loads buttons in the map section using data from database.js
 window.addEventListener('load', function () {
     const buttonContainer = document.getElementById('button-row');
     for (let buttonName of Object.keys(jewelleryQuarterPlaces)) {
@@ -59,7 +59,7 @@ function initMap() {
 /**
  * places markers on the map
  * called via eventListeners which pass in placeType
- * @param {Array} placeType - extracted from jewelleryQuarterPlaces object in map-consts.js
+ * @param {Array} placeType - extracted from jewelleryQuarterPlaces object in database.js
  */
 function dropMarkers(placeType) {
     map.panTo(jQ);
