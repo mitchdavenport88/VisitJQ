@@ -21,7 +21,7 @@ body {
 /* navigation */
 
 .my-navbar {
-    background-color: var(--medium-green);
+    background-color: var(--dark-green);
     font-size: 1rem;
     border-bottom: 1px solid var(--light-green);
 }
@@ -82,7 +82,7 @@ body {
 
 .landing-page-overlay-textbox {
     text-align: center;
-    background-color: var(--medium-green);
+    background-color: var(--dark-green);
     color: var(--light-green);
     padding: 2.5%;
     margin-left: 5%;
@@ -194,7 +194,7 @@ body {
     -ms-flex-preferred-size: 50%;
     flex-basis: 50%;
     margin: 0 auto;
-    background-color: var(--medium-green);
+    background-color: var(--dark-green);
 }
 
 .slider-content {
@@ -242,7 +242,7 @@ body {
 
 .explore-container {
     width: 100%;
-    background-color: var(--medium-green);
+    background-color: var(--dark-green);
     border-radius: 5px;
 }
 
@@ -358,7 +358,7 @@ body {
 
 .contact-container {
     width: 100%;
-    background-color: var(--medium-green);
+    background-color: var(--dark-green);
 }
 
 #contact-form {

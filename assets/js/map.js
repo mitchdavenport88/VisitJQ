@@ -3,7 +3,7 @@ window.addEventListener('load', function () {
     const buttonContainer = document.getElementById('button-row');
     for (let buttonName of Object.keys(jewelleryQuarterPlaces)) {
         buttonContainer.innerHTML += 
-        `<button type="button" class="button-bg" 
+        `<button type="button" class="button-bg" aria-label="${buttonName}" 
         onclick="dropMarkers(jewelleryQuarterPlaces.${buttonName}); setDefaultText();">
             <i class="fas ${placeIcon[buttonName]}"></i>
             <span class="d-none d-md-inline"> ${buttonName}</span>
