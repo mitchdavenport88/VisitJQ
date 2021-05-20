@@ -4,11 +4,11 @@
 Visit JQ is an interactive website aimed at encouraging people to venture out of central Birmingham and discover what the Jewellery Quarter has to offer. The JQ (as locals call it) is seen as a bit of a hidden gem, located just a stone’s throw away from the hustle and bustle of the city centre with a flourishing food and drink scene. This along with the area’s industrial roots and being Birmingham’s central creative hub makes the JQ well worth a visit.
 
 ## Demo
-The live site can be viewed here - [Visit JQ](https://mitchdavenport88.github.io/VisitJQ/).
+The live site can be viewed here - [Visit JQ.](https://mitchdavenport88.github.io/VisitJQ/)
 
-GitHub repository can be viewed here - [mitchdavenport88/visitJQ](https://github.com/mitchdavenport88/visitJQ).
+GitHub repository can be viewed here - [mitchdavenport88/visitJQ.](https://github.com/mitchdavenport88/visitJQ)
 
-![Site Mockup](readme-docs/screenshots/amiresponsive-image.jpg)
+![Site Mockup](readme-docs/screenshots/amiresponsive-image-2.jpg)
 
 ## UX
 ### Strategy
@@ -171,6 +171,7 @@ I’ve visited the JQ a number of times in the past I found that green was quite
 * W3C [HTML](https://validator.w3.org/) & [CSS](https://jigsaw.w3.org/css-validator/) validators.
 * [JSHint](https://jshint.com/) JavaScript validator.
 * [Beautifier.](https://beautifier.io/) Formats code neatly.
+* [Lighthouse in Chrome DevTools](https://developers.google.com/web/tools/lighthouse/?utm_source=devtools) for auditing performance, accessibility, SEO and best practices.
 
 ## Testing
 Separate testing document can be found here - [testing documentation.](TESTING.md)
