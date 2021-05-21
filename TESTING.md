@@ -123,8 +123,18 @@ This shows the impact of these changes:
 ![Lighthouse report after changes.](readme-docs/screenshots/lighthouse-desktop-2.jpg)
 
 ## Responsiveness
+Whilst building my site I have been checking my progress and changes using Chrome DevTools at different breakpoints. I also make a habit of regularly pushing my work to GitHub, so I can pshyically see the live site on both my desktop and iPhone via GitHub pages. I do this at varying stages of the build and especially when new features get added as I find physically seeing something more beneficial than a projection on Devtools. This also gives me a better feel of how it'll work.
+
+I have tested for responsiveness on other devices using DevTools along with the Responsive Design Mode on Firefox and the Inspect tool on Microsoft Edge. Using these tools I have tested on numerous mobile devices such as the Moto G4, Galaxy X9 and the iPhone range as well as numerous tablet devices in both landscape and portrait views.
 
 ## Browser Compatibility
+I have physically tested my website by completing the manual testing plan on the following browsers and devices:
+* Chrome (desktop and iPhone).
+* Firefox (desktop and iPhone).
+* Safari (desktop and iPhone).
+* Microsoft Edge (desktop only).
+ 
+I also tested compatibility at varying screen sizes to test the responsiveness on each Browser using Chrome DevTools along with the Responsive Design Mode on Firefox or the Inspect tool on Microsoft Edge. Issues that occured during this testing are documented in the bugs & fixes section.
 
 ## User Stories
 

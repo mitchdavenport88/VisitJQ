@@ -161,9 +161,9 @@ I’ve visited the JQ a number of times in the past and found that green was qui
 * [Bootstrap 5.](https://getbootstrap.com/) Grid layout, responsive design and basic styling.
 * [Favicon.io.](https://favicon.io/) Created favicon's, which are visible in browser tabs and the bookmarks bar.
 * [Font Awesome.](https://fontawesome.com/) Adds icons throughout the site to increase UX.
-* [Google Maps JavaScript API.](https://developers.google.com/maps/documentation/javascript/overview) API used to render a google map on my site. I used built in features such as markers and infowindows to provide additional information. 
+* [Google Maps JavaScript API.](https://developers.google.com/maps/documentation/javascript/overview) API used to render a Google map on my site. I used built in features such as markers and info windows to provide additional information. 
 * [Custom map markers.](https://mapicons.mapsmarker.com/) Used to generate and download custom map markers that match the sites aesthetic.
-* [Email.JS.](https://www.emailjs.com/) Connects the contact form to a email service. EmailJS uses the data inputted into the form to generate and send an email using a combination of JavaScript and a custom template.
+* [EmailJS.](https://www.emailjs.com/) Connects the contact form to an email service. EmailJS uses the data inputted into the form to generate and send an email using a combination of JavaScript and a custom template.
 * [W3schools](https://www.w3schools.com/) & [MDN.](https://developer.mozilla.org/en-US/) For general coding problem solving.
 * [TinyPNG.](https://tinypng.com/) Reduces file size of the image files used. 
 * [Am I responsive?](http://ami.responsivedesign.is/) Gives a visual representation of how the website looks on different devices. Also used to produce the mock-up shown above.
@@ -209,7 +209,7 @@ Taken from GitHub's documentation on cloning, which can be found
 ### Code
 * I used the `git branch` feature throughout this project. I learned how by watching - [Git and GitHub for beginners Crash Course on YouTube – freeCodeCamp.org.](https://youtu.be/RGOj5yH7evk)
 * I also used this website - [Learn Git Branching.](https://learngitbranching.js.org/)
-* Code to make the "Plan Your Visit" button scroll down to next section was from [plus2net.com](https://youtu.be/PP4Tr0l08NE) and edited accordingly.
+* Code to make the "Plan Your Visit" button scroll down to next section was from [plus2net.com](https://www.plus2net.com/html_tutorial/button-linking.php) and edited accordingly.
 * I made the carousel by following a walkthrough by [FrontendTips.](https://youtu.be/rTB-UNl_B_Y) I made changes where I saw fit to suit my requirements and also added to the code.
 * I learned the basics of google map features by watching and reading the following:
     * [Google Maps JavaScript API documentation | Developers console.](https://developers.google.com/maps/documentation/javascript/overview)
@@ -226,19 +226,19 @@ Taken from GitHub's documentation on cloning, which can be found
 * Places that were included in the recommendation section were found via [Tripadvisor.](https://www.tripadvisor.co.uk/)
 * The additional information shown in the What to Do? section was found on the following:
     * "Museums, heritage, creativity and culture. The JQ is bursting with activities and new experiences" tagline was from the[ Albert Dock, Liverpool](https://albertdock.com/things-to-do) site and adapted to fit the JQ. 
-    * google maps - supplied co-ordinates.
-    * google reviews - supplied the short description seen in the info windows.
+    * Google Maps - supplied co-ordinates.
+    * Google Reviews - supplied the short description seen in the info windows.
     * [Wikipedia](https://en.wikipedia.org/wiki/Main_Page) - supplied the additional information on the stations.
     * All the reviews seen in the Visit JQ Recommends section were from [Tripadvisor.](https://www.tripadvisor.co.uk/Attraction_Review-g186402-d1475248-Reviews-Jewellery_Quarter-Birmingham_West_Midlands_England.html)
-* [Home / landing page hero image - Ambitious Creative Co. Rick Barrett.](https://unsplash.com/photos/O9BznaWPO2M)
-* [Carousel slide 1 image - jewelleryquarter.net.](https://jewelleryquarter.net/action-stations/)
-* [Carousel slide 2 image - opentable.co.uk.](https://www.opentable.co.uk/r/lasan-restaurant-birmingham)
-* [Carousel slide 3 image - jewelleryquarter.net.](https://jewelleryquarter.net/gallery/independents/)
-* [Carousel slide 4 image - TimeOut article by David Baldwin.](https://www.timeout.com/birmingham/museums/museum-of-the-jewellery-quarter)
+* Home / landing page hero image - [Ambitious Creative Co. Rick Barrett.](https://unsplash.com/photos/O9BznaWPO2M)
+* Carousel slide 1 image - [jewelleryquarter.net.](https://jewelleryquarter.net/action-stations/)
+* Carousel slide 2 image - [opentable.co.uk.](https://www.opentable.co.uk/r/lasan-restaurant-birmingham)
+* Carousel slide 3 image - [jewelleryquarter.net.](https://jewelleryquarter.net/gallery/independents/)
+* Carousel slide 4 image - [TimeOut article by David Baldwin.](https://www.timeout.com/birmingham/museums/museum-of-the-jewellery-quarter)
 * The writing in the carousel was taken from the following sites and edited accordingly to suit:
-    * [About the JQ | Eat | Drink | Explore & Discover sections.](https://jewelleryquarter.net/visit/#cbd5ec58a7)
-    * [About the JQ | Explore & Discover sections.](https://jewelleryquarter.net/learn-explore/)
-    * [Eat section.](https://www.discoverjq.co.uk/the-jewellery-quarter/)
+    * About the JQ | Eat | Drink | Explore & Discover sections - [jewelleryquarter.net/visit.](https://jewelleryquarter.net/visit/#cbd5ec58a7)
+    * Eat section - [discoverjq.co.uk.](https://www.discoverjq.co.uk/the-jewellery-quarter/)
+    * About the JQ | Explore & Discover sections - [jewelleryquarter.net/learn-explore.](https://jewelleryquarter.net/learn-explore/)
 
 ### Acknowledgements
 * Aukje van der Wal - [MS2 Lead Call via Slack.](https://us02web.zoom.us/rec/play/PL07KmO07O24DlzKgJ0W8aA1NIuCKpURunQB89g6LP71sRwXL7WF2YhHiOGYvPkYMwlMEvCfu3jOruhu.M8bzVC5Hy8UDC2Nz?startTime=1613671536000&_x_zm_rtaid=llLdywhYSJyduniSuy4unw.1618323037971.65d64db139e616abc014e51344401eb0&_x_zm_rhtaid=554)
