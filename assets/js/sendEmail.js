@@ -52,6 +52,7 @@ submitButton.addEventListener('click', function () {
 /** displays 'Please ensure all fields are correctly filled in!' message */
 function displayValidateMsg() {
     document.getElementById('failed').style.display = 'none';
+    document.getElementById('success').style.display = 'none';
     document.getElementById('validate').style.display = 'block';
     // message hidden after 6seconds
     setTimeout(function () {
