@@ -316,7 +316,7 @@ body {
 #recommend-content a {
     text-decoration: none;
     font-weight: bold;
-    color: var(--dark-green);    
+    color: var(--light-green);    
 }
 
 #recommend-content a:hover {
@@ -418,7 +418,7 @@ label {
 }
 
 #success {
-    background-color: var(--dark-green);
+    background-color: var(--medium-green);
     border: 1px solid var(--light-green);    
 }
 
@@ -519,5 +519,16 @@ label {
     /* contact */
     #contact-form {
         width: 90%;
+    }
+}
+
+/* below 320px */
+@media only screen and (max-width: 319px) {
+    /* footer */
+    #footer p {
+        display: none;
+    }
+    .social-icons {
+        margin: 0 auto;
     }
 }
