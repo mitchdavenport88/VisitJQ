@@ -123,9 +123,11 @@ This shows the impact of these changes:
 ![Lighthouse report after changes.](readme-docs/screenshots/lighthouse-desktop-2.jpg)
 
 ## Responsiveness
-Whilst building my site I have been checking my progress and changes using Chrome DevTools at different breakpoints. I also make a habit of regularly pushing my work to GitHub, so I can pshyically see the live site on both my desktop and iPhone via GitHub pages. I do this at varying stages of the build and especially when new features get added as I find physically seeing something more beneficial than a projection on Devtools. This also gives me a better feel of how it'll work.
+Whilst building my site I have been checking my progress and changes using Chrome DevTools at different breakpoints. I also make a habit of regularly pushing my work to GitHub, so I can physically see the live site on both my desktop and iPhone via GitHub pages. I do this at varying stages of the build and especially when new features get added as I find physically seeing something more beneficial than a projection on Devtools. This also gives me a better feel of how it works.
 
 I have tested for responsiveness on other devices using DevTools along with the Responsive Design Mode on Firefox and the Inspect tool on Microsoft Edge. Using these tools I have tested on numerous mobile devices such as the Moto G4, Galaxy X9 and the iPhone range as well as numerous tablet devices in both landscape and portrait views.
+
+![Chrome DevTools iPad projection](readme-docs/screenshots/chrome-devtools-ipad1.jpg)
 
 ## Browser Compatibility
 I have physically tested my website by completing the manual testing plan on the following browsers and devices:
@@ -134,8 +136,15 @@ I have physically tested my website by completing the manual testing plan on the
 * Safari (desktop and iPhone).
 * Microsoft Edge (desktop only).
  
-I also tested compatibility at varying screen sizes to test the responsiveness on each Browser using Chrome DevTools along with the Responsive Design Mode on Firefox or the Inspect tool on Microsoft Edge. Issues that occured during this testing are documented in the bugs & fixes section.
+I also tested compatibility at varying screen sizes to test the responsiveness on each Browser using Chrome DevTools along with the Responsive Design Mode on Firefox or the Inspect tool on Microsoft Edge. Issues that occurred during this testing are documented in the bugs & fixes section.
 
 ## User Stories
 
 ## Bugs & fixes
+As a result of my manual testing I found and corrected the following issues:
+* As mentioned above I modified my colour scheme to improve the contrast ratio and during testing I realised that I had overlooked changing the colour of two things:
+    * The links found in the recommendation section (where applicable). The link still worked but wasn’t visible as it was the same colour as the background. I altered the css so the link was now #FBFAD3 and visible. [Screenshot showing this here.](readme-docs/screenshots/manual-testing-img1.jpg)      
+    * The background colour of the success message that appears when a message has been sent was also the same colour as the background. I changed this to #729D39 as I wanted the message to stand out more. [Screenshot showing this change here.](readme-docs/screenshots/manual-testing-img2.jpg)  
+* During the testing of my contact form I found one instance where two messages appeared at once. [Screenshot showing this here.](readme-docs/screenshots/manual-testing-img3.jpg) As I want the messages to relay clear information I added `style.display = 'none';` to the function displayValidateMsg() in sendEmail.js in order to hide the success message in this situation.
+* I noticed that on incredibly thin widths (below 320px) the copyright notice and the social media icons in the footer clashed. Now at this breakpoint the copyright notice gets hidden and the social media links get centrally aligned (in the rare occasions that this occurs).
+* While testing the carousel I came to the realisation that the arrow on the 1st slide was being lost in the background. [As seen here.](readme-docs/screenshots/manual-testing-img4.jpg) I resolved this issue by switching the content and images over on each slide meaning the arrows on all slides are now very noticeable, this simple switch means the carousel still runs in the same order but is much more user-friendly. 
