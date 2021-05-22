@@ -52,14 +52,14 @@ Eat | Drink | Explore:
     * Checked on slides 2 and 3 that arrows are displayed on both sides of the carousel.
 6. Checked that the indicator buttons update in appearance dependent on the slides index, they should indicate what slide is currently been shown.
 7. Clicked on each indication button. On click the carousel should move to its corresponding slide e.g. button 2 will display slide 2 and so on... 
-8. 4 slides in total.
+8. Checked there are 4 slides in total.
 9. Changed the window width to below 992px to check the carousel shows text only and the images get hidden.
     * Carousel content should adjust to the screen width. Text is legible and doesn’t overflow. 
 10. Repeated steps 3-8.
 
 What to do:
 1. Checked that the title of "What To Do?" is displayed and aligned centrally above the section.
-2. On screen widths of 992px and above all the contents of this section should be inline filling the pages width.
+2. On screen widths of 992px and above all the contents of this section should be inline filling the page width.
     * Checked that the map renders. It should locate to the JQ.
     * Checked the correct buttons load above the map. Each button should have a label and an icon that relate to its function.
     * Checked that the brief introduction and explanatory text appears in the recommendation section.
@@ -82,7 +82,7 @@ What to do:
 8. Clicked another map button.
     * Relevant marker set should appear as previously tested.
     * Checked the map view resets to its default position and default zoom.
-    * Checked the recommendation section text also reset to its default content.
+    * Checked the recommendation section text also resets to its default content.
 9. Changed the window width to below 992px in order to check the map and its buttons fill the screen width.
     * The recommendation section should drop underneath the map.
 10. Repeat steps 4-8.
@@ -96,11 +96,11 @@ Contact:
     * Filled in any 2 of the 3 fields with "test test test". Pressed the send button. Again failed as all fields are required.
     * Filled in all fields with "test test test". Pressed the send button. Failed as the email field requires a email address.
 5. Tested the email address validation.
-    * I changed the email field to "test@test" and pressed send. This would send if using the HTML required attribute but should fail in this instance as a valid email address should have a .com or .something at the end.
-    * I also tried "@test.com", "test@test.c" and "test@test.comm". As these don't fit the pattern set in my JavaScript validation they all should fail.
+    * I changed the email field to "test@test" and pressed send. This would send if using the HTML required attribute but should fail in this instance as a valid email address should have a .com or .something at the end. “Please ensure all fields are correctly filled in!” message should display.
+    * I also tried "@test.com", "test@test.c" and "test@test.comm". As these don't fit the pattern set in my JavaScript validation they all should fail too. “Please ensure all fields are correctly filled in!” message should display.
 6. Changed email field to "test@test.com" and pressed send. The button text should now read sending...
-7. A green box should now appear and display the message: “Your message has been sent!”.
-    * Form should of been reset, blank and ready for use again if required.
+7. A green message box should now appear and display the message: “Your message has been sent!”.
+    * Checked the form has been reset, blank and ready for use again if required.
     * Checked the button text has defaulted back to send.
     * Message disappears after 6 seconds.
 8. On screen widths below 768px the form layout will change with all fields becoming block and displaying on top of one another.
@@ -112,14 +112,14 @@ Footer:
 I also posted my site in the #peer-code-review channel on Code Institutes Slack channel to get feedback from fellow students. Stefan Carter and Naoise Gaffney kindly took the time to test my front end product with no major issues being reported back. 
 
 ### Lighthouse Reports
-Naoise mentioned in his feedback about doing a Lighthouse report. I had done some initial audits before submitting to the #peer-code-review but hadn't taken any action on any of the feedback. As part of my testing I decided to look further into its results and recommmendations in order to improve my site.
+Naoise mentioned in his feedback about doing a Lighthouse report. I had done some initial audits before submitting to the #peer-code-review, but hadn't taken any action on any of the feedback. As part of my testing I decided to look further into its results and recommmendations in order to improve my site.
 
-![Initial lighthouse report](readme-docs/screenshots/lighthouse-desktop-1.jpg)
+![Initial lighthouse report.](readme-docs/screenshots/lighthouse-desktop-1.jpg)
 
 Based on the results of the report I made the following changes:
 * In order to improve the SEO I added a meta description into my header section.
 * To improve the sites accessibility I added an `aria-label` attribute to all my buttons so they work better with screen readers.
-* It was bought to my attention that my colour scheme did not have a sufficient contrast ratio. I was originally using a light green (#FBFAD3) on top of a medium green (#729D39) background, I thought this contrast was enough but it was only been given a rating of 2.99 where ideally we'd want a ratio above 4.5. As a result I decided to tweak my color scheme in order to improve the accessibility. I swapped the medium green (#729D39) for a darker green (#36622B), which was part of my planned colour palette to get a final ratio of 6.71. This is much improved. 
+* It was bought to my attention that my colour scheme did not have a sufficient contrast ratio. I was originally using a light green (#FBFAD3) on top of a medium green (#729D39) background, I thought this contrast was enough but it was only been given a contrast rating of 2.99. I read further into this and found that ideally we'd want a contrast ratio above 4.5. As a result I decided to tweak my color scheme in order to improve accessibility. I swapped the medium green (#729D39) for a darker green (#36622B), which was part of my planned colour palette to get a final contrasr ratio of 6.71. This is much improved. 
 
     [Before the change (contrast ratio 2.99) screenshot.](readme-docs/screenshots/amiresponsive-image.jpg)
 
@@ -135,11 +135,11 @@ This shows the impact of these changes:
 ![Lighthouse report after changes.](readme-docs/screenshots/lighthouse-desktop-2.jpg)
 
 ## Responsiveness
-Whilst building my site I have been checking my progress and changes using Chrome DevTools at different breakpoints. I also make a habit of regularly pushing my work to GitHub, so I can physically see the live site on both my desktop and iPhone via GitHub pages. I do this at varying stages of the build and especially when new features get added as I find physically seeing something more beneficial than a projection on Devtools. This also gives me a better feel of how it works.
+Whilst building my site I have been checking my progress and changes using Chrome DevTools at different breakpoints. I also make a habit of regularly pushing my work to GitHub, so I can physically see the live site on both my desktop and iPhone via GitHub pages. I do this at varying stages of the build and especially when new features get added, as I find physically seeing something more beneficial than a projection on DevTools. This also gives me a better feel of how it works.
 
 I have tested for responsiveness on other devices using DevTools along with the Responsive Design Mode on Firefox and the Inspect tool on Microsoft Edge. Using these tools I have tested on numerous mobile devices such as the Moto G4, Galaxy X9 and the iPhone range as well as numerous tablet devices in both landscape and portrait views.
 
-![Chrome DevTools iPad projection](readme-docs/screenshots/chrome-devtools-ipad1.jpg)
+![Chrome DevTools iPad projection.](readme-docs/screenshots/chrome-devtools-ipad1.jpg)
 
 ## Browser Compatibility
 I have physically tested my website by completing the manual testing plan on the following browsers and devices:
@@ -151,15 +151,77 @@ I have physically tested my website by completing the manual testing plan on the
 I also tested compatibility at varying screen sizes to test the responsiveness on each Browser using Chrome DevTools along with the Responsive Design Mode on Firefox or the Inspect tool on Microsoft Edge. Issues that occurred during this testing are documented in the bugs & fixes section.
 
 ## User Stories
+### As a user / site owner I'd like:
+* **"The site to be easy to navigate around."** 
+* **"An easy to navigate, responsive site."**
+* **"To do all of the above regardless of what device I’m using."**
+    * I've used a fixed navigation bar so that the page links are available at the top of the page at any point of use as shown in the image below.
+    * This is also the case on smaller devices but the links get placed into a dropdown menu, which is operational by clicking the menu button [as shown here.](readme-docs/screenshots/user-story-screenshots/user-story1-screenshot2.jpg)
+    * I have done thorough browser compatibility testing as well as responsiveness testing at different breakpoints. I am confident that the site is suitable for use on a wide range of devices on the browsers tested. 
+
+![Fixed navigation bar on desktop.](readme-docs/screenshots/user-story-screenshots/user-story1-screenshot.jpg)
+  
+* **"To be able to find what I’m after quickly."**
+    * The fixed navigation bar mentioned above aids with this.
+    * Each section is clearly titled and seperated by these titles. The sections also appear on contrasting block colour backgrounds adding further distinction.  
+    * I've also tried to keep each section as concise as possible meaning if a user were to scroll down the page they wouldn't have to scroll far to find what they're after.
+
+![Contact section title.](readme-docs/screenshots/user-story-screenshots/user-story2-screenshot.jpg)
+
+* **"To find out where places are."**
+    * My "What To Do?" section uses the Google Maps API to display the recommendations, showing users where specific places are on a map.
+    * The map works just as it would if it was accessed via Google with the controls being the same. The map has been tailored for showcasing the JQ area throughout use. 
+
+![Google map.](readme-docs/screenshots/user-story-screenshots/user-story3-screenshot.jpg)
+
+* **"Recommendations of what to do, where to go and where to stay."**
+* **"To give people reasons to visit. I can do this by providing a wide range of options of what to do, where to go and where to stay thus catering for a wider audience."**
+    * As you can see from the image above there are a series of buttons above the map that represent place types. When one of these buttons is clicked a range of markers will drop on the map showing the places we recommend for that place type.
+    * At the moment the place types are:
+        * Travel - car parks, metro and train stations.
+        * Eat -  cafes and restaurants.
+        * Drink - pubs and bars.
+        * Explore - places of interest such as museums, breweries and live music venues.
+        * Sleep - apartments, hotels and hostels.
+    * I've tried to include a wide range of venues and activities to cater for a wider audience.
+    * I've used an object in my JavaScript to hold this information. This makes it easy to maintain, meaning at a later date I could add or remove places, update marker positions if required and even add a new place type button.
+
+![Google map with markers.](readme-docs/screenshots/user-story-screenshots/user-story4-screenshot.jpg)
+
+* **"Find further information on recommendations easily, so I can decide on whether they’re suitable."**
+* **"To show relevant information on my recommendations. This information is to be clear and informative."**
+    * Each marker that is dropped is clickable. Clicking a marker will display an info window that shows additonal information specific to that place. The information showed via an info window is:
+        * Place name.
+        * A brief description of the place.
+        * A link to thier website.
+    * In addition to this when a marker is clicked the text in the recommendation section (shown to the right or underneath the map) is updated. This section will now contain either additional information on one of the stations for instance or contain a review of a restaurant or pub we've recommended.
+
+![Google map info window and recommendation section.](readme-docs/screenshots/user-story-screenshots/user-story5-screenshot.jpg)
+
+* **"To get a better understanding about the area to gauge whether it’s worth visiting."**
+    * I feel the carousel covers the wide diversity offered by the area.
+    * Each image used (including the hero images) helps portray this too.
+    * Each of the 4 slides in the carousel showcase a different aspect to the area. I've broken the information down this way as not to overloaded the user with alot of information at once.
+    * The information is easily accessible, displayed in a visually compact way that doesn't effect the quality of information provided.
+    * The map also helps by showing where the JQ it is geographically. This can be used to see where the area is in relation to the city centre or elsewhere.
+
+![Eat carousel page.](readme-docs/screenshots/user-story-screenshots/user-story6-screenshot.jpg)
+
+* **"To be able to get in touch with someone if I have any questions."**
+* **"To be easily contactable."**
+    * An easy to use contact form can be found at the bottom of the page. This will send a message using a EmailJS template that populates using the data collecting in the form. Example shown below.
+    * Contact can also be made via social media channels with links to these at the bottom of the page. These are located by the contact section so can be found easily if a contact form isnt thier thing! 
+
+![EmailJS email template.](readme-docs/screenshots/user-story-screenshots/user-story7-screenshot.jpg)
 
 ## Bugs & fixes
 As a result of my manual testing I found and corrected the following issues:
-* As mentioned above I modified my colour scheme to improve the contrast ratio and during testing I realised that I had overlooked changing the colour of two things:
-    * The links found in the recommendation section (where applicable). The link still worked but wasn’t visible as it was the same colour as the background. I altered the css so the link was now #FBFAD3 and visible. [Screenshot showing this here.](readme-docs/screenshots/manual-testing-img1.jpg)      
-    * The background colour of the success message that appears when a message has been sent was also the same colour as the background. I changed this to #729D39 as I wanted the message to stand out more. [Screenshot showing this change here.](readme-docs/screenshots/manual-testing-img2.jpg)  
+* As mentioned above I modified my colour scheme to improve the contrast ratio. During testing I realised that I had overlooked changing the colour of two things:
+    * The links found in the recommendation section (where applicable). The links still worked but weren’t visible as they were the same colour as the background. I altered the css so the links are now #FBFAD3 and visible. [Screenshot showing this here.](readme-docs/screenshots/manual-testing-img1.jpg)      
+    * The background colour of the success message that appears when a message has been sent. This was also the same colour as the background. I changed this to #729D39 as I want this message to stand out. [Screenshot showing this change here.](readme-docs/screenshots/manual-testing-img2.jpg)  
 
 * During the testing of my contact form I found one instance where two messages appeared at once. [Screenshot showing this here.](readme-docs/screenshots/manual-testing-img3.jpg) As I want the messages to relay clear information I added `style.display = 'none';` to the function displayValidateMsg() in sendEmail.js in order to hide the success message in this situation.
 
-* I noticed that on incredibly thin widths (below 320px) the copyright notice and the social media icons in the footer clashed. Now at this breakpoint the copyright notice gets hidden and the social media links get centrally aligned (in the rare occasions that this occurs).
+* I noticed that on incredibly thin widths (below 320px) the copyright notice and the social media icons in the footer overlapped. Now at this breakpoint the copyright notice gets hidden and the social media links get centrally aligned (in the rare occasions that this occurs).
 
-* While testing the carousel I came to the realisation that the arrow on the 1st slide was being lost in the background. [As seen here.](readme-docs/screenshots/manual-testing-img4.jpg) I resolved this issue by switching the content and images over on each slide meaning the arrows on all slides are now very noticeable, this simple switch means the carousel still runs in the same order but is much more user-friendly. 
+* While testing the carousel I came to the realisation that the arrow on the 1st slide was being lost in the background. [As seen here.](readme-docs/screenshots/manual-testing-img4.jpg) I resolved this issue by switching the content and images over on each slide meaning the arrows are now either up against a dark green background or a dark image. This simple switch means the carousel still runs in the same order but the arrows are much more visible making the carousel more user-friendly. 

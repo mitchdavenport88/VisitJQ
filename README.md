@@ -12,7 +12,7 @@ GitHub repository can be viewed here - [mitchdavenport88/visitJQ.](https://githu
 
 ## UX
 ### Strategy
-The aim is to create a user friendly website that’s shows potential visitors information about the Jewellery Quarter in a clear and intuitive manner. Visit JQ will provide the user with recommendations along with any other relevant information with the intention of enticing people away from the city centre and support more local, independent businesses and the local community.
+The aim is to create a user friendly website that shows potential visitors information about the Jewellery Quarter in a clear and intuitive manner. Visit JQ will provide the user with recommendations along with any other relevant information with the intention of enticing people away from the city centre to support more local, independent businesses and the local community.
 
 This website will be aimed at potential visitors who might be new to the area and have never visited or even thought of visiting before. It will also be of use to those visitors who may have visited before or know of the area but are looking to explore it further. Either way the users share the same end goal - they want information.
 
@@ -186,7 +186,7 @@ I’ve been using Gitpod to write my code and using the terminal to add, commit 
 ### GitHub Pages deployment
 This site is hosted by GitHub pages and was deployed from the master branch of its GitHub repository. The following steps were taken to deploy this project:
 1. Log in to GitHub and navigate to the chosen repository.
-2. Select **settings** from the menu that is near the top of the page.
+2. Select **settings** from the menu this is near the top of the page.
 3. From the options menu on the left of the screen select **pages**. You can also scroll down to the GitHub Pages section near the bottom of the page and click the link shown.
 4. Under the sub-heading **source** change the drop down menu that reads "none" so it reads "Branch:master". **Click save**.
 5. The page will refresh, this means it was successful. Note that changes will take a while to take effect.
