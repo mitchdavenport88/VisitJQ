@@ -206,14 +206,15 @@ I also tested compatibility at varying screen sizes to test the responsiveness o
 * **"To be able to get in touch with someone if I have any questions."**
 * **"To be easily contactable."**
     * An easy to use contact form can be found at the bottom of the page. This will send a message using an EmailJS template that populates using the data collected in the form. An example of a sent message can be [seen here.](readme-docs/screenshots/user-story-screenshots/user-story7-screenshot.jpg)
-    * Contact can also be made via social media channels with links to these at the bottom of the page. These are located by the contact section so can be found easily if a contact form isn't their thing! 
+    * Contact can also be made via social media channels with links to these at the bottom of the page. These are located by the contact section so can be found easily if a contact form isn't their thing!     
+    
 
 * **"A well-presented and visually appealing product that gives users the feeling that they can trust the content."**
     * I like to think I have created a visually appealing site that looks like it’s been well thought through. To achieve this I've used a combination of different features throughout the page as well as using a simple colour scheme and layout that gives a clean and professional look.
 
 * **To provide useful information in a concise, intuitive manner that keeps the user engaged and likely to return.**
     * I have provided a range of information in a number of different ways:
-        * On a carousel, which is operated by button click. The content of which is informative and responsive and is displayed in a concise way. This is achieved by using a number of slides in order to break up the content up into size-able chucks as opposed to just a big block of text, which is hard going.
+        * On a carousel, which is operated by button click. The content of which is informative, responsive and is displayed in a concise way. This is achieved by using a number of slides in order to break up the content up into size-able chucks as opposed to just a big block of text, which is hard going.
         * Locations of recommendations get displayed in a visual manner by using markers placed on a map to indicate their whereabouts.
         * Place specific information on the recommendations gets displayed via an info window, which is triggered by clicking on any of the marker icons. This information is also concise and doesnt take the user away from where they are on the page.  
         * Additional information that is likely to take up more screen space is shown in a separate section but still next to the map.
@@ -223,6 +224,7 @@ I also tested compatibility at varying screen sizes to test the responsiveness o
     * I have done thorough browser compatibility testing as well as responsiveness testing at different breakpoints. I am confident that the site is suitable for use on a wide range of devices on the browsers tested. 
 
 ## Bugs & fixes
+
 As a result of my manual testing I found and corrected the following issues:
 * As mentioned above I modified my colour scheme to improve the contrast ratio. During testing I realised that I had overlooked changing the colour of two things:
     * The links found in the recommendation section (where applicable). The links still worked but weren’t visible as they were the same colour as the background. I altered the css so the links are now #FBFAD3 and visible. [Screenshot showing this here.](readme-docs/screenshots/manual-testing-img1.jpg)      
@@ -233,3 +235,22 @@ As a result of my manual testing I found and corrected the following issues:
 * I noticed that on incredibly thin widths (below 320px) the copyright notice and the social media icons in the footer overlapped. Now at this breakpoint the copyright notice gets hidden and the social media links get centrally aligned (in the rare occasions that this occurs).
 
 * While testing the carousel I came to the realisation that the arrow on the 1st slide was being lost in the background. [As seen here.](readme-docs/screenshots/manual-testing-img4.jpg) I resolved this issue by switching the content and images over on each slide meaning the arrows are now either up against a dark green background or a dark image. This simple switch means the carousel still runs in the same order but the arrows are much more visible making the carousel more user-friendly. 
+
+### Webkit issue
+I also found something odd during the testing of the map section on my mobile, which is an iPhone 6. When the “Click here to visit website” link is used via the Google map info window it opens in a new tab like it should… But then on my return to the page the info window surround was collapsing as shown below. 
+
+[Before link was opened.](readme-docs/screenshots/bug-iphone-before.PNG)
+
+[On return to the page.](readme-docs/screenshots/bug-iphone-after.PNG)
+
+I tried a number of things to resolve the issue all to no avail:
+* Turning off the maxWidth property I have on the window.
+* Re-adding the webkits using AutoPrefixer.
+* Styling the info window in numerous different ways.
+* Looked at the overriding the windows preset css styling in my css.
+
+The issue didn't occur on my desktop browser nor on any of DevTools, Responsive Design Mode or on the Inspect tool. This seemed to be only happening on iPhones though as I also tested the issue on my partner’s iPhone 7 also using Chrome and Safari but when I tested on my friends Huawei P30 pro using Chrome it didn’t happen at all. I ended up speaking to my mentor about it who also tested it on his iPhone on both Brave and Safari with the same results as me. 
+
+[On return to the page using a Huawei P30 pro.](readme-docs/screenshots/bug-huawei-after.jpg)
+
+After speaking to tutor support and my mentor Brian, I am putting the issue down to a peculiarity in how the browsers are handling this. It was explained to me that browsers on iOS use the same rendering engine i.e. Chrome on iPhone uses Webkit (Apple’s rendering engine), which is different from Chrome on other platforms (which uses Chromium). This could point to it being a possible Webkit issue. The content that I'm putting into the info window is actually unaffected - it still displays, its still visible and doesn't get re-sized in anyway, Its just the surrounding window effected.

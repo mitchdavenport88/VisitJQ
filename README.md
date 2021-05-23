@@ -219,7 +219,7 @@ Taken from GitHub's documentation on cloning, which can be found
     * [JavaScript Google Maps API Tutorial Updated [2021] - Sam Codes.](https://youtu.be/uPhWSyRqQDA)
 * [EmailJS documentation](https://www.emailjs.com/docs/) was used to link my contact form to their service.
 * I got the idea for the validation messages used in the contact form from this [Traversy Media video.](https://youtu.be/PP4Tr0l08NE)
-* The code used to validate email addresses by thier format/make up was taken from this [Online Tutorials video.](https://youtu.be/HzJngc-Se9Q)
+* The pattern code used to validate email addresses by thier format/make up was taken from this [Online Tutorials video.](https://youtu.be/HzJngc-Se9Q)
 * [W3schools](https://www.w3schools.com/) & [MDN.](https://developer.mozilla.org/en-US/) For general coding problem solving.
 
 ### Content
@@ -246,3 +246,4 @@ Taken from GitHub's documentation on cloning, which can be found
 * Tutor support at Code Institute for their help and support when needed most.
 * Naoise Gaffney and Stefan Carter for taking the time to look at my site and giving feedback via 
 slack's #peer-code-review channel.
+* README examples - [AJGreaves](https://github.com/AJGreaves/portrait-artist/blob/master/README.md) / [crypticCaroline](https://github.com/crypticCaroline/ms1-plantfactory/blob/master/README.md).
