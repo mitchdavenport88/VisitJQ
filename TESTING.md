@@ -203,8 +203,7 @@ I also tested compatibility at varying screen sizes to test the responsiveness o
 
 ![Eat carousel page.](readme-docs/screenshots/user-story-screenshots/user-story6-screenshot.jpg)
 
-* **"To be able to get in touch with someone if I have any questions."**
-* **"To be easily contactable."**
+* **"To be able to get in touch with someone if I have any questions." & "To be easily contactable."**
     * An easy to use contact form can be found at the bottom of the page. This will send a message using an EmailJS template that populates using the data collected in the form. An example of a sent message can be [seen here.](readme-docs/screenshots/user-story-screenshots/user-story7-screenshot.jpg)
     * Contact can also be made via social media channels with links to these at the bottom of the page. These are located by the contact section so can be found easily if a contact form isn't their thing!     
     
@@ -219,6 +218,8 @@ I also tested compatibility at varying screen sizes to test the responsiveness o
         * Place specific information on the recommendations gets displayed via an info window, which is triggered by clicking on any of the marker icons. This information is also concise and doesnt take the user away from where they are on the page.  
         * Additional information that is likely to take up more screen space is shown in a separate section but still next to the map.
         * In the contact section I chose to show success, failure or validation messages based on the users input once the form gets submitted to increase interactivity with a user. 
+
+![Success, failure or validation messages.](readme-docs/screenshots/user-story-screenshots/user-story8-screenshot.jpg)
 
 * **"To do all of the above regardless of what device I’m using."**
     * I have done thorough browser compatibility testing as well as responsiveness testing at different breakpoints. I am confident that the site is suitable for use on a wide range of devices on the browsers tested. 
@@ -239,18 +240,15 @@ As a result of my manual testing I found and corrected the following issues:
 ### Webkit issue
 I also found something odd during the testing of the map section on my mobile, which is an iPhone 6. When the “Click here to visit website” link is used via the Google map info window it opens in a new tab like it should… But then on my return to the page the info window surround was collapsing as shown below. 
 
-[Before link was opened.](readme-docs/screenshots/bug-iphone-before.PNG)
-
-[On return to the page.](readme-docs/screenshots/bug-iphone-after.PNG)
+The issue didn't occur on my desktop browser nor on any of DevTools, Responsive Design Mode or on the Inspect tool. This seemed to be only happening on iPhones though as I also found the issue on my partner’s iPhone 7 also using Chrome and Safari but when I tested on my friends Huawei P30 pro using Chrome it didn’t happen at all. I ended up speaking to my mentor about it who also tested it on his iPhone on both Brave and Safari with the same results as me. 
+* [Before link was opened (iPhone).](readme-docs/screenshots/bug-iphone-before.PNG)
+* [On return to the page (iPhone).](readme-docs/screenshots/bug-iphone-after.PNG)
+* [On return to the page (Huawei P30 pro).](readme-docs/screenshots/bug-huawei-after.jpg)
 
 I tried a number of things to resolve the issue all to no avail:
 * Turning off the maxWidth property I have on the window.
-* Re-adding the webkits using AutoPrefixer.
 * Styling the info window in numerous different ways.
-* Looked at the overriding the windows preset css styling in my css.
+* Re-adding the webkits using AutoPrefixer.
+* Tried overriding and editing the info windows preset css styling with my own css styling.
 
-The issue didn't occur on my desktop browser nor on any of DevTools, Responsive Design Mode or on the Inspect tool. This seemed to be only happening on iPhones though as I also tested the issue on my partner’s iPhone 7 also using Chrome and Safari but when I tested on my friends Huawei P30 pro using Chrome it didn’t happen at all. I ended up speaking to my mentor about it who also tested it on his iPhone on both Brave and Safari with the same results as me. 
-
-[On return to the page using a Huawei P30 pro.](readme-docs/screenshots/bug-huawei-after.jpg)
-
-After speaking to tutor support and my mentor Brian, I am putting the issue down to a peculiarity in how the browsers are handling this. It was explained to me that browsers on iOS use the same rendering engine i.e. Chrome on iPhone uses Webkit (Apple’s rendering engine), which is different from Chrome on other platforms (which uses Chromium). This could point to it being a possible Webkit issue. The content that I'm putting into the info window is actually unaffected - it still displays, its still visible and doesn't get re-sized in anyway, Its just the surrounding window effected.
+After speaking to tutor support and my mentor Brian, I am putting the issue down to a peculiarity in how the browsers are handling this. It was explained to me that browsers on iOS use the same rendering engine i.e. Chrome on iPhone uses Webkit (Apple’s rendering engine), which is different from Chrome on other platforms (which uses Chromium). This could point to it being a possible Webkit issue. The content that I'm putting into the info window is actually unaffected - it still displays, its still visible and doesn't get re-sized in anyway. Its just the surrounding window that's effected.
