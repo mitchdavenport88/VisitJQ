@@ -135,7 +135,7 @@ I’ve visited the JQ a number of times in the past and found that green was qui
 ### Contact 
 * All inputs are labelled and have a placeholder so it’s clear what goes into each field.
 * The form layout changes at 768px to provide something suited for smaller screen widths.
-* The form doesn’t use the `method="POST"` attribute instead the data collected will be sent in an email using EmailJS. When send is clicked the form data is sent to a template on EmailJS, which has been setup to put this data into a structured email and then sent on.
+* The form doesn’t use the `method="POST"` attribute instead the data collected will be sent in an email using EmailJS. When send is clicked the form data is sent to a template on EmailJS, which has been setup to put this data into a structured email and then sent on. [Example of what this looks like shown here.](readme-docs/screenshots/emailjs-example.jpg)
 * I've used the correct input types for each input field but also written my own validation using JavaScript to check that all input fields are filled in so no empty forms can be sent and that the email address provided is valid.
 * Once the send button is clicked a message will appear dependant on its status. This message will tell the user if:
     * The message has been sent correctly.
@@ -164,12 +164,11 @@ I’ve visited the JQ a number of times in the past and found that green was qui
 * [Google Maps JavaScript API.](https://developers.google.com/maps/documentation/javascript/overview) API used to render a Google map on my site. I used built in features such as markers and info windows to provide additional information. 
 * [Custom map markers.](https://mapicons.mapsmarker.com/) Used to generate and download custom map markers that match the sites aesthetic.
 * [EmailJS.](https://www.emailjs.com/) Connects the contact form to an email service. EmailJS uses the data inputted into the form to generate and send an email using a combination of JavaScript and a custom template.
-* [W3schools](https://www.w3schools.com/) & [MDN.](https://developer.mozilla.org/en-US/) For general coding problem solving.
 * [TinyPNG.](https://tinypng.com/) Reduces file size of the image files used. 
 * [Am I responsive?](http://ami.responsivedesign.is/) Gives a visual representation of how the website looks on different devices. Also used to produce the mock-up shown above.
 * [AutoPrefixer.](https://autoprefixer.github.io/) Adds vendor prefixes to CSS code for use on additional browsers.
 * W3C [HTML](https://validator.w3.org/) & [CSS](https://jigsaw.w3.org/css-validator/) validators.
-* [JSHint](https://jshint.com/) JavaScript validator.
+* [JSHint.](https://jshint.com/) JavaScript validator.
 * [Beautifier.](https://beautifier.io/) Formats code neatly.
 * [Lighthouse in Chrome DevTools](https://developers.google.com/web/tools/lighthouse/?utm_source=devtools) for auditing performance, accessibility, SEO and best practices.
 
@@ -207,17 +206,18 @@ Taken from GitHub's documentation on cloning, which can be found
 ## Credits
 
 ### Code
+* I used [Bootstrap](https://getbootstrap.com/) for grid layout, responsive design and simple styling.
 * I used the `git branch` feature throughout this project. I learned how by watching - [Git and GitHub for beginners Crash Course on YouTube – freeCodeCamp.org.](https://youtu.be/RGOj5yH7evk)
 * I also used this website - [Learn Git Branching.](https://learngitbranching.js.org/)
 * Code to make the "Plan Your Visit" button scroll down to next section was from [plus2net.com](https://www.plus2net.com/html_tutorial/button-linking.php) and edited accordingly.
 * I made the carousel by following a walkthrough by [FrontendTips.](https://youtu.be/rTB-UNl_B_Y) I made changes where I saw fit to suit my requirements and also added to the code.
-* I learned the basics of google map features by watching and reading the following:
+* I learned about the basics of google map features by watching and reading the following:
     * [Google Maps JavaScript API documentation | Developers console.](https://developers.google.com/maps/documentation/javascript/overview)
     * How to Google Maps PDF by Eamonn Smyth via Slack.
     * [Google Maps API Tutorial | Custom Marker Icon | Multiple Info Window - Pradip Debnath.](https://youtu.be/Xptz0GQ2DO4)
     * [Google Maps JavaScript API Tutorial – Traversy Media.](https://youtu.be/Zxf1mnP5zcw)
     * [JavaScript Google Maps API Tutorial Updated [2021] - Sam Codes.](https://youtu.be/uPhWSyRqQDA)
-* [EmailJS documentation.](https://www.emailjs.com/docs/)
+* [EmailJS documentation](https://www.emailjs.com/docs/) was used to link my contact form to thier service.
 * I got the idea for the validation messages used in the contact form from this [Traversy Media video.](https://youtu.be/PP4Tr0l08NE)
 * The code used to validate email addresses by thier format/make up was taken from this [Online Tutorials video.](https://youtu.be/HzJngc-Se9Q)
 * [W3schools](https://www.w3schools.com/) & [MDN.](https://developer.mozilla.org/en-US/) For general coding problem solving.

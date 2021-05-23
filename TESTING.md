@@ -154,19 +154,15 @@ I also tested compatibility at varying screen sizes to test the responsiveness o
 ### As a user / site owner I'd like:
 * **"The site to be easy to navigate around."** 
 * **"An easy to navigate, responsive site."**
-* **"To do all of the above regardless of what device I’m using."**
     * I've used a fixed navigation bar so that the page links are available at the top of the page at any point of use as shown in the image below.
     * This is also the case on smaller devices but the links get placed into a dropdown menu, which is operational by clicking the menu button [as shown here.](readme-docs/screenshots/user-story-screenshots/user-story1-screenshot2.jpg)
-    * I have done thorough browser compatibility testing as well as responsiveness testing at different breakpoints. I am confident that the site is suitable for use on a wide range of devices on the browsers tested. 
 
 ![Fixed navigation bar on desktop.](readme-docs/screenshots/user-story-screenshots/user-story1-screenshot.jpg)
   
 * **"To be able to find what I’m after quickly."**
     * The fixed navigation bar mentioned above aids with this.
-    * Each section is clearly titled and seperated by these titles. The sections also appear on contrasting block colour backgrounds adding further distinction.  
-    * I've also tried to keep each section as concise as possible meaning if a user were to scroll down the page they wouldn't have to scroll far to find what they're after.
-
-![Contact section title.](readme-docs/screenshots/user-story-screenshots/user-story2-screenshot.jpg)
+    * Each section is clearly titled and separated by these titles. The sections also appear on contrasting block colour backgrounds adding further distinction [(as shown here)](readme-docs/screenshots/user-story-screenshots/user-story2-screenshot.jpg).  
+    * I've also tried to keep each section as concise as possible, meaning if a user were to scroll down the page they wouldn't have to scroll far to find what they're after.
 
 * **"To find out where places are."**
     * My "What To Do?" section uses the Google Maps API to display the recommendations, showing users where specific places are on a map.
@@ -184,35 +180,47 @@ I also tested compatibility at varying screen sizes to test the responsiveness o
         * Explore - places of interest such as museums, breweries and live music venues.
         * Sleep - apartments, hotels and hostels.
     * I've tried to include a wide range of venues and activities to cater for a wider audience.
-    * I've used an object in my JavaScript to hold this information. This makes it easy to maintain, meaning at a later date I could add or remove places, update marker positions if required and even add a new place type button.
+    * I've used an object in my JavaScript to hold this information. This makes it easy to maintain, meaning at a later date I could add or remove places; update marker positions if required and even add a new place type button.
 
 ![Google map with markers.](readme-docs/screenshots/user-story-screenshots/user-story4-screenshot.jpg)
 
 * **"Find further information on recommendations easily, so I can decide on whether they’re suitable."**
 * **"To show relevant information on my recommendations. This information is to be clear and informative."**
-    * Each marker that is dropped is clickable. Clicking a marker will display an info window that shows additonal information specific to that place. The information showed via an info window is:
+    * Each marker that is dropped is clickable. Clicking a marker will display an info window that shows additional information specific to that place. The information showed via an info window is:
         * Place name.
         * A brief description of the place.
-        * A link to thier website.
+        * A link to their website.
     * In addition to this when a marker is clicked the text in the recommendation section (shown to the right or underneath the map) is updated. This section will now contain either additional information on one of the stations for instance or contain a review of a restaurant or pub we've recommended.
 
 ![Google map info window and recommendation section.](readme-docs/screenshots/user-story-screenshots/user-story5-screenshot.jpg)
 
 * **"To get a better understanding about the area to gauge whether it’s worth visiting."**
     * I feel the carousel covers the wide diversity offered by the area.
-    * Each image used (including the hero images) helps portray this too.
-    * Each of the 4 slides in the carousel showcase a different aspect to the area. I've broken the information down this way as not to overloaded the user with alot of information at once.
-    * The information is easily accessible, displayed in a visually compact way that doesn't effect the quality of information provided.
+    * Each image used (including the hero image) helps portray this too.
+    * Each of the 4 slides in the carousel showcase a different aspect to the area. I've broken the information down this way as not to overload the user with a lot of information at once.
+    * The information is easily accessible, displayed in a visually compact way that doesn't affect the quality of information provided.
     * The map also helps by showing where the JQ it is geographically. This can be used to see where the area is in relation to the city centre or elsewhere.
 
 ![Eat carousel page.](readme-docs/screenshots/user-story-screenshots/user-story6-screenshot.jpg)
 
 * **"To be able to get in touch with someone if I have any questions."**
 * **"To be easily contactable."**
-    * An easy to use contact form can be found at the bottom of the page. This will send a message using a EmailJS template that populates using the data collecting in the form. Example shown below.
-    * Contact can also be made via social media channels with links to these at the bottom of the page. These are located by the contact section so can be found easily if a contact form isnt thier thing! 
+    * An easy to use contact form can be found at the bottom of the page. This will send a message using an EmailJS template that populates using the data collected in the form. An example of a sent message can be [seen here.](readme-docs/screenshots/user-story-screenshots/user-story7-screenshot.jpg)
+    * Contact can also be made via social media channels with links to these at the bottom of the page. These are located by the contact section so can be found easily if a contact form isn't their thing! 
 
-![EmailJS email template.](readme-docs/screenshots/user-story-screenshots/user-story7-screenshot.jpg)
+**"A well-presented and visually appealing product that gives users the feeling that they can trust the content."**
+    * I like to think I have created a visually appealing site that looks like it’s been well thought through. To achieve this I've used a combination of different features throughout the page as well as using a simple colour scheme and layout that gives a clean and professional look.
+
+**To provide useful information in a concise, intuitive manner that keeps the user engaged and likely to return.**
+    * I have provided a range of information in a number of different ways:
+        * On a carousel, which is operated by button click. The content of which is informative and responsive and is displayed in a concise way. This is achieved by using a number of slides in order to break up the content up into size-able chucks as opposed to just a big block of text, which is hard going.
+        * Locations of recommendations get displayed in a visual manner by using markers placed on a map to indicate their whereabouts.
+        * Place specific information on the recommendations gets displayed via an info window, which is triggered by clicking on any of the marker icons. This information is also concise and doesnt take the user away from where they are on the page.  
+        * Additional information that is likely to take up more screen space is shown in a separate section but still next to the map.
+        * In the contact section I chose to show success, failure or validation messages based on the users input once the form gets submitted to increase interactivity with a user. 
+
+* **"To do all of the above regardless of what device I’m using."**
+    * I have done thorough browser compatibility testing as well as responsiveness testing at different breakpoints. I am confident that the site is suitable for use on a wide range of devices on the browsers tested. 
 
 ## Bugs & fixes
 As a result of my manual testing I found and corrected the following issues:
