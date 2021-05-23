@@ -208,10 +208,10 @@ I also tested compatibility at varying screen sizes to test the responsiveness o
     * An easy to use contact form can be found at the bottom of the page. This will send a message using an EmailJS template that populates using the data collected in the form. An example of a sent message can be [seen here.](readme-docs/screenshots/user-story-screenshots/user-story7-screenshot.jpg)
     * Contact can also be made via social media channels with links to these at the bottom of the page. These are located by the contact section so can be found easily if a contact form isn't their thing! 
 
-**"A well-presented and visually appealing product that gives users the feeling that they can trust the content."**
+* **"A well-presented and visually appealing product that gives users the feeling that they can trust the content."**
     * I like to think I have created a visually appealing site that looks like it’s been well thought through. To achieve this I've used a combination of different features throughout the page as well as using a simple colour scheme and layout that gives a clean and professional look.
 
-**To provide useful information in a concise, intuitive manner that keeps the user engaged and likely to return.**
+* **To provide useful information in a concise, intuitive manner that keeps the user engaged and likely to return.**
     * I have provided a range of information in a number of different ways:
         * On a carousel, which is operated by button click. The content of which is informative and responsive and is displayed in a concise way. This is achieved by using a number of slides in order to break up the content up into size-able chucks as opposed to just a big block of text, which is hard going.
         * Locations of recommendations get displayed in a visual manner by using markers placed on a map to indicate their whereabouts.

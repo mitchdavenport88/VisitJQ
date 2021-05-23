@@ -482,7 +482,7 @@ label {
 
 /* media queries */
 
-/* max-width tablet */
+/* max-width lg */
 @media only screen and (max-width: 991px) {  
     /* carousel content */
     .slider div {

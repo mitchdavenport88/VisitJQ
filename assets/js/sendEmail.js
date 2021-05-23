@@ -1,13 +1,12 @@
-// as a guide I used a combination of the CI walkthrough and EmailJS documentation to send the form
-
-/** authorises the use of my EmailJS account- https://www.emailjs.com/docs/tutorial/creating-contact-form/*/
+// followed the CI course material but found it outdated so also used EmailJS docs to get setup
+/** authorises the use of my EmailJS account */
 (function () {
     emailjs.init('user_S3AJosb3HjKtZGHIvYZxa');
 })();
 
 const submitButton = document.getElementById('submit-button');
 submitButton.addEventListener('click', function () {
-    // principle of validation taken from - https://www.w3schools.com/js/js_validation.asp
+    // principle of form validation taken from - https://www.w3schools.com/js/js_validation.asp
     const userName = document.forms['contact-form']['user_name'].value;
     const userEmail = document.forms['contact-form']['user_email'].value;
     const userMessage = document.forms['contact-form']['message'].value;
@@ -21,7 +20,7 @@ submitButton.addEventListener('click', function () {
         displayValidateMsg();
     }
     // if statements taken from - https://youtu.be/HzJngc-Se9Q and edited accordingly 
-    // checks the email validity against the pattern variable. assigns validUserEmail a boolean value
+    // checks the email validity against the pattern variable & assigns validUserEmail a boolean value
     if (userEmail.match(pattern)) {
         validUserEmail = true;
     } else {

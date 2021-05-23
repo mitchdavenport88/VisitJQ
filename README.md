@@ -217,7 +217,7 @@ Taken from GitHub's documentation on cloning, which can be found
     * [Google Maps API Tutorial | Custom Marker Icon | Multiple Info Window - Pradip Debnath.](https://youtu.be/Xptz0GQ2DO4)
     * [Google Maps JavaScript API Tutorial – Traversy Media.](https://youtu.be/Zxf1mnP5zcw)
     * [JavaScript Google Maps API Tutorial Updated [2021] - Sam Codes.](https://youtu.be/uPhWSyRqQDA)
-* [EmailJS documentation](https://www.emailjs.com/docs/) was used to link my contact form to thier service.
+* [EmailJS documentation](https://www.emailjs.com/docs/) was used to link my contact form to their service.
 * I got the idea for the validation messages used in the contact form from this [Traversy Media video.](https://youtu.be/PP4Tr0l08NE)
 * The code used to validate email addresses by thier format/make up was taken from this [Online Tutorials video.](https://youtu.be/HzJngc-Se9Q)
 * [W3schools](https://www.w3schools.com/) & [MDN.](https://developer.mozilla.org/en-US/) For general coding problem solving.

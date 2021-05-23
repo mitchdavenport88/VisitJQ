@@ -1,4 +1,5 @@
-// scrolls to about section on planButton click - https://www.plus2net.com/html_tutorial/button-linking.php and edited accordingly
+// scrolls to about section on planButton click 
+// https://www.plus2net.com/html_tutorial/button-linking.php and edited accordingly
 const planButton = document.getElementById('plan-button');
 planButton.addEventListener('click', function () {
     parent.location = '#about';
