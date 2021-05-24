@@ -225,6 +225,12 @@ I also tested compatibility at varying screen sizes to test the responsiveness o
     * I have done thorough browser compatibility testing as well as responsiveness testing at different breakpoints. I am confident that the site is suitable for use on a wide range of devices on the browsers tested. 
 
 ## Bugs & fixes
+* I had some issues with dot notation at times. [Here’s one example.](readme-docs/screenshots/placeIcon.buttonName-issue-screenshot.jpg)
+    * I wanted to put a Font Awesome icon on each button that was specific to the place type the button represented after the buttons had been generated dynamically.
+    * So I created a separate object called `placeIcon`, which held the values of different Font Awesome links. Each key in `placeIcon` shared a name with the value of the `let buttonName` variable that was being created on each loop. [placeIcon can be viewed here.](readme-docs/screenshots/placeIcon-object.jpg)
+    * My thinking was that I could simply use dot notation to access the keys by using buttonName e.g. `placeIcon.buttonName` as they had the same name. This didn't work.
+    * I console logged the value of `placeIcon` and it returned the object as expected. I consoled logged the values of `buttonName` on each loop and that returned what I expected also - the shared names of the values [as shown here](readme-docs/screenshots/placeIcon.buttonName-console.jpg). 
+    * I thought the dot notation was correct and couldnt see what the issue was. As an alternative I tried bracket notation instead whilst using the same logic... `placeIcon[buttonName]` worked.
 
 As a result of my manual testing I found and corrected the following issues:
 * As mentioned above I modified my colour scheme to improve the contrast ratio. During testing I realised that I had overlooked changing the colour of two things:
@@ -240,15 +246,11 @@ As a result of my manual testing I found and corrected the following issues:
 ### Webkit issue
 I also found something odd during the testing of the map section on my mobile, which is an iPhone 6. When the “Click here to visit website” link is used via the Google map info window it opens in a new tab like it should… But then on my return to the page the info window surround was collapsing as shown below. 
 
-The issue didn't occur on my desktop browser nor on any of DevTools, Responsive Design Mode or on the Inspect tool. This seemed to be only happening on iPhones though as I also found the issue on my partner’s iPhone 7 also using Chrome and Safari but when I tested on my friends Huawei P30 pro using Chrome it didn’t happen at all. I ended up speaking to my mentor about it who also tested it on his iPhone on both Brave and Safari with the same results as me. 
+The issue didn't occur on my desktop browser nor on any of DevTools, Responsive Design Mode or on the Inspect tool. This seemed to be only happening on iPhones as I also found the issue on my partner’s iPhone 7 also using Chrome and Safari, but when I tested on my friends Huawei P30 pro using Chrome it didn’t happen at all. I ended up speaking to my mentor about it who also tested it on his iPhone on both Brave and Safari with the same results as me. 
 * [Before link was opened (iPhone).](readme-docs/screenshots/bug-iphone-before.PNG)
 * [On return to the page (iPhone).](readme-docs/screenshots/bug-iphone-after.PNG)
 * [On return to the page (Huawei P30 pro).](readme-docs/screenshots/bug-huawei-after.jpg)
 
-I tried a number of things to resolve the issue all to no avail:
-* Turning off the maxWidth property I have on the window.
-* Styling the info window in numerous different ways.
-* Re-adding the webkits using AutoPrefixer.
-* Tried overriding and editing the info windows preset css styling with my own css styling.
+I tried a number of things to resolve the issue such as turning off the maxWidth property I have on the window. Styling the info window in numerous ways. Re-adding the webkits using AutoPrefixer. Overriding and editing the info windows preset css styling with my own css styling, all to no avail.
 
-After speaking to tutor support and my mentor Brian, I am putting the issue down to a peculiarity in how the browsers are handling this. It was explained to me that browsers on iOS use the same rendering engine i.e. Chrome on iPhone uses Webkit (Apple’s rendering engine), which is different from Chrome on other platforms (which uses Chromium). This could point to it being a possible Webkit issue. The content that I'm putting into the info window is actually unaffected - it still displays, its still visible and doesn't get re-sized in anyway. Its just the surrounding window that's effected.
+After speaking to tutor support and my mentor Brian, I am putting the issue down to a peculiarity in how the browsers are handling this and that there's a bug in the browser. It was explained to me that browsers on iOS use the same rendering engine i.e. Chrome on iPhone uses Webkit (Apple’s rendering engine), which is different from Chrome on other platforms (which uses Chromium). This could point to it being a possible Webkit issue. The content that I'm putting into the info window is actually uneffected - it still displays, its still visible and doesn't get re-sized in anyway. Its just the surrounding window that's effected.
