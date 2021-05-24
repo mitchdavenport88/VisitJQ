@@ -156,7 +156,7 @@ I’ve visited the JQ a number of times in the past and found that green was qui
 * HTML & CSS.
 * JavaScript.
 * Gitpod (IDE).
-* Git, [GitHub](https://github.com/) and [GitHub Pages](https://pages.github.com/). Used for version control, hosting my repository and hosting my site.
+* Git, GitHub and GitHub Pages. Used for version control, hosting my repository and hosting my site.
 * [Balsamiq.](https://balsamiq.com/) Program used for drawing the wireframes.
 * [Bootstrap 5.](https://getbootstrap.com/) Grid layout, responsive design and basic styling.
 * [Favicon.io.](https://favicon.io/) Created favicon's, which are visible in browser tabs and the bookmarks bar.

@@ -225,12 +225,12 @@ I also tested compatibility at varying screen sizes to test the responsiveness o
     * I have done thorough browser compatibility testing as well as responsiveness testing at different breakpoints. I am confident that the site is suitable for use on a wide range of devices on the browsers tested. 
 
 ## Bugs & fixes
-* I had some issues with dot notation at times. [Here’s one example.](readme-docs/screenshots/placeIcon.buttonName-issue-screenshot.jpg)
+* I had an issue with dot notation. [Here’s one example.](readme-docs/screenshots/placeIcon.buttonName-issue-screenshot.jpg)
     * I wanted to put a Font Awesome icon on each button that was specific to the place type the button represented after the buttons had been generated dynamically.
-    * So I created a separate object called `placeIcon`, which held the values of different Font Awesome links. Each key in `placeIcon` shared a name with the value of the `let buttonName` variable that was being created on each loop. [placeIcon can be viewed here.](readme-docs/screenshots/placeIcon-object.jpg)
-    * My thinking was that I could simply use dot notation to access the keys by using buttonName e.g. `placeIcon.buttonName` as they had the same name. This didn't work.
-    * I console logged the value of `placeIcon` and it returned the object as expected. I consoled logged the values of `buttonName` on each loop and that returned what I expected also - the shared names of the values [as shown here](readme-docs/screenshots/placeIcon.buttonName-console.jpg). 
-    * I thought the dot notation was correct and couldnt see what the issue was. As an alternative I tried bracket notation instead whilst using the same logic... `placeIcon[buttonName]` worked.
+    * So I created a separate object called `placeIcon`, which held the values of different Font Awesome links. Each key in `placeIcon` shared a name with the value of the `let buttonName` variable that was being created on each loop. [placeIcon object can be seen here.](readme-docs/screenshots/placeIcon-object.jpg)
+    * My thinking was that I could simply use dot notation to access the keys by using `buttonName` e.g. `placeIcon.buttonName` as they shared value / name. This didn't work.
+    * I console logged the value of `placeIcon` and it returned the object as expected. I consoled logged the values of `buttonName` on each loop and that returned what I expected also - [as shown here](readme-docs/screenshots/placeIcon.buttonName-console.jpg). 
+    * I thought the dot notation was correct and couldn't see what the issue was. As an alternative I tried bracket notation instead whilst using the same logic... `placeIcon[buttonName]` worked.
 
 As a result of my manual testing I found and corrected the following issues:
 * As mentioned above I modified my colour scheme to improve the contrast ratio. During testing I realised that I had overlooked changing the colour of two things:
